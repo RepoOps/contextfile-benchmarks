@@ -1,0 +1,17 @@
+{
+  "id": "ut-0007",
+  "title": "GitChameleon 12: log_ndtr in torch 1.12.0",
+  "library": "torch",
+  "version": "1.12.0",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=12",
+  "prompt": "Using torch 1.12.0 on Python 3.10: Calculate the logarithm of the cumulative distribution function of the standard normal distribution using PyTorch's special functions.\n\nComplete this code:\n\nimport torch\ndef log_ndtr(input_tensor: torch.Tensor) -> torch.Tensor:",
+  "checks": {
+    "mustMatch": [
+      "special\\.log_ndtr\\("
+    ],
+    "mustNotMatch": []
+  },
+  "evidence": []
+}

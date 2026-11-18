@@ -1,0 +1,99 @@
+{
+  "id": "gw-0029",
+  "artifactType": "oci_image",
+  "title": "marrowgate container image",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# marrowgate image. Marrowgate runs scheduled logical backups of a PostgreSQL database and uploads them to S3 compatible storage. The image is based on `alpine:3.20` and includes the `pg_dump` client from PostgreSQL 16. It exposes a single port, 8081, which serves a health endpoint at `/healthz`. The entrypoint is the script `/opt/marrowgate/run.sh`, which starts a cron loop. The container runs as user `marrow` with UID 1001."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment. `PGHOST`, `PGUSER`, and `PGDATABASE` select the database, and the password is read from the file named in `PGPASSFILE`. `MG_SCHEDULE` takes a cron expression and defaults to `0 3 * * *`, which runs once a day at 03:00 UTC. `MG_BUCKET` names the target bucket. `MG_RETAIN_DAYS` sets how many days of backups to keep and defaults to 14. Backups are compressed with zstd before upload."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The marrowgate image is based on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Marrowgate compresses backups with zstd before upload.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "MG_RETAIN_DAYS defaults to 14.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The marrowgate health endpoint is served on port 8080.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The default MG_SCHEDULE runs a backup once a day at 03:00 UTC.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Marrowgate can restore a backup into a new database.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

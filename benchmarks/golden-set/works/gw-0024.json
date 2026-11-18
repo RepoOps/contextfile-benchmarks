@@ -1,0 +1,99 @@
+{
+  "id": "gw-0024",
+  "artifactType": "open_spec",
+  "title": "Saffronmill invoice soft delete",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: soft delete for invoices in Saffronmill. Today, deleting a draft invoice removes its row from the `invoices` table, which breaks audit reports that reference the invoice number. This change adds a nullable `deleted_at` column. A delete request sets `deleted_at` to the current time instead of removing the row. Only invoices in the draft state can be deleted; finalized invoices return error code `INVOICE_FINALIZED`. A nightly job purges soft deleted rows older than 90 days."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Requirements. List endpoints must exclude soft deleted invoices by default. Clients can include them by passing `include_deleted=true`, which requires the `billing:audit` scope. Restoring an invoice clears `deleted_at` and is allowed only within 30 days of deletion. Scenario: restore after the window. Given an invoice deleted 31 days ago, when an admin calls the restore endpoint, then the server returns status 409 and the invoice stays deleted."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A Saffronmill delete request sets deleted_at to the current time.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The nightly job purges soft deleted invoice rows older than 60 days.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Passing include_deleted=true requires the billing:audit scope.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Restoring a soft deleted invoice is allowed only within 30 days of deletion.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Restoring an invoice after the restore window returns status 404.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Deleting a finalized invoice returns the error code INVOICE_FINALIZED.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

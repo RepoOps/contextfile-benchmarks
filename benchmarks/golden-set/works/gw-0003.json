@@ -1,0 +1,99 @@
+{
+  "id": "gw-0003",
+  "artifactType": "doc",
+  "title": "Gutenberg and the Printing Press",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Johannes Gutenberg, a goldsmith from the German city of Mainz, developed a printing press with movable metal type around 1440. His system combined a hand mould for casting individual letters, an oil-based ink that stuck well to metal, and a screw press adapted from those used to make wine and olive oil. Because each letter could be reused, a printer could set a page, print many copies, and then break the type apart for the next page. The method cut the cost of books sharply compared with copying by hand."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The most famous product of Gutenberg's workshop is the Gutenberg Bible, finished in Mainz around 1455. It was printed in Latin, with most pages set in two columns of 42 lines, which is why it is also called the 42-line Bible. Around 180 copies were made, some on paper and some on vellum. Fewer than 50 copies survive today, and only about 21 of these are complete. Within fifty years of its printing, presses had spread to more than 200 European cities."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Gutenberg worked as a goldsmith.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Gutenberg Bible was printed in Latin.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Most pages of the Gutenberg Bible were set in two columns of 42 lines.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Around 280 copies of the Gutenberg Bible were made.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Gutenberg adapted his screw press from presses used for wine and olive oil.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Gutenberg died in Mainz in 1468.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

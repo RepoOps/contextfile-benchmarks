@@ -1,0 +1,19 @@
+{
+  "id": "ut-0010",
+  "title": "GitChameleon 69: find_common_type in numpy 1.25.0",
+  "library": "numpy",
+  "version": "1.25.0",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=69",
+  "prompt": "Using numpy 1.25.0 on Python 3.10: Given two arrays, find their common types.\n\nComplete this code:\n\nimport numpy as np\n\ndef find_common_type(arr1:np.ndarray, arr2:np.ndarray) -> np.dtype:\n    return np.",
+  "checks": {
+    "mustMatch": [
+      "\\b(np|numpy)\\.common_type\\("
+    ],
+    "mustNotMatch": [
+      "\\b(np|numpy)\\.find_common_type\\("
+    ]
+  },
+  "evidence": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ut-0009",
+  "title": "GitChameleon 51: get_scorer_names in scikit-learn 1.3",
+  "library": "scikit-learn",
+  "version": "1.3",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=51",
+  "prompt": "Using scikit-learn 1.3 on Python 3.10: Retrieve and list all available scorer names, ensuring they are returned in a list format.\n\nComplete this code:\n\nfrom sklearn import metrics\ndef get_scorer_names() -> list:\n    return",
+  "checks": {
+    "mustMatch": [
+      "metrics\\.get_scorer_names\\("
+    ],
+    "mustNotMatch": [
+      "metrics\\.SCORERS\\b"
+    ]
+  },
+  "evidence": []
+}

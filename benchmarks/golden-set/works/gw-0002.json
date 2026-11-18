@@ -1,0 +1,99 @@
+{
+  "id": "gw-0002",
+  "artifactType": "doc",
+  "title": "How Photosynthesis Works",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Photosynthesis is the process by which plants, algae, and some bacteria turn light energy into chemical energy. In plants it takes place mainly inside chloroplasts, small structures found in leaf cells. Chlorophyll, the green pigment in chloroplasts, absorbs red and blue light most strongly and reflects green light, which is why leaves look green. Using the captured energy, the plant combines carbon dioxide taken in from the air with water drawn up from the roots. The products are glucose, a simple sugar, and oxygen, which the plant releases through tiny pores called stomata."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Photosynthesis happens in two linked stages. The light-dependent reactions take place in the thylakoid membranes, where light splits water molecules and releases oxygen as a by-product. These reactions produce two energy carriers, ATP and NADPH. The second stage, called the Calvin cycle, runs in the stroma, the fluid that surrounds the thylakoids. There, an enzyme known as RuBisCO fixes carbon dioxide into organic molecules, and the ATP and NADPH from the first stage power the building of sugar. RuBisCO is often described as the most abundant protein on Earth."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Calvin cycle takes place in the thylakoid membranes.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Plants release oxygen through pores called stomata.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The light-dependent reactions produce ATP and NADPH.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The oxygen released during photosynthesis comes from split water molecules.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Chlorophyll absorbs green light most strongly.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Chlorophyll reflects green light, which makes leaves look green.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

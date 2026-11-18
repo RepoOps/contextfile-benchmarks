@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "system": "You are a coding agent starting a new session in the user's repository. The repository's instructions file is shown below; follow it. Several MCP servers are installed. Make the tool calls you would make now, or answer directly.",
+  "tasks": [
+    { "id": "s-add-cli-flag", "prompt": "Add a --verbose flag to scripts/build.mjs that prints each step as it runs." },
+    { "id": "s-fix-failing-test", "prompt": "The test in src/dates.test.ts started failing after yesterday's merge. Find out why and fix it." },
+    { "id": "s-add-db-index", "prompt": "Add an index on orders.created_at with a migration; the orders page is slow." },
+    { "id": "s-readme-local", "prompt": "Write the 'Run it locally' section of the README." },
+    { "id": "s-upgrade-next", "prompt": "Upgrade Next.js to the newest 15.x release and fix whatever breaks." },
+    { "id": "s-review-diff", "prompt": "Review my staged changes before I open a pull request." },
+    { "id": "s-new-endpoint", "prompt": "Add a GET /v1/health endpoint that reports the database connection state." },
+    { "id": "s-rename-var", "prompt": "Rename the variable usrCnt to userCount in src/stats.ts." }
+  ]
+}

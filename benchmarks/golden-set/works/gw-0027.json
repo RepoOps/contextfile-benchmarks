@@ -1,0 +1,99 @@
+{
+  "id": "gw-0027",
+  "artifactType": "brain_wiki",
+  "title": "Halley's Comet",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Halley's Comet is a periodic comet that returns to the inner solar system roughly every 75 to 79 years. The English astronomer Edmond Halley studied records of earlier sightings and argued in 1705 that comets seen in 1531, 1607, and 1682 were the same object. He predicted its return in 1758. Halley died in 1742 and did not live to see the comet reappear on schedule late in 1758, but the comet was named in his honor."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The comet's most recent visit to the inner solar system was in 1986. During that pass, an international fleet of spacecraft studied it, including the European Space Agency probe Giotto, which flew within about 600 kilometers of the nucleus. Images showed a dark, peanut-shaped nucleus about 15 kilometers long, with jets of gas and dust escaping from its sunlit side. Halley's Comet is expected to return in 2061."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Edmond Halley predicted the comet's return in 1758.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Giotto probe flew within about 600 kilometers of the nucleus of Halley's Comet.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Halley's Comet is expected to return in 2061.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Edmond Halley died in 1741.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Halley's Comet last visited the inner solar system in 1986.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Halley's Comet is the source of the Orionid meteor shower.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

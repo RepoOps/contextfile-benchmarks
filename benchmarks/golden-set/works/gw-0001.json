@@ -1,0 +1,99 @@
+{
+  "id": "gw-0001",
+  "artifactType": "doc",
+  "title": "The Nile River",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Nile is one of the longest rivers on Earth, flowing roughly 6,650 kilometres northward through northeastern Africa before emptying into the Mediterranean Sea. It has two major tributaries. The White Nile rises in the Great Lakes region of central Africa, while the Blue Nile begins at Lake Tana in Ethiopia. The two streams meet at Khartoum, the capital of Sudan, and continue north as a single river through Egypt. Most of the water and nearly all of the fertile silt reaching Egypt historically came from the Blue Nile during the summer rains in the Ethiopian Highlands."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "For thousands of years, farming in ancient Egypt depended on the yearly flood of the Nile. Each summer the river rose and spread over its banks, leaving behind a layer of dark, rich soil. Egyptians called their land Kemet, meaning the black land, after this soil. The Aswan High Dam, completed in 1970, ended the annual flood by holding the water back in Lake Nasser, one of the largest artificial lakes in the world. The dam supplies hydroelectric power and steady irrigation, but farmers now rely on chemical fertilizers to replace the lost silt."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Blue Nile begins at Lake Tana in Ethiopia.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Aswan High Dam was completed in 1971.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The White Nile and the Blue Nile meet at Khartoum.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Aswan High Dam created Lake Nasser.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Egyptians called their land Kemet, meaning the black land.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Nile empties into the Red Sea.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

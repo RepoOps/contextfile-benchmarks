@@ -1,0 +1,99 @@
+{
+  "id": "gw-0030",
+  "artifactType": "doc",
+  "title": "Newcomen, Watt, and the steam engine",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Thomas Newcomen built the first practical steam engine in 1712 to pump water out of mines. His atmospheric engine condensed steam inside the main cylinder, so the cylinder had to be cooled and reheated on every stroke, which wasted a great deal of fuel. Even so, hundreds of Newcomen engines were working in Britain by the late eighteenth century, mostly at coal mines where fuel was cheap and plentiful."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "James Watt, an instrument maker at the University of Glasgow, realized in 1765 that a separate condenser would let the main cylinder stay hot. He patented the idea in 1769. Watt later went into partnership with the Birmingham manufacturer Matthew Boulton, and their firm began selling engines in 1776. Watt's engines used roughly a quarter of the coal of a Newcomen engine doing the same work."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "James Watt patented the separate condenser in 1769.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Thomas Newcomen built the first practical steam engine in 1712.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Boulton and Watt began selling engines in 1775.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Newcomen's engine condensed steam inside the main cylinder.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Matthew Boulton was a manufacturer based in Glasgow.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Watt's engines used roughly a quarter of the coal of a comparable Newcomen engine.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

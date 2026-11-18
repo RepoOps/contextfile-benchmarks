@@ -1,0 +1,99 @@
+{
+  "id": "gw-0004",
+  "artifactType": "doc",
+  "title": "Monarch Butterfly Migration",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The monarch butterfly is known for one of the longest insect migrations in the world. Each autumn, monarchs from eastern North America fly south as far as 4,000 kilometres to spend the winter in the fir forests of central Mexico. There they gather by the millions on tree branches high in the mountains, where the cool, steady climate lets them conserve energy. In spring they start back north, but no single butterfly finishes the round trip. The journey north is completed over several generations."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Monarch caterpillars feed only on milkweed plants. Milkweed contains bitter chemicals called cardenolides, which the caterpillars store in their bodies as they grow. The adult butterflies keep these chemicals, which makes them taste bad and can make birds that eat them sick. The bright orange and black wings serve as a warning to predators. The viceroy butterfly looks very similar to the monarch, and for many years it was thought to be harmless, though later studies found that viceroys also taste unpleasant to birds."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Eastern monarchs spend the winter in the fir forests of central Mexico.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Monarch caterpillars feed only on milkweed.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A single monarch butterfly completes the full round trip of the migration.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The orange and black wings of the monarch warn predators.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Viceroy butterflies also taste unpleasant to birds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Monarch populations have declined sharply because of habitat loss.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

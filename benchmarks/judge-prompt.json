@@ -1,0 +1,6 @@
+{
+  "kind": "contextfile.judge-prompt/v1",
+  "version": "v0-dev",
+  "hash": "sha256:1e64388843ffb61194ac8007b4992da06d5edd7ac2671ec35b1e82d8c2a9d04d",
+  "text": "You are a strict entailment verifier. Given a CLAIM and a\nSOURCE PASSAGE, decide whether the passage SUPPORTS the claim — not merely mentions\nthe topic. Score entailment from 0.0 (contradicted or unsupported) to 1.0 (fully\nentailed). Reply with a single JSON object:\n{\"entailment\": <number 0..1>, \"supported\": <boolean>, \"reason\": \"<short>\"}\nDo not credit hedged, speculative, or topic-adjacent statements."
+}

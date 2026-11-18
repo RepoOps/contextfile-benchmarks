@@ -1,0 +1,7 @@
+{
+  "note": "The judge change gate (packages/core/src/golden-set.ts judgeGate). The grandfathered judge is the one live when the gate was added, before any golden-set run; it may stand without a result. Any other judge version or prompt hash needs a signed result in results/ that meets the golden_* thresholds in config/constants.md. Never edit this pin to wave a new judge through.",
+  "grandfathered": {
+    "version": "v0-dev",
+    "hash": "sha256:1e64388843ffb61194ac8007b4992da06d5edd7ac2671ec35b1e82d8c2a9d04d"
+  }
+}

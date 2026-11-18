@@ -1,0 +1,1127 @@
+{
+  "digest": "sha256:f9a3177b0fba67d87c22b475905cb3bd82a44d7dcaf01d8d78faf08ee95a8c1f",
+  "body": {
+    "kind": "contextfile.benchmark.golden/v1",
+    "harnessVersion": "golden-harness-1",
+    "ranAt": "2026-11-11T18:50:26.477Z",
+    "set": {
+      "id": "contextfile-golden",
+      "version": "0.1.0",
+      "digest": "sha256:f4c8c07b8e1f68a90dfb35859350377d74159aa78ac97d89576dbe9fbe86d955",
+      "works": 30,
+      "claims": 180,
+      "stage": "pilot"
+    },
+    "judge": {
+      "model": "anthropic/claude-haiku-5.5",
+      "promptVersion": "v0-dev",
+      "promptHash": "sha256:1e64388843ffb61194ac8007b4992da06d5edd7ac2671ec35b1e82d8c2a9d04d",
+      "backend": "openrouter"
+    },
+    "passThreshold": 0.9,
+    "tolerance": 0.02,
+    "metrics": {
+      "precision": 1,
+      "recall": 0.9222,
+      "misgroundedRate": 0,
+      "wrongPassRate": 0
+    },
+    "counts": {
+      "supportedPassed": 83,
+      "supportedFailed": 7,
+      "wrongPassed": 0,
+      "wrongFailed": 46,
+      "misgroundedPassed": 0,
+      "misgroundedFailed": 44,
+      "errors": 15
+    },
+    "items": [
+      {
+        "id": "gw-0001/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c2",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0001/c3",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c4",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0001/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c6",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c1",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c2",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0002/c3",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0002/c4",
+        "expected": "misgrounded",
+        "entailment": 0.1,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c5",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c6",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c2",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0003/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0003/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c2",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c6",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c1",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c2",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c3",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c6",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c2",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c3",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c6",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c1",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c6",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c3",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c5",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c6",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c2",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c6",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c1",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0010/c3",
+        "expected": "supported",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c4",
+        "expected": "supported",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c6",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c1",
+        "expected": "supported",
+        "entailment": 0.92,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c2",
+        "expected": "wrong",
+        "entailment": 0.3,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c4",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c6",
+        "expected": "wrong",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c1",
+        "expected": "supported",
+        "entailment": 0.72,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c2",
+        "expected": "supported",
+        "entailment": 0.95,
+        "passed": true
+      },
+      {
+        "id": "gw-0012/c3",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c4",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c5",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c6",
+        "expected": "supported",
+        "entailment": 0.96,
+        "passed": true
+      },
+      {
+        "id": "gw-0013/c1",
+        "expected": "supported",
+        "entailment": 0.55,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c2",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c3",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c5",
+        "expected": "supported",
+        "entailment": 0.92,
+        "passed": true
+      },
+      {
+        "id": "gw-0013/c6",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c1",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c6",
+        "expected": "wrong",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c3",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c5",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c6",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c2",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0016/c3",
+        "expected": "misgrounded",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0016/c5",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c6",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c1",
+        "expected": "supported",
+        "entailment": 0.95,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c2",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c5",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c6",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c2",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c5",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c1",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c2",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c3",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c5",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c6",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c2",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c5",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c6",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c1",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c2",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0021/c3",
+        "expected": "supported",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0021/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0021/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c6",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c1",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c2",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0022/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0022/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0022/c6",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0023/c2",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c3",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0023/c5",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c6",
+        "expected": "supported",
+        "entailment": 0.96,
+        "passed": true
+      },
+      {
+        "id": "gw-0024/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0024/c2",
+        "expected": "wrong",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0024/c4",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c5",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c6",
+        "expected": "supported",
+        "entailment": 0.85,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c2",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0025/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0025/c4",
+        "expected": "wrong",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c5",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c2",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c3",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c4",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c6",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c1",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c3",
+        "expected": "misgrounded",
+        "entailment": 0.05,
+        "passed": false
+      },
+      {
+        "id": "gw-0027/c4",
+        "expected": "wrong",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0027/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c6",
+        "expected": "misgrounded",
+        "entailment": null,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c1",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c2",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0028/c3",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c4",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0028/c5",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c6",
+        "expected": "supported",
+        "entailment": 0.96,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c2",
+        "expected": "misgrounded",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0029/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c4",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0029/c5",
+        "expected": "supported",
+        "entailment": 0.97,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c6",
+        "expected": "misgrounded",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c2",
+        "expected": "supported",
+        "entailment": 0.95,
+        "passed": true
+      },
+      {
+        "id": "gw-0030/c3",
+        "expected": "wrong",
+        "entailment": 0.02,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c4",
+        "expected": "supported",
+        "entailment": 0.98,
+        "passed": true
+      },
+      {
+        "id": "gw-0030/c5",
+        "expected": "wrong",
+        "entailment": 0.03,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      }
+    ]
+  },
+  "signature": {
+    "keyId": "pem-7ac325de9743c0a4",
+    "alg": "Ed25519",
+    "value": "kFIzn4utOixtUeUI/2/EKiyn/48jqVjaqk/iXb2zQDP5HsDho14fSB9HyGsU8HJQmjqmk3yzwjkFtJxNUomtDw=="
+  },
+  "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAeLyZv8cw7jtRnUADICzQfENpdmn4/6ad38kDm0MrTI0=\n-----END PUBLIC KEY-----\n"
+}

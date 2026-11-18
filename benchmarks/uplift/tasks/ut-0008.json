@@ -1,0 +1,19 @@
+{
+  "id": "ut-0008",
+  "title": "GitChameleon 23: points_from_xy in geopandas 0.9.0",
+  "library": "geopandas",
+  "version": "0.9.0",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=23",
+  "prompt": "Using geopandas 0.9.0 on Python 3.10: Write a function that creates a GeoSeries from x and y coordinates.\n\nComplete this code:\n\nimport geopandas as gpd\ndef create_geoseries(x:list[int], y:list[int]) -> gpd.GeoSeries:\n    return",
+  "checks": {
+    "mustMatch": [
+      "points_from_xy\\("
+    ],
+    "mustNotMatch": [
+      "GeoSeries\\.from_xy\\("
+    ]
+  },
+  "evidence": []
+}

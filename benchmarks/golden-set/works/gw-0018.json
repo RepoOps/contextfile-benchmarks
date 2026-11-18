@@ -1,0 +1,99 @@
+{
+  "id": "gw-0018",
+  "artifactType": "brain_wiki",
+  "title": "The periodic table",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Dmitri Mendeleev, a Russian chemist, published his periodic table in 1869. He arranged the known elements by increasing atomic weight and grouped those with similar chemical behavior into columns. Where no known element fit, he left gaps and predicted the properties of the missing ones. Gallium, discovered in 1875, and germanium, discovered in 1886, matched his forecasts closely, which persuaded many scientists that the table reflected a real pattern in nature."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The modern periodic table orders elements by atomic number, the count of protons in the nucleus, rather than by weight. This change followed the work of Henry Moseley, who in 1913 used X-ray spectra to show that atomic number was the more basic property. The table now holds 118 confirmed elements arranged in 18 vertical groups and 7 horizontal periods. The noble gases, found in group 18, rarely react because their outer electron shells are full."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mendeleev published his periodic table in 1869.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Germanium was discovered in 1885.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The modern periodic table has 18 groups.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Henry Moseley used X-ray spectra to establish atomic number as the basic ordering property.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Mendeleev arranged the elements by increasing atomic number.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The noble gases are found in group 18.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

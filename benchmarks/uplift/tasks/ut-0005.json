@@ -1,0 +1,16 @@
+{
+  "id": "ut-0005",
+  "title": "Read a cookie in a server component",
+  "library": "next",
+  "version": "15.0.3",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "prompt": "Using Next.js 15.0.3 App Router, write an async server component that reads the `theme` cookie with `cookies()` from `next/headers` and renders its value.",
+  "checks": {
+    "mustMatch": [
+      "await\\s+cookies\\(\\)"
+    ],
+    "mustNotMatch": []
+  },
+  "evidence": []
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0007",
+  "artifactType": "brain_wiki",
+  "title": "Apollo 11",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Apollo 11 launched from Kennedy Space Center in Florida on 16 July 1969, carried by a Saturn V rocket. Its crew were Neil Armstrong, the commander, Buzz Aldrin, the lunar module pilot, and Michael Collins, the command module pilot. On 20 July, Armstrong and Aldrin landed the lunar module, named Eagle, in the Sea of Tranquility, while Collins stayed in lunar orbit aboard the command module Columbia. Armstrong became the first person to step onto the Moon, and Aldrin followed him about twenty minutes later."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Armstrong and Aldrin spent about two and a half hours walking on the lunar surface. They set up a seismometer and a laser reflector, planted a United States flag, and collected about 21.5 kilograms of rock and soil to bring home. The lunar module then lifted off and rejoined Columbia in orbit. The three astronauts splashed down in the Pacific Ocean on 24 July 1969 and spent the next three weeks in quarantine in case they had carried back any harmful microbes."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Michael Collins piloted the lunar module Eagle.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Apollo 11 launched on 16 July 1969.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Apollo 11 astronauts collected about 21.5 kilograms of lunar rock and soil.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Apollo 11 crew splashed down in the Atlantic Ocean.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Apollo 11 lunar module Eagle landed in the Sea of Tranquility.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Apollo 11 returned to Earth on 24 July 1969.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

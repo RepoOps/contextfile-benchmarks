@@ -1,0 +1,99 @@
+{
+  "id": "gw-0015",
+  "artifactType": "oci_image",
+  "title": "fernhollow-render image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The fernhollow-render image runs Fernhollow, a service that turns Markdown documents into PDF files. It is based on alpine:3.20 and bundles the fonts needed for Latin, Greek, and Cyrillic text. The service exposes an HTTP API on port 8088. Send a POST request to /render with Markdown in the body and the service returns a PDF. The entrypoint is /app/fernhollow serve, and the container stops cleanly when it receives SIGTERM, finishing any render already in progress."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "FERNHOLLOW_WORKERS sets how many documents render at once and defaults to 4. FERNHOLLOW_MAX_PAGES caps the length of a single output file and defaults to 200 pages; longer documents return an error. FERNHOLLOW_LOG_LEVEL accepts debug, info, warn, or error and defaults to info. Write temporary files to /tmp/fernhollow, which should be a tmpfs mount in production so that rendered documents never touch persistent disk."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The fernhollow-render image is based on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "FERNHOLLOW_WORKERS defaults to 4.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The fernhollow-render service exposes its HTTP API on port 8080.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "FERNHOLLOW_MAX_PAGES defaults to 200 pages.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The fernhollow-render image bundles fonts for Cyrillic text.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The fernhollow-render service can render Markdown to HTML.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

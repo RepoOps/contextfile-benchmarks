@@ -1,0 +1,19 @@
+{
+  "id": "ut-0014",
+  "title": "GitChameleon 110: distance.minkowski in scipy 1.9.2",
+  "library": "scipy",
+  "version": "1.9.2",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=110",
+  "prompt": "Using scipy 1.9.2 on Python 3.10: complete the function that computes the weigthed Minkowski distance between two 1-D arrays, u and v, based on a 1D weigth vector, w.\n\nComplete this code:\n\nfrom scipy.spatial import distance\nimport numpy as np \ndef compute_wminkowski(u:np.ndarray, v:np.ndarray, p:int, w:np.ndarray)->np.ndarray:",
+  "checks": {
+    "mustMatch": [
+      "\\bminkowski\\("
+    ],
+    "mustNotMatch": [
+      "\\bdistance\\.wminkowski\\("
+    ]
+  },
+  "evidence": []
+}

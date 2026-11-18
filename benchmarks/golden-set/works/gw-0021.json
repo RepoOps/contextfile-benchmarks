@@ -1,0 +1,99 @@
+{
+  "id": "gw-0021",
+  "artifactType": "doc",
+  "title": "The Bretton Woods system",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "In July 1944, delegates from 44 Allied nations met at a hotel in Bretton Woods, New Hampshire, to design a postwar monetary order. They agreed that member currencies would be pegged to the US dollar, and the dollar would be convertible to gold at 35 dollars per ounce. The conference also created the International Monetary Fund and the International Bank for Reconstruction and Development, which later became part of the World Bank Group. John Maynard Keynes led the British delegation."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The fixed exchange system came under strain in the 1960s as US gold reserves fell relative to the dollars held abroad. On 15 August 1971, President Richard Nixon announced that the United States would suspend the convertibility of the dollar into gold. The move, often called the Nixon shock, effectively ended the Bretton Woods arrangement. By 1973 the major currencies were floating against one another, and that general approach has continued since."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Bretton Woods conference took place in July 1944.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Nixon suspended the convertibility of the dollar into gold in August 1971.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "John Maynard Keynes led the British delegation at Bretton Woods.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Delegates from 45 nations attended the Bretton Woods conference.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "By 1973 the major currencies were floating against one another.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The end of the Bretton Woods system caused high inflation in the United States during the 1970s.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

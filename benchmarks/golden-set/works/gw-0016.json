@@ -1,0 +1,99 @@
+{
+  "id": "gw-0016",
+  "artifactType": "doc",
+  "title": "Jupiter and its Galilean moons",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Jupiter is the fifth planet from the Sun and the largest in the solar system. Its mass is more than twice that of all the other planets combined. The planet is made mostly of hydrogen and helium and has no solid surface that a spacecraft could land on. Its most famous feature, the Great Red Spot, is a storm larger than Earth that has been observed for at least 190 years. Jupiter completes one rotation in just under ten hours, giving it the shortest day of any planet."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In January 1610, Galileo Galilei pointed an early telescope at Jupiter and noticed four small points of light that changed position from night to night. He concluded that they were moons orbiting the planet, a finding that challenged the belief that everything circled the Earth. These four bodies, Io, Europa, Ganymede, and Callisto, are now called the Galilean moons. Ganymede is the largest moon in the solar system and is even bigger than the planet Mercury. Io is the most volcanically active body known."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jupiter is the sixth planet from the Sun.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Jupiter has no solid surface for a spacecraft to land on.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Ganymede is larger than the planet Mercury.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Galileo observed four moons of Jupiter in January 1610.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Jupiter completes one rotation in just over twelve hours.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Io is the most volcanically active body known.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

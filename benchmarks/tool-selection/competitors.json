@@ -1,0 +1,48 @@
+{
+  "version": "0.1.0",
+  "servers": [
+    {
+      "server": "context7",
+      "source": "Paraphrased fixture of the Context7 MCP server's two tools. Replace with that server's live tools/list output before a published run.",
+      "tools": [
+        {
+          "name": "resolve-library-id",
+          "description": "Resolve a package or product name to a library id that get-library-docs accepts. Call this first unless the user gives a library id.",
+          "input_schema": { "type": "object", "properties": { "libraryName": { "type": "string", "description": "Library name to search for." } }, "required": ["libraryName"] }
+        },
+        {
+          "name": "get-library-docs",
+          "description": "Fetch up-to-date documentation for a library by its library id, optionally narrowed to a topic.",
+          "input_schema": { "type": "object", "properties": { "context7CompatibleLibraryID": { "type": "string" }, "topic": { "type": "string" }, "tokens": { "type": "number" } }, "required": ["context7CompatibleLibraryID"] }
+        }
+      ]
+    },
+    {
+      "server": "deepwiki",
+      "source": "Paraphrased fixture of the DeepWiki MCP server. Replace with that server's live tools/list output before a published run.",
+      "tools": [
+        {
+          "name": "read_wiki_structure",
+          "description": "List the documentation topics generated for a GitHub repository.",
+          "input_schema": { "type": "object", "properties": { "repoName": { "type": "string", "description": "owner/repo" } }, "required": ["repoName"] }
+        },
+        {
+          "name": "ask_question",
+          "description": "Ask a question about a GitHub repository and get an answer grounded in its generated documentation.",
+          "input_schema": { "type": "object", "properties": { "repoName": { "type": "string" }, "question": { "type": "string" } }, "required": ["repoName", "question"] }
+        }
+      ]
+    },
+    {
+      "server": "fetch",
+      "source": "Paraphrased fixture of the reference fetch MCP server. Replace with that server's live tools/list output before a published run.",
+      "tools": [
+        {
+          "name": "fetch",
+          "description": "Fetch a URL from the internet and return its contents as markdown.",
+          "input_schema": { "type": "object", "properties": { "url": { "type": "string" }, "max_length": { "type": "number" } }, "required": ["url"] }
+        }
+      ]
+    }
+  ]
+}

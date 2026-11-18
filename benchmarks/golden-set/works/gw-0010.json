@@ -1,0 +1,99 @@
+{
+  "id": "gw-0010",
+  "artifactType": "context_file",
+  "title": "Brambleway CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Brambleway is a job scheduling service written in Go 1.22. Build the binary with make build, which writes it to bin/brambleway. Start a local stack with make dev, which runs the service alongside a Postgres 16 container on port 5433 so it does not clash with a system Postgres on 5432. Database migrations live in db/migrations and run with make migrate. Never edit a migration that has already merged to main; add a new one instead."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "All public functions in the scheduler package need doc comments. Log with the structured slog package, not fmt.Println, and include a job_id field on every log line that concerns a job. Unit tests sit next to the code they test in files ending in _test.go and run with make test. Integration tests need Docker and run with make itest. Retries use exponential backoff starting at 2 seconds, with a cap of five attempts before a job is marked failed."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Brambleway's local Postgres container listens on port 5432.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "In Brambleway, make build writes the binary to bin/brambleway.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Brambleway integration tests require Docker.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Brambleway marks a job failed after five attempts.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Brambleway log lines must use the slog package.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Brambleway exposes its HTTP API on port 8080.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

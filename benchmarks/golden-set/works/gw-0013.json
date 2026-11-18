@@ -1,0 +1,99 @@
+{
+  "id": "gw-0013",
+  "artifactType": "open_spec",
+  "title": "Offline mode for the Marrowbook mobile app",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: let Marrowbook mobile users read and edit their recipe collections without a network connection. The app will keep a local copy of every recipe the user has opened in the last 30 days, stored in an encrypted on-device database. Edits made offline are queued and sent to the server when the connection returns. Photos are not cached in this phase because of storage limits on older phones; recipes show a placeholder image while offline."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Requirement: when an offline edit conflicts with a newer server version, the app must keep both versions and ask the user which to keep. Scenario: sync after reconnect. Given a user edited three recipes offline, when the device reconnects, then all three edits upload in the order they were made. Scenario: offline banner. Given the device has no connection, when the user opens the app, then a grey banner reading Offline appears at the top of the screen."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Marrowbook keeps a local copy of every recipe opened in the last 30 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Marrowbook uploads offline edits in the order they were made.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "When a Marrowbook offline edit conflicts with a newer server version, the app keeps both versions.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Marrowbook caches recipe photos for offline viewing.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Marrowbook offline banner is grey.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Marrowbook offline mode will ship in the next app release.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0028",
+  "artifactType": "open_spec",
+  "title": "Lumenvale offline draft sync",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: offline drafts in the Lumenvale notes app. Users who lose connection while editing currently see their changes discarded on reload. This change stores unsent edits in a local queue on the device. Each queued edit records the note id, a base revision number, and the new content. When the device reconnects, the client replays the queue in the order the edits were made. The queue holds at most 500 edits; beyond that, the app blocks further edits and shows a banner telling the user to reconnect."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Conflict handling. Scenario: server revision moved ahead. Given a queued edit whose base revision is lower than the server revision, when the client replays it, then the server rejects it with status 412 and the client keeps both versions, saving the local one as a copy titled with the suffix (offline copy). Scenario: note deleted on the server. Given a queued edit for a note that was deleted elsewhere, when the client replays it, then the edit is dropped and the user sees a notice."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Lumenvale client replays queued edits in reverse order of when they were made.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Each queued Lumenvale edit records a base revision number.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Lumenvale offline queue holds at most 1000 edits.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The server rejects an outdated queued edit with status 412.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "On a conflict, the local version is saved as a copy with the suffix (offline copy).",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A queued edit for a note deleted on the server is dropped.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

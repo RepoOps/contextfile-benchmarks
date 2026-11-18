@@ -1,0 +1,19 @@
+{
+  "id": "ut-0004",
+  "title": "Mount the root component",
+  "library": "react-dom",
+  "version": "18.3.1",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "prompt": "Using React 18.3.1 and react-dom 18.3.1, write the code that mounts the `<App />` component into the DOM element with id `root`.",
+  "checks": {
+    "mustMatch": [
+      "createRoot\\("
+    ],
+    "mustNotMatch": [
+      "ReactDOM\\.render\\(",
+      "(?<![A-Za-z.])render\\(\\s*<App"
+    ]
+  },
+  "evidence": []
+}

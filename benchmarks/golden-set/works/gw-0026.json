@@ -1,0 +1,99 @@
+{
+  "id": "gw-0026",
+  "artifactType": "context_file",
+  "title": "Halvorsnip CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Halvorsnip. Halvorsnip is a batch pipeline that cleans weather station CSV files and loads them into Parquet. It targets Python 3.12 and manages dependencies with uv. Set up the environment with `uv sync`, then run checks with `uv run pytest -q` and `uv run ruff check .`. The pipeline entry point is `halvorsnip/cli.py`, invoked as `uv run halvorsnip ingest <path>`. Test data lives in `tests/data/` and must stay under 5 MB in total."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for changes. Type hints are required on every function, and mypy runs in strict mode in CI. The project does not use pandas; all dataframe work uses polars. Station identifiers are strings, never integers, because some carry leading zeros. Any change to the output schema needs a bump of `SCHEMA_VERSION` in `halvorsnip/schema.py` and a note in `docs/schema-changes.md`. Network calls are not allowed during tests."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Halvorsnip targets Python 3.12.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Halvorsnip test data must stay under 10 MB in total.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Halvorsnip uses polars for dataframe work.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Halvorsnip uploads its Parquet output to cloud storage.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Halvorsnip station identifiers are stored as integers.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Halvorsnip pipeline is invoked as uv run halvorsnip ingest <path>.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

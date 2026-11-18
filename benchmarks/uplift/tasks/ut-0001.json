@@ -1,0 +1,18 @@
+{
+  "id": "ut-0001",
+  "title": "Append a row to a DataFrame",
+  "library": "pandas",
+  "version": "2.2.3",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "prompt": "Using pandas 2.2.3, `df` is a DataFrame with columns `name` and `qty`. Write the code that adds the row {\"name\": \"bolt\", \"qty\": 4} to `df` and keeps the result in `df`.",
+  "checks": {
+    "mustMatch": [
+      "(pd|pandas)\\.concat\\("
+    ],
+    "mustNotMatch": [
+      "df\\.append\\("
+    ]
+  },
+  "evidence": []
+}

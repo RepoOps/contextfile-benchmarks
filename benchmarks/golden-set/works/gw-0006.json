@@ -1,0 +1,99 @@
+{
+  "id": "gw-0006",
+  "artifactType": "brain_wiki",
+  "title": "Lake Baikal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Lake Baikal lies in southern Siberia, Russia, near the border with Mongolia. It is the deepest lake in the world, reaching a maximum depth of about 1,642 metres, and it holds roughly 20 percent of the unfrozen fresh surface water on Earth. That volume is greater than the combined water of all five of North America's Great Lakes. Baikal is also among the oldest lakes known, with an age estimated at 25 to 30 million years. It was listed as a UNESCO World Heritage Site in 1996."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Baikal's long isolation has produced a remarkable range of life, and most of its animal species are found nowhere else. The best known is the Baikal seal, or nerpa, one of the few seals that lives only in fresh water. Scientists still debate how the seals first reached the lake, which lies far from any ocean. Another native animal is the golomyanka, a translucent fish with no scales whose body is about one third oil. More than 300 rivers and streams flow into Baikal, but only one, the Angara, flows out."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lake Baikal's only outflowing river is the Angara.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lake Baikal was listed as a UNESCO World Heritage Site in 1997.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Baikal seal lives only in fresh water.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Lake Baikal holds more water than all five Great Lakes combined.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The golomyanka is a fish with no scales.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lake Baikal freezes over every winter.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

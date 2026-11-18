@@ -1,0 +1,14 @@
+ContextFile benchmarks
+
+The harness code in this repository is licensed under the Apache License, Version 2.0
+(see LICENSE).
+
+The golden set (benchmarks/golden-set/works/) and the uplift tasks ut-0001 to ut-0006
+(benchmarks/uplift/tasks/) were written for these benchmarks and are released under
+CC0-1.0, as each file's license field says.
+
+The uplift tasks ut-0007 to ut-0014 are derived from GitChameleon 2.0
+(https://github.com/mrcabbage972/GitChameleonBenchmark, commit
+3a1b6045a6b2a276bd24d715589cb041f8eccb93, dataset/dataset.jsonl). That dataset is
+released under the MIT License; its copyright notice and license text are in that
+repository. Each derived task names its source example in its sourceUrl field.

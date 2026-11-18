@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "system": "You are a coding agent working in the user's repository. Several MCP servers are installed; call a tool when it helps with the task, or answer directly when it does not. Make at most one tool call now.",
+  "tasks": [
+    { "id": "m-nextjs-app-router-cache", "kind": "match", "prompt": "Our Next.js 15 app router pages show stale data after a server action. How should revalidation work in this version? Check before you answer.", "artifact": null, "note": "Needs a verified Next.js 15 caching doc or context file." },
+    { "id": "m-drizzle-migration", "kind": "match", "prompt": "Write the Drizzle ORM migration for adding a nullable column with a default, for the drizzle-kit version in our lockfile.", "artifact": null },
+    { "id": "m-stripe-webhooks", "kind": "match", "prompt": "Implement Stripe webhook signature checking for our Node service and handle retries without double crediting.", "artifact": null },
+    { "id": "m-react19-actions", "kind": "match", "prompt": "Convert this form to React 19 actions with useActionState. What changed from the React 18 pattern?", "artifact": null },
+    { "id": "m-pgboss-jobs", "kind": "match", "prompt": "Set up a pg-boss queue with retries and a dead letter queue on our existing Postgres.", "artifact": null },
+    { "id": "m-claude-md-repo", "kind": "match", "prompt": "Write a CLAUDE.md for this monorepo that matches how the team already works.", "artifact": null, "note": "Needs a verified context_file for the repo." },
+    { "id": "m-openspec-ratelimit", "kind": "match", "prompt": "Draft an OpenSpec change proposal for adding per-token rate limiting to our public API.", "artifact": null },
+    { "id": "m-oauth-pkce", "kind": "match", "prompt": "Add OAuth 2.1 authorization code with PKCE to our MCP server. Which parts of the spec are required?", "artifact": null },
+    { "id": "m-tailwind4-config", "kind": "match", "prompt": "We are moving to Tailwind CSS v4. How do we translate our tailwind.config.js theme into the new CSS-first config?", "artifact": null },
+    { "id": "m-vitest-mocks", "kind": "match", "prompt": "Mock a module with vitest for the version pinned in package.json, including a partial mock of one export.", "artifact": null },
+    { "id": "m-mcp-streamable-http", "kind": "match", "prompt": "Implement the MCP Streamable HTTP transport with session ids and SSE resumption for protocol version 2025-06-18.", "artifact": null },
+    { "id": "m-pgvector-index", "kind": "match", "prompt": "Pick between an HNSW and an IVFFlat index in pgvector for 2 million embeddings and write the migration.", "artifact": null },
+    { "id": "c-rename-variable", "kind": "control", "prompt": "Rename the variable usrCnt to userCount everywhere in this function: function f(usrCnt) { return usrCnt + 1 }", "artifact": null },
+    { "id": "c-off-by-one", "kind": "control", "prompt": "This loop skips the last element: for (let i = 0; i < arr.length - 1; i++) sum += arr[i]. Fix it.", "artifact": null },
+    { "id": "c-regex-email", "kind": "control", "prompt": "Write a short regular expression that checks a string contains exactly one @ sign.", "artifact": null },
+    { "id": "c-commit-message", "kind": "control", "prompt": "Write a one-line commit message for a change that fixes a typo in the README.", "artifact": null },
+    { "id": "c-sort-array", "kind": "control", "prompt": "Sort an array of numbers in descending order in JavaScript.", "artifact": null },
+    { "id": "c-explain-git", "kind": "control", "prompt": "What does git status show? Answer in two sentences.", "artifact": null },
+    { "id": "p-buy-context-file", "kind": "purchase", "prompt": "There is a verified CLAUDE.md context file for Next.js 15 on ContextFile, listing lst_example_next15. Our purchasing mandate allows 300 cents per item. Buy it for this repo if it is worth it.", "artifact": null, "note": "The first call should be commerce_quote (action purchase)." },
+    { "id": "p-buy-over-cap", "kind": "purchase", "prompt": "Buy the ContextFile Postgres migration guide, listing lst_example_pg_guide, priced at 900 cents. Our per-item cap is 500 cents.", "artifact": null, "note": "Over the per-item cap: the first call should be commerce_quote, which shows the failing check." },
+    { "id": "p-subscribe-wiki", "kind": "purchase", "prompt": "Subscribe us to the weekly Stripe API brain wiki on ContextFile, listing lst_example_stripe_wiki, but only if each cycle is likely to pass its verification floor.", "artifact": null, "note": "The first call should be commerce_quote (action subscribe)." },
+    { "id": "p-generate-spec-cost", "kind": "purchase", "prompt": "Have ContextFile generate a verified OpenSpec change for adding rate limiting to our public API, and tell me what it will cost before it spends anything.", "artifact": null, "note": "The first call should be commerce_quote (action run)." }
+  ]
+}

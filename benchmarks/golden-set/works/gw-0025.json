@@ -1,0 +1,99 @@
+{
+  "id": "gw-0025",
+  "artifactType": "doc",
+  "title": "The structure of DNA",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "In 1953, James Watson and Francis Crick proposed that DNA has the shape of a double helix, two strands wound around each other. Their model relied heavily on X-ray diffraction images produced by Rosalind Franklin and Raymond Gosling at King's College London. Watson, Crick, and Maurice Wilkins shared the Nobel Prize in Physiology or Medicine in 1962. Franklin had died in 1958, and the prize is not awarded after death."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Each strand of DNA is a chain of nucleotides, and each nucleotide carries one of four bases: adenine, thymine, guanine, or cytosine. The two strands are held together by hydrogen bonds between paired bases. Adenine pairs with thymine, and guanine pairs with cytosine. Because the pairing rules are fixed, the sequence on one strand determines the sequence on the other, which lets a cell copy its DNA before it divides."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "In DNA, guanine pairs with cytosine.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Watson and Crick proposed the double helix model of DNA in 1953.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Adenine pairs with thymine in DNA.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Watson, Crick, and Wilkins shared the Nobel Prize in 1963.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Rosalind Franklin later studied the structure of viruses.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Rosalind Franklin died in 1958.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

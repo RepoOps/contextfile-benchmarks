@@ -1,0 +1,26 @@
+{
+  "name": "contextfile-benchmarks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ContextFile's golden set, uplift scorecard and tool selection evals, with the harness code to verify and rerun them.",
+  "license": "Apache-2.0",
+  "homepage": "https://contextfile.ai/benchmarks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RepoOps/contextfile-benchmarks.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "verify": "node --experimental-strip-types verify.ts",
+    "golden": "node --experimental-strip-types packages/core/src/golden-cli.ts",
+    "uplift": "node --experimental-strip-types packages/core/src/uplift-cli.ts",
+    "selection": "node --experimental-strip-types packages/mcp/src/selection-eval-cli.ts",
+    "session-start": "node --experimental-strip-types packages/mcp/src/session-start-eval-cli.ts"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  }
+}

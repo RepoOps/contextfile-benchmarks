@@ -1,0 +1,13 @@
+{
+  "note": "The first GitChameleon 2.0 subset (owner decision 2026-11-09). Each pick names a dataset example_id and the pattern checks a person wrote for it; the dataset's own unit tests are not run. Regenerate the task files with: node --experimental-strip-types packages/core/src/uplift-cli.ts import-gitchameleon <dataset.jsonl>, then manifest --write.",
+  "picks": [
+    { "exampleId": "12", "id": "ut-0007", "checks": { "mustMatch": ["special\\.log_ndtr\\("], "mustNotMatch": [] } },
+    { "exampleId": "23", "id": "ut-0008", "checks": { "mustMatch": ["points_from_xy\\("], "mustNotMatch": ["GeoSeries\\.from_xy\\("] } },
+    { "exampleId": "51", "id": "ut-0009", "checks": { "mustMatch": ["metrics\\.get_scorer_names\\("], "mustNotMatch": ["metrics\\.SCORERS\\b"] } },
+    { "exampleId": "69", "id": "ut-0010", "checks": { "mustMatch": ["\\b(np|numpy)\\.common_type\\("], "mustNotMatch": ["\\b(np|numpy)\\.find_common_type\\("] } },
+    { "exampleId": "71", "id": "ut-0011", "checks": { "mustMatch": ["\\b(np|numpy)\\.(round|around)\\("], "mustNotMatch": ["\\b(np|numpy)\\.round_\\("] } },
+    { "exampleId": "72", "id": "ut-0012", "checks": { "mustMatch": ["\\b(np|numpy)\\.prod\\(|\\.prod\\(\\)"], "mustNotMatch": ["\\b(np|numpy)\\.product\\("] } },
+    { "exampleId": "74", "id": "ut-0013", "checks": { "mustMatch": ["\\b(np|numpy)\\.any\\(|\\.any\\(\\)"], "mustNotMatch": ["\\b(np|numpy)\\.sometrue\\("] } },
+    { "exampleId": "110", "id": "ut-0014", "checks": { "mustMatch": ["\\bminkowski\\("], "mustNotMatch": ["\\bdistance\\.wminkowski\\("] } }
+  ]
+}

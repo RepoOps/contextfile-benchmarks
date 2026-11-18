@@ -1,0 +1,19 @@
+{
+  "id": "ut-0013",
+  "title": "GitChameleon 74: sometrue in numpy 1.25.0",
+  "library": "numpy",
+  "version": "1.25.0",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=74",
+  "prompt": "Using numpy 1.25.0 on Python 3.10: Write a function that checks if any elements in an array are true.\n\nComplete this code:\n\nimport numpy as np\n\ndef custom_sometrue(arr:np.ndarray) -> np.ndarray:\n    return",
+  "checks": {
+    "mustMatch": [
+      "\\b(np|numpy)\\.any\\(|\\.any\\(\\)"
+    ],
+    "mustNotMatch": [
+      "\\b(np|numpy)\\.sometrue\\("
+    ]
+  },
+  "evidence": []
+}

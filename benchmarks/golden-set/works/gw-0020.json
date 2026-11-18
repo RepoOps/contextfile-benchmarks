@@ -1,0 +1,99 @@
+{
+  "id": "gw-0020",
+  "artifactType": "oci_image",
+  "title": "brindlecache container image",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# brindlecache image. This image packages Brindlecache, a small HTTP caching proxy written in Go. It builds on `gcr.io/distroless/static-debian12` and runs as the non-root user with UID 65532. The proxy listens on port 8080 for client traffic and exposes Prometheus metrics on port 9090. The entrypoint is `/usr/local/bin/brindlecache serve`, and any extra arguments passed to `docker run` are appended to it. The image contains no shell, so debugging requires the separate `-debug` tag."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Configuration. Set `BRINDLE_UPSTREAM` to the origin URL the proxy should forward misses to; the container exits with code 2 if it is missing. `BRINDLE_CACHE_SIZE_MB` controls the in-memory cache and defaults to 256. `BRINDLE_TTL_SECONDS` sets how long entries live and defaults to 300. Mount a volume at `/var/cache/brindle` and set `BRINDLE_DISK=1` to spill entries to disk when memory fills. Logs go to standard output in JSON format, one object per line."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The brindlecache image runs as the user with UID 65532.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The brindlecache proxy listens on port 9090 for client traffic.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "BRINDLE_CACHE_SIZE_MB defaults to 256.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "BRINDLE_TTL_SECONDS defaults to 600.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The brindlecache image is published for both amd64 and arm64.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The brindlecache container exits with code 2 if BRINDLE_UPSTREAM is missing.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "note": "maxTurns and maxTokens are Example values until the operator confirms them. models is empty until the operator picks the models to score.",
+  "models": [],
+  "mcpUrl": "https://mcp.contextfile.ai/mcp",
+  "tools": [
+    "search_artifacts",
+    "get_artifact",
+    "get_verification_report",
+    "ask_wiki"
+  ],
+  "maxTurns": 6,
+  "maxTokens": 1500
+}

@@ -1,0 +1,77 @@
+{
+  "id": "contextfile-uplift",
+  "version": "0.2.0",
+  "tasks": [
+    {
+      "id": "ut-0001",
+      "file": "tasks/ut-0001.json",
+      "digest": "sha256:ca7fd63ed66875df368f5561bc5b2306110697fd636208cbff1c90a094b26dce"
+    },
+    {
+      "id": "ut-0002",
+      "file": "tasks/ut-0002.json",
+      "digest": "sha256:412a103f9b9b1811da586d082b40dd87511c323e28d1339e72082bc2c02ec365"
+    },
+    {
+      "id": "ut-0003",
+      "file": "tasks/ut-0003.json",
+      "digest": "sha256:d7c5728853a76bca1307ba6b48a3357626c6842a57dbe2b0dd78be6da4aeb5a8"
+    },
+    {
+      "id": "ut-0004",
+      "file": "tasks/ut-0004.json",
+      "digest": "sha256:4a252dba583c3790f42a1c35936d3e9d58ba9057fef30ee3b2eb2c69cbe4f918"
+    },
+    {
+      "id": "ut-0005",
+      "file": "tasks/ut-0005.json",
+      "digest": "sha256:87868d4f50ba3ef0e66afc7a657f30990b62297aa74c0f30d50a6664a7a92fb5"
+    },
+    {
+      "id": "ut-0006",
+      "file": "tasks/ut-0006.json",
+      "digest": "sha256:25fe9c7ae48c6daedaaa3920292a97dcba6815a8cd05baddf23fb461a8af5506"
+    },
+    {
+      "id": "ut-0007",
+      "file": "tasks/ut-0007.json",
+      "digest": "sha256:091ab89624fe538d30f01365f963487ae81f9dce7ac3354fc175ec2d53d52c4b"
+    },
+    {
+      "id": "ut-0008",
+      "file": "tasks/ut-0008.json",
+      "digest": "sha256:b04dc903566277fe862c91e06f3573107a1d2abfc00c60f8927fc643dfbee755"
+    },
+    {
+      "id": "ut-0009",
+      "file": "tasks/ut-0009.json",
+      "digest": "sha256:2110e628a187d76c0ea23ddc0127c589a404c8d2c08622e1e72d7fee80d382ca"
+    },
+    {
+      "id": "ut-0010",
+      "file": "tasks/ut-0010.json",
+      "digest": "sha256:50d24bb49d13d8fb50e83f0a80f2be81017521245bb61290fa2f45423ea26322"
+    },
+    {
+      "id": "ut-0011",
+      "file": "tasks/ut-0011.json",
+      "digest": "sha256:662c7bf8906c69c582975d8695aece496efac88411dbcae7740d65dff65afb67"
+    },
+    {
+      "id": "ut-0012",
+      "file": "tasks/ut-0012.json",
+      "digest": "sha256:a581f08243b00986346348e499fbaeceb89aaeaf51bc8b80a392c1548b7e8b43"
+    },
+    {
+      "id": "ut-0013",
+      "file": "tasks/ut-0013.json",
+      "digest": "sha256:bf85ff0556fb52923b65ff8d6b14add4a19727225abf4047252afbee8962e5fd"
+    },
+    {
+      "id": "ut-0014",
+      "file": "tasks/ut-0014.json",
+      "digest": "sha256:556faacfaf81dd791262d4903753818ae834e5822205b93df34c9a7abb73c6fd"
+    }
+  ],
+  "setDigest": "sha256:2c78ae2f30a83a79c790accb2f934ab6d66a33e19b680318055881c5791f9bb9"
+}

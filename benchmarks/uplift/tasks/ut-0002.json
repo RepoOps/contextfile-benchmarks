@@ -1,0 +1,18 @@
+{
+  "id": "ut-0002",
+  "title": "Turn a model into a dict",
+  "library": "pydantic",
+  "version": "2.7.4",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "prompt": "Using pydantic 2.7.4, `user` is an instance of a `BaseModel` subclass. Write the code that turns `user` into a plain Python dict named `data`.",
+  "checks": {
+    "mustMatch": [
+      "\\.model_dump\\("
+    ],
+    "mustNotMatch": [
+      "user\\.dict\\("
+    ]
+  },
+  "evidence": []
+}

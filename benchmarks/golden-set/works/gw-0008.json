@@ -1,0 +1,99 @@
+{
+  "id": "gw-0008",
+  "artifactType": "brain_wiki",
+  "title": "Blue Whale",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The blue whale is the largest animal known to have ever lived. Adults commonly reach 25 to 30 metres in length and can weigh more than 150 tonnes. Its heart alone is about the size of a small car. Blue whales are baleen whales: instead of teeth they have plates of baleen that hang from the upper jaw and act like a sieve. A feeding whale takes in a huge mouthful of water and pushes it out through the baleen, trapping the food inside."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The main food of the blue whale is krill, small shrimp-like animals that gather in dense swarms. During the feeding season an adult may eat around 4 tonnes of krill a day. Blue whales produce some of the loudest sounds of any animal, low-pitched calls that can travel hundreds of kilometres underwater. Whaling in the twentieth century reduced their numbers by more than 90 percent. Commercial hunting of blue whales was banned in 1966, and some populations have slowly recovered since then."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Blue whale calls can travel hundreds of kilometres underwater.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Blue whales have plates of baleen instead of teeth.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The main food of the blue whale is krill.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Commercial hunting of blue whales was banned in 1966.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Blue whales migrate to warm tropical waters to give birth.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "An adult blue whale may eat around 40 tonnes of krill a day.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

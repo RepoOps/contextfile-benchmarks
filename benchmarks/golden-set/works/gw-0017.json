@@ -1,0 +1,99 @@
+{
+  "id": "gw-0017",
+  "artifactType": "context_file",
+  "title": "Quillmoss agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# Quillmoss agent notes. Quillmoss is a command line tool that indexes local Markdown notes into a searchable SQLite file. The project uses Rust 1.79 with Cargo workspaces. Run `cargo build` at the workspace root to build every crate, and run the test suite with `cargo test`. The integration tests in `crates/qm-index/tests` need the `QM_FIXTURES` environment variable pointing to the `fixtures/` directory. Never edit files under `fixtures/golden/` by hand; regenerate them with `cargo run -p qm-tools regen-golden`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Conventions. All public functions carry a doc comment that starts with a verb. Error types live in `crates/qm-core/src/error.rs` and use the thiserror crate; library code does not return boxed errors. Log through the tracing crate at debug level or lower inside loops. Commit messages follow the pattern `area: summary` with a lowercase area such as `index` or `cli`. Pull requests must stay under 400 changed lines unless a maintainer approves a larger one in the issue first. Format with `cargo fmt` before every commit."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Quillmoss stores its search index in a SQLite file.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Quillmoss error types use the thiserror crate.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Quillmoss integration tests require the QM_FIXTURES environment variable.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Quillmoss pull requests may contain up to 500 changed lines without maintainer approval.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Quillmoss supports exporting notes to HTML.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Quillmoss commit messages use the pattern area: summary.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

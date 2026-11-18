@@ -1,0 +1,99 @@
+{
+  "id": "gw-0014",
+  "artifactType": "oci_image",
+  "title": "skerrymq-broker image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The skerrymq-broker image packages the SkerryMQ message broker. It is built on debian:12-slim and runs as a non-root user named skerry with user ID 10001. The broker listens for client connections on port 7400 and serves a Prometheus metrics endpoint on port 9464. Mount a volume at /var/lib/skerrymq to keep queued messages across container restarts. The entrypoint is /usr/local/bin/skerrymq-broker, and it reads its settings from /etc/skerrymq/broker.toml by default."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Configure the broker through environment variables. SKERRY_CLUSTER_NAME sets the cluster name and defaults to local. SKERRY_MAX_CONNECTIONS limits concurrent client connections and defaults to 2048. Set SKERRY_TLS_CERT and SKERRY_TLS_KEY to file paths to turn on TLS; when both are unset, the broker accepts plain connections. The image includes a health check that calls the /healthz endpoint every 15 seconds and marks the container unhealthy after three failures."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The skerrymq-broker image serves Prometheus metrics on port 7400.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The skerrymq-broker image is built on debian:12-slim.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "SKERRY_MAX_CONNECTIONS defaults to 2048.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The skerrymq-broker image runs as user ID 10001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The skerrymq-broker health check runs every 15 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "SKERRY_CLUSTER_NAME defaults to default.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

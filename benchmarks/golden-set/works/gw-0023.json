@@ -1,0 +1,99 @@
+{
+  "id": "gw-0023",
+  "artifactType": "brain_wiki",
+  "title": "The Brooklyn Bridge",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Brooklyn Bridge spans the East River between Manhattan and Brooklyn in New York City. John Augustus Roebling designed it, but he died in 1869 from tetanus after an accident at the site, before construction began in earnest. His son Washington Roebling took over as chief engineer. When the bridge opened on 24 May 1883, its main span of about 486 meters made it the longest suspension bridge in the world at the time."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Building the bridge's towers required workers to dig inside caissons, huge wooden boxes sunk into the riverbed and filled with compressed air. Many men developed decompression sickness, then known as caisson disease, after returning to the surface too quickly. Washington Roebling himself was disabled by it and directed the remaining work from an apartment window. His wife, Emily Warren Roebling, learned the engineering details and carried his instructions to the site."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Brooklyn Bridge opened on 24 May 1883.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Emily Warren Roebling carried her husband's instructions to the construction site.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "John Augustus Roebling died in 1867.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Washington Roebling took over as chief engineer after his father's death.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The caissons of the Brooklyn Bridge were later removed from the riverbed.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Workers digging in the caissons developed decompression sickness.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

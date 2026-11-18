@@ -1,0 +1,99 @@
+{
+  "id": "gw-0009",
+  "artifactType": "context_file",
+  "title": "Quillfern AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Quillfern is a desktop note-taking app built with Tauri and a Svelte front end. Install dependencies with pnpm install, then start the development build with pnpm tauri dev. The Rust backend lives in src-tauri and the front end lives in app. Run the full test suite with pnpm test, which runs Vitest for the front end and cargo test for the backend. Node 20 is the minimum supported version. Do not add new npm dependencies without a note in docs/deps.md explaining why the package is needed."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Quillfern uses conventional commit messages, such as feat, fix, and chore prefixes. Branch names follow the pattern qf-<issue-number>-<short-slug>. Every pull request needs one approving review and a green CI run before merge, and maintainers squash merge by default. Format Rust code with cargo fmt and front-end code with Prettier; CI rejects unformatted code. Store user notes as plain Markdown files on disk, never in a database, so that users can open them in any editor."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Quillfern Rust backend lives in the src-tauri directory.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Quillfern requires Node 18 or later.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Quillfern maintainers squash merge pull requests by default.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Quillfern branch names follow the pattern qf-<issue-number>-<short-slug>.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In Quillfern, pnpm test runs Vitest for the front end and cargo test for the backend.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Quillfern stores user notes in a SQLite database.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

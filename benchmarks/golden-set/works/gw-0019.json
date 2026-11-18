@@ -1,0 +1,99 @@
+{
+  "id": "gw-0019",
+  "artifactType": "open_spec",
+  "title": "Tallyfern export API rate limit headers",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: Tallyfern export API rate limit headers. Today clients of the `/v2/exports` endpoint learn that they hit the rate limit only when they receive an HTTP 429 response. This change adds three response headers to every export request: `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`. The limit stays at 120 requests per minute per API key. The reset header carries the number of seconds until the window refills, not a timestamp. The change ships behind the flag `exports.ratelimit_headers` and is enabled for all tenants after two weeks."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scenario: client exceeds the limit. Given an API key that has made 120 export requests in the current minute, when it sends another request, then the server responds with status 429, the `X-RateLimit-Remaining` header equals 0, and the response includes a `Retry-After` header with the same value as `X-RateLimit-Reset`. Scenario: headers absent when the flag is off. Given the flag is disabled for a tenant, when that tenant calls the endpoint, then none of the new headers appear and behavior matches the current release."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "When the Tallyfern export rate limit is exceeded, the response includes a Retry-After header.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Tallyfern export rate limit is 120 requests per minute per API key.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The X-RateLimit-Reset header carries a Unix timestamp.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The rate limit header change ships behind the flag exports.ratelimit_headers.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The proposal also raises the export rate limit for enterprise tenants.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "When the flag is disabled for a tenant, none of the new headers appear.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

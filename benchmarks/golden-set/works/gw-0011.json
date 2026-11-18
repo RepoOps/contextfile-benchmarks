@@ -1,0 +1,99 @@
+{
+  "id": "gw-0011",
+  "artifactType": "context_file",
+  "title": "Lanternwick AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Lanternwick is a Python library for building data pipelines. It supports Python 3.11 and 3.12. Set up a development environment with uv sync, then run tests with uv run pytest. Type checking uses mypy in strict mode, and linting uses ruff; both run in CI and must pass. The public API is whatever is exported from lanternwick/__init__.py, and anything with a leading underscore is private and may change without notice."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Lanternwick follows semantic versioning. Any change that removes or renames a public function needs a deprecation warning for at least two minor releases before removal. Record user-facing changes in a new file under changes/ named after the pull request number. Docs are built with MkDocs and published from the docs branch. Keep test fixtures smaller than 1 megabyte; larger sample data belongs in the separate lanternwick-data repository."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lanternwick type checks with mypy in strict mode.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Removing a public Lanternwick function requires a deprecation warning for at least one minor release.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lanternwick docs are built with MkDocs.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Lanternwick follows semantic versioning.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Names with a leading underscore in Lanternwick are private.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lanternwick supports Python 3.10.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

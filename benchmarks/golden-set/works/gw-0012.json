@@ -1,0 +1,99 @@
+{
+  "id": "gw-0012",
+  "artifactType": "open_spec",
+  "title": "Rate limiting for the Tidemarsh upload API",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: add per-account rate limiting to the Tidemarsh upload API. Today a single account can send unlimited upload requests, and one misconfigured client recently filled the ingest queue for an entire afternoon. The change adds a token bucket for each account that allows 60 upload requests per minute, with bursts of up to 10 extra requests. Limits apply only to the POST /v2/uploads endpoint. Read endpoints are out of scope for this change and keep their current behavior."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scenario: account exceeds the limit. Given an account has used all of its tokens, when it sends another upload request, then the API returns status 429 with a Retry-After header giving the number of seconds until a token is free. Scenario: limit resets. Given an account was rate limited, when enough time passes for its bucket to refill, then the next upload request succeeds with status 201. Requirement: every rejected request is counted in the uploads_rate_limited_total metric, labeled by account tier."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Tidemarsh token bucket allows 60 upload requests per minute per account.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A rate-limited Tidemarsh upload request receives status 429.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Tidemarsh rate limits apply to the GET /v2/uploads endpoint.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Rejected Tidemarsh upload requests are counted in the uploads_rate_limited_total metric.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "A Tidemarsh upload that succeeds after the bucket refills returns status 200.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Tidemarsh read endpoints keep their current behavior under this change.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

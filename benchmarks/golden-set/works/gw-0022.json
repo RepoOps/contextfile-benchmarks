@@ -1,0 +1,99 @@
+{
+  "id": "gw-0022",
+  "artifactType": "context_file",
+  "title": "Pondrake AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Pondrake. Pondrake is an internal dashboard for tracking greenhouse sensor readings, built with Vite and TypeScript on Node 20. Install dependencies with `pnpm install` and commit no lockfile changes unless a dependency was added. Start the dev server with `pnpm dev`, which serves the app on port 5173. Run unit tests with `pnpm test` and end to end tests with `pnpm e2e`; the end to end suite needs a running dev server. The production bundle is built with `pnpm build` and written to `dist/`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Style rules. Components live in `src/components` and use one file per component, named in PascalCase. State shared across pages goes in Zustand stores under `src/stores`; the project does not use Redux. Dates are stored as UTC ISO strings and converted to local time only at render. Every new chart needs a matching Storybook story. Keep sensor names out of URLs because some contain slashes; pass the numeric sensor id instead."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Pondrake runs on Node 18.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Pondrake dev server serves the app on port 5173.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Pondrake keeps shared state in Zustand stores.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Dates in Pondrake are stored as UTC ISO strings.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Every new chart in Pondrake needs a matching Storybook story.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Pondrake production bundle is written to the build/ directory.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

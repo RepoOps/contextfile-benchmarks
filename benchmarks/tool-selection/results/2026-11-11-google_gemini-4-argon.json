@@ -1,0 +1,115 @@
+{
+  "digest": "sha256:f20e4812082221196860b73994657d5986a07634fc436ad101e059f83acf0d24",
+  "body": {
+    "kind": "contextfile.tool-selection/v1",
+    "harnessVersion": "selection-eval/1",
+    "model": "google/gemini-4-argon",
+    "ranAt": "2026-11-11T17:05:22.476Z",
+    "tasksDigest": "sha256:4057f0ba55cfa9f5a9d7c4edbf5a09bda8ebcff88c7d8493420c3fcfb75301c6",
+    "competitorsDigest": "sha256:3fe08544969470fd6cc3ab287d23881ce1de273fc1000641fa414d11278f8dad",
+    "competitors": [
+      "context7",
+      "deepwiki",
+      "fetch"
+    ],
+    "skipped": 12,
+    "metrics": {
+      "matchTasks": 0,
+      "matchCalls": 0,
+      "callRate": null,
+      "controlTasks": 6,
+      "controlCalls": 0,
+      "falseCallRate": 0,
+      "contextfileCalls": 4,
+      "validArgs": 4,
+      "validArgsRate": 1,
+      "errors": 0,
+      "taskAccuracy": null,
+      "purchaseTasks": 4,
+      "quoteFirstCalls": 4,
+      "quoteFirstRate": 1
+    },
+    "outcomes": [
+      {
+        "task": "c-rename-variable",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "c-off-by-one",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "c-regex-email",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "c-commit-message",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "c-sort-array",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "c-explain-git",
+        "kind": "control",
+        "called": null,
+        "arguments": null
+      },
+      {
+        "task": "p-buy-context-file",
+        "kind": "purchase",
+        "called": "contextfile__commerce_quote",
+        "arguments": {
+          "listing_id": "lst_example_next15",
+          "max_price_cents": 300,
+          "action": "purchase",
+          "formats": [
+            "md"
+          ]
+        }
+      },
+      {
+        "task": "p-buy-over-cap",
+        "kind": "purchase",
+        "called": "contextfile__commerce_quote",
+        "arguments": {
+          "formats": [
+            "md"
+          ],
+          "action": "purchase",
+          "listing_id": "lst_example_pg_guide",
+          "max_price_cents": 900
+        }
+      },
+      {
+        "task": "p-subscribe-wiki",
+        "kind": "purchase",
+        "called": "contextfile__commerce_quote",
+        "arguments": {
+          "listing_id": "lst_example_stripe_wiki",
+          "action": "subscribe"
+        }
+      },
+      {
+        "task": "p-generate-spec-cost",
+        "kind": "purchase",
+        "called": "contextfile__commerce_quote",
+        "arguments": {
+          "artifact_type": "open_spec",
+          "action": "run"
+        }
+      }
+    ]
+  }
+}

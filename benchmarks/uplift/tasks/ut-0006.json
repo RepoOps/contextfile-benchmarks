@@ -1,0 +1,19 @@
+{
+  "id": "ut-0006",
+  "title": "Use the float dtype alias",
+  "library": "numpy",
+  "version": "2.1.3",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "prompt": "Using numpy 2.1.3, write the code that creates an array of five zeros whose dtype is given with the numpy 64-bit float scalar type (not a string).",
+  "checks": {
+    "mustMatch": [
+      "np\\.float64|numpy\\.float64"
+    ],
+    "mustNotMatch": [
+      "np\\.float_\\b",
+      "numpy\\.float_\\b"
+    ]
+  },
+  "evidence": []
+}

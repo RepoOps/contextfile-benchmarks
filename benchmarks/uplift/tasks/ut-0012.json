@@ -1,0 +1,19 @@
+{
+  "id": "ut-0012",
+  "title": "GitChameleon 72: product in numpy 1.25.0",
+  "library": "numpy",
+  "version": "1.25.0",
+  "license": "MIT",
+  "provenance": "public",
+  "sourceUrl": "https://github.com/mrcabbage972/GitChameleonBenchmark/blob/3a1b6045a6b2a276bd24d715589cb041f8eccb93/dataset/dataset.jsonl#example_id=72",
+  "prompt": "Using numpy 1.25.0 on Python 3.10: Write a function that computes the product of an array.\n\nComplete this code:\n\nimport numpy as np\n\ndef custom_product(arr:np.ndarray) -> np.ndarray:\n    return",
+  "checks": {
+    "mustMatch": [
+      "\\b(np|numpy)\\.prod\\(|\\.prod\\(\\)"
+    ],
+    "mustNotMatch": [
+      "\\b(np|numpy)\\.product\\("
+    ]
+  },
+  "evidence": []
+}

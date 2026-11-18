@@ -1,0 +1,99 @@
+{
+  "id": "gw-0005",
+  "artifactType": "doc",
+  "title": "From Continental Drift to Plate Tectonics",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "In 1912 the German scientist Alfred Wegener proposed that the continents had once been joined in a single landmass, which he called Pangaea, and had slowly drifted apart. He pointed to the way the coastlines of South America and Africa fit together, to matching rock formations on both sides of the Atlantic, and to fossils of the same land reptiles found on continents now separated by ocean. Most geologists rejected his idea because he could not explain what force could move entire continents."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The missing mechanism emerged in the 1950s and 1960s from studies of the ocean floor. Scientists found that new crust forms at mid-ocean ridges, where molten rock rises and spreads outward, a process called seafloor spreading. Magnetic stripes in the rock on either side of the ridges form mirror-image patterns, recording reversals of Earth's magnetic field. These findings led to the theory of plate tectonics, which holds that Earth's outer shell is broken into large plates that move a few centimetres each year."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Wegener proposed continental drift in 1913.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Wegener called the single ancient landmass Pangaea.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "New crust forms at mid-ocean ridges.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Magnetic stripes on either side of mid-ocean ridges form mirror-image patterns.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Tectonic plates move a few centimetres each year.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Most geologists quickly accepted Wegener's idea.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

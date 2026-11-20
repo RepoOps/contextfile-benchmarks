@@ -1,0 +1,99 @@
+{
+  "id": "gw-0078",
+  "artifactType": "open_spec",
+  "title": "Duskwen serve-stale answers",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Change proposal DSK-19: serve stale answers in the Duskwen resolver. Today, when every upstream DNS server times out, Duskwen returns SERVFAIL even if it holds an expired copy of the record. In the upstream outage of 12 June, this turned a 6 minute provider problem into failed lookups for every internal service. The change lets Duskwen answer from an expired cache entry when all upstreams fail, following RFC 8767. Stale answers are sent with a TTL of 30 seconds."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "A record may be served stale for at most 1 day after it expires; after that Duskwen returns SERVFAIL as before. The feature is controlled by serve_stale in duskwen.conf, which defaults to false in version 4.3 and to true in version 4.4. Each stale answer increments duskwen_stale_answers_total. Duskwen keeps trying the upstreams in the background while serving stale data. This proposal does not change how negative answers such as NXDOMAIN are cached."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Duskwen sends stale answers with a TTL of 30 seconds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "serve_stale defaults to true in Duskwen 4.4.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Duskwen may serve a record stale for at most 7 days after it expires.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Duskwen keeps trying the upstreams in the background while serving stale data.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Duskwen serve-stale change follows RFC 8767.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Duskwen currently returns SERVFAIL when every upstream times out, even if it holds an expired copy of the record.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

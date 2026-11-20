@@ -1,0 +1,99 @@
+{
+  "id": "gw-0053",
+  "artifactType": "open_spec",
+  "title": "Altrevo synchronous replicas",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal AV-9: synchronous replicas for Altrevo. Motivation: Altrevo replicates writes asynchronously, so a primary failure can lose up to two seconds of committed data. Change: an operator can mark one replica as synchronous; the primary then waits for that replica to confirm each commit before replying to the client. The setting is sync_replica in altrevo.conf and accepts a replica name. Commit latency is expected to rise by about 3 milliseconds within one data center."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits: only one synchronous replica is allowed per primary in this version. If the synchronous replica stops responding for 5 seconds, the primary drops back to asynchronous mode and logs a warning, rather than blocking writes. Replicas in a different region are not allowed as synchronous replicas. Rollout: the feature ships in Altrevo 6.2 and is off by default. A later proposal will cover quorum commits across several replicas. Replication traffic uses port 5480."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Altrevo synchronous replica setting is sync_replica in altrevo.conf.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Altrevo allows up to two synchronous replicas per primary in this version.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "If the Altrevo synchronous replica stops responding, the primary blocks writes.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Synchronous replicas ship in Altrevo 6.2.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Altrevo commit latency is expected to rise by about 3 milliseconds within one data center.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Altrevo replicas in a different region cannot be synchronous replicas.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

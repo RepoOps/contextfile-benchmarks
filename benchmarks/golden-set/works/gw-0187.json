@@ -1,0 +1,99 @@
+{
+  "id": "gw-0187",
+  "artifactType": "brain_wiki",
+  "title": "Norman Borlaug and dwarf wheat",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Norman Borlaug and dwarf wheat. Norman Borlaug was an American plant scientist born in Iowa in 1914. From 1944 he worked in Mexico on a wheat program backed by the Rockefeller Foundation. To speed up breeding, he grew two generations a year at two sites with different climates, a method called shuttle breeding. His teams bred semi-dwarf wheat varieties that resisted stem rust and had short, strong stems that could carry heavy heads of grain without falling over."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In the mid-1960s, India and Pakistan imported Borlaug's wheat seed and planted it widely, and their wheat harvests rose sharply within a few years. This rise in yields from new seed, fertilizer and irrigation became known as the Green Revolution. Borlaug received the Nobel Peace Prize in 1970 for his work against hunger. The Mexican program grew into CIMMYT, the International Maize and Wheat Improvement Center, founded in 1966. Borlaug died in 2009."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Borlaug's method of growing two generations a year at two sites was called shuttle breeding.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Borlaug received the Nobel Peace Prize in 1975.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "CIMMYT was founded in 1966.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Norman Borlaug was born in Iowa.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Borlaug began working in Mexico in 1954.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Borlaug's semi-dwarf wheat varieties resisted stem rust.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

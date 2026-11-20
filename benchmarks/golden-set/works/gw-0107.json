@@ -1,0 +1,99 @@
+{
+  "id": "gw-0107",
+  "artifactType": "context_file",
+  "title": "Kordwyn agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Kordwyn. Kordwyn is a GraphQL gateway that stitches several REST services into one schema. It is written in Kotlin and builds with Gradle 8; run `./gradlew build` from the repo root. The schema source of truth is `schema/kordwyn.graphqls`; after editing it, run `./gradlew generateTypes` and commit the generated files in `src/generated/`. Local runs use `./gradlew run`, which serves on port 8088 with the playground at `/graphiql`. Integration tests start mock REST services with WireMock."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "API conventions. Field names use camelCase and type names use PascalCase. Never remove a field in one step: mark it `@deprecated` with a reason and keep it for at least two minor releases. Lists that can exceed 100 items must use cursor pagination with `first` and `after` arguments, and `first` caps at 250. Every resolver that calls a REST service must set a timeout, 2 seconds by default. Errors return a `code` extension such as `NOT_FOUND` or `FORBIDDEN`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Kordwyn builds with Gradle 8.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "In Kordwyn, the first argument for cursor pagination caps at 500.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Kordwyn resolvers that call a REST service default to a 2 second timeout.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A deprecated Kordwyn field must be kept for at least two minor releases.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kordwyn's local server listens on port 8080.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "After editing schema/kordwyn.graphqls, Kordwyn contributors run ./gradlew generateTypes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

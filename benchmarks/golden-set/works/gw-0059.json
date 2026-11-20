@@ -1,0 +1,99 @@
+{
+  "id": "gw-0059",
+  "artifactType": "doc",
+  "title": "The human heart",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The human heart is a muscular organ about the size of a closed fist, lying in the chest between the lungs. It has four chambers: two upper atria and two lower ventricles. The right side pumps blood to the lungs to pick up oxygen, and the left side pumps oxygen-rich blood to the rest of the body. The left ventricle has the thickest wall because it pumps against the highest pressure. Four valves keep blood flowing in one direction."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Each heartbeat starts in the sinoatrial node, a small group of cells in the wall of the right atrium that acts as a natural pacemaker. At rest, an adult heart usually beats 60 to 100 times a minute. Blood leaves the left ventricle through the aorta, the largest artery in the body. The heart muscle gets its own blood supply through the coronary arteries. In 1967 Christiaan Barnard performed the first human-to-human heart transplant in Cape Town."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The human heart has four chambers.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The sinoatrial node lies in the wall of the left atrium.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The right side of the heart pumps blood to the lungs.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Christiaan Barnard performed the first human-to-human heart transplant in 1967.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The right ventricle has the thickest wall of the heart's four chambers.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The aorta is the largest artery in the body.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

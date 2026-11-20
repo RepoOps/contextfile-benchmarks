@@ -1,0 +1,99 @@
+{
+  "id": "gw-0045",
+  "artifactType": "context_file",
+  "title": "Ambrelt CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "CLAUDE.md for Ambrelt. Ambrelt is a schema migration tool for PostgreSQL, written in Rust. Build with cargo build and the release flag. Run tests with cargo test; the database tests need a local PostgreSQL 16 server on port 5433, started with docker compose up -d db. Migrations used in tests live in tests/fixtures/migrations. The CLI entry point is src/main.rs, and the planner that orders migrations is in src/planner/. The minimum supported Rust version is 1.78."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules: never change a migration file after it has been released; add a new one instead. Migration file names start with a UTC timestamp in the form YYYYMMDDHHMMSS. Every public function needs a doc comment. Run cargo fmt and cargo clippy before committing; CI rejects any clippy warning. Do not add a new crate dependency without opening an issue first. The lock timeout for migrations defaults to 5 seconds. Keep commit messages under 72 characters per line."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Ambrelt database tests need PostgreSQL 16 on port 5432.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Ambrelt migration file names start with a UTC timestamp.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Ambrelt migration planner is in src/planner/.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Ambrelt CI rejects any clippy warning.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Ambrelt migration lock timeout defaults to 30 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Ambrelt is written in Rust.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0035",
+  "artifactType": "doc",
+  "title": "The Danube",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Danube is the second longest river in Europe after the Volga, at about 2,850 kilometres. It rises in the Black Forest of Germany, where two small streams, the Brigach and the Breg, join at Donaueschingen. From there it flows generally east and southeast and ends in a wide delta on the Black Sea coast of Romania and Ukraine. The Danube passes through or along the borders of ten countries, more than any other river in the world."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Four national capitals stand on the Danube: Vienna, Bratislava, Budapest and Belgrade. In Budapest the river divides the hilly Buda side from the flat Pest side. Between Serbia and Romania the river cuts through a long gorge known as the Iron Gates, where two large dams produce hydroelectric power. Since 1992 the Main-Danube Canal in Germany has linked the river to the Rhine, allowing barges to travel from the North Sea to the Black Sea."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Danube ends in a delta on the Black Sea.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Bratislava is a national capital on the Danube.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Danube rises in the Alps of Austria.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Main-Danube Canal opened in 1972.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Iron Gates gorge lies between Serbia and Romania.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Brigach and the Breg join at Donaueschingen.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

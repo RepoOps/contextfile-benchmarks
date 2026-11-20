@@ -1,0 +1,99 @@
+{
+  "id": "gw-0038",
+  "artifactType": "brain_wiki",
+  "title": "Iceland",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Iceland is an island country in the North Atlantic Ocean, and its mainland lies just south of the Arctic Circle. Its capital, Reykjavik, is the northernmost capital of a sovereign state, and about two thirds of the population live in or near it. The island sits on the Mid-Atlantic Ridge, where the North American and Eurasian plates move apart, so volcanoes and hot springs are common. Geothermal energy heats about nine in ten homes."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Iceland's parliament, the Althing, was founded in 930 and is one of the oldest parliaments in the world. The country became fully independent from Denmark in 1944, when it declared itself a republic. Iceland has no standing army, though it was a founding member of NATO in 1949. Its largest glacier, Vatnajokull, covers about 8 percent of the country. The currency is the Icelandic krona. Iceland joined the European Economic Area in 1994 but is not a member of the European Union."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Iceland became a republic in 1944.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Reykjavik is the northernmost capital of a sovereign state.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Iceland's currency is the Icelandic krona.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Althing was founded in 1030.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Geothermal energy heats about nine in ten homes in Iceland.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Iceland has no standing army.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

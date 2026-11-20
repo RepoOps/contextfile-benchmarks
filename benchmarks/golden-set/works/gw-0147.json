@@ -1,0 +1,99 @@
+{
+  "id": "gw-0147",
+  "artifactType": "doc",
+  "title": "The Mona Lisa",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Mona Lisa is a portrait painted by Leonardo da Vinci, who began it in Florence in the early 1500s and kept working on it for years. It is painted in oil on a panel of poplar wood rather than on canvas. The sitter is widely believed to be Lisa Gherardini, the wife of the Florentine silk merchant Francesco del Giocondo, which is why the painting is called La Gioconda in Italian. Leonardo used sfumato, a soft blending of tones without hard outlines."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "King Francis I of France acquired the painting, and it later passed into the collection of the Louvre in Paris. On 21 August 1911 it was stolen from the Louvre by Vincenzo Peruggia, an Italian handyman who had worked at the museum. The painting was missing for more than two years, until Peruggia tried to sell it to an art dealer in Florence in December 1913. Since 2005 it has hung in the Salle des Etats behind protective glass. The panel measures about 77 by 53 centimetres."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Mona Lisa was stolen from the Louvre in 1911.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Mona Lisa is painted on canvas.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Vincenzo Peruggia was a French handyman.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Mona Lisa is painted on a poplar panel.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Mona Lisa panel measures about 77 by 53 centimetres.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Leonardo used sfumato in the Mona Lisa.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

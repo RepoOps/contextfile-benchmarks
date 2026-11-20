@@ -1,0 +1,99 @@
+{
+  "id": "gw-0214",
+  "artifactType": "context_file",
+  "title": "Vanthorle agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Vanthorle. Vanthorle is a desktop Markdown editor built with Tauri 2, a Rust backend and a Svelte 5 front end. Install with `pnpm install`, then run `pnpm tauri dev` to open the app with hot reload. The Rust code lives in `src-tauri/`, and the editor UI in `src/lib/editor/`. Run front-end tests with `pnpm vitest` and Rust tests with `cargo test` inside `src-tauri/`. Files are saved with an atomic write: write to a temp file, then rename."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Autosave fires 2 seconds after the last keystroke; do not lower that delay without an issue. Open documents larger than 5 MB in read-only mode. Every Tauri command exposed to the front end must be listed in `src-tauri/capabilities/default.json`. Keyboard shortcuts are defined only in `src/lib/keymap.ts`. Spell check uses the operating system's checker; never bundle dictionary files in the app. Release notes go in `CHANGELOG.md` under the next version heading."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Vanthorle autosave fires 2 seconds after the last keystroke.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Vanthorle saves files with an atomic write.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Vanthorle opens documents larger than 5 MB in read-only mode.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Vanthorle keyboard shortcuts may be defined in any front-end file.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Vanthorle front end is built with Svelte 5.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Vanthorle Rust tests run with cargo test inside src-tauri/.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

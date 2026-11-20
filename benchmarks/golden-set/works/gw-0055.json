@@ -1,0 +1,99 @@
+{
+  "id": "gw-0055",
+  "artifactType": "doc",
+  "title": "Newton's laws of motion",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Isaac Newton set out his three laws of motion in the Principia, published in 1687. The first law says that an object stays at rest or keeps moving in a straight line at constant speed unless a net force acts on it; this tendency is called inertia. The second law says that the net force on an object equals its mass times its acceleration, written F = ma. The unit of force, the newton, is the force that gives a mass of one kilogram an acceleration of one metre per second squared."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The third law says that when one object exerts a force on a second object, the second exerts a force of equal size in the opposite direction on the first. This explains how a rocket moves: it pushes exhaust gas backward, and the gas pushes the rocket forward. The Principia also set out Newton's law of universal gravitation, which says the attraction between two masses weakens with the square of the distance between them. Newton wrote the Principia in Latin."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Newton published the Principia in 1687.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Newton's second law says that net force equals mass times acceleration.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Under Newton's third law, the reaction force acts in the same direction as the action force.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Newton wrote the Principia in English.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Exhaust gas pushes a rocket forward.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Gravitational attraction between two masses weakens with the square of the distance between them.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

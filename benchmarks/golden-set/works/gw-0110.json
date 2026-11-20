@@ -1,0 +1,99 @@
+{
+  "id": "gw-0110",
+  "artifactType": "brain_wiki",
+  "title": "Mars",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mars is the fourth planet from the Sun. Its red color comes from iron oxide in the dust and rocks on its surface. It has two small moons, Phobos and Deimos, both discovered by the American astronomer Asaph Hall in 1877. Mars rotates once in about 24 hours and 37 minutes, close to the length of an Earth day, but a Martian year lasts 687 Earth days. Olympus Mons, a shield volcano on Mars, is the tallest known volcano in the solar system."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The first spacecraft to fly past Mars and return close-up images was NASA's Mariner 4, in July 1965. In 1976 the Viking 1 lander became the first American craft to land and work on the surface. The rover Curiosity landed in Gale Crater in August 2012, and Perseverance landed in Jezero Crater in February 2021, carrying a small helicopter named Ingenuity. Mars has a thin atmosphere made mostly of carbon dioxide."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Asaph Hall discovered both moons of Mars in 1877.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Perseverance rover landed in Jezero Crater.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Mariner 4 flew past Mars in July 1965.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A Martian year lasts 365 Earth days.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Olympus Mons is the tallest known volcano in the solar system.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The atmosphere of Mars is made mostly of carbon dioxide.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

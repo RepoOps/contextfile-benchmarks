@@ -1,0 +1,99 @@
+{
+  "id": "gw-0126",
+  "artifactType": "open_spec",
+  "title": "Kovrith signed webhooks proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal KR-9: signed webhooks for Kovrith. Motivation: Kovrith webhooks are sent without a signature, so a receiver cannot tell a real event from a forged one. Each webhook will carry a `Kovrith-Signature` header holding an HMAC-SHA256 of the timestamp and the raw body. Each endpoint gets its own signing secret, shown once in the dashboard. Receivers should reject events whose timestamp is more than 5 minutes old, to block replay attacks."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rollout and limits. Signing secrets can be rotated from the dashboard; after a rotation, both the old and the new secret sign events for 24 hours. The official SDKs for Node, Python and Ruby gain a `verifyWebhook` helper. Unsigned delivery stays available until 2027-06-30 and is then turned off. Failed deliveries are retried with backoff for up to 72 hours. Event payloads are unchanged by this proposal. Delivery logs in the dashboard show the signature sent with each event."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Kovrith receivers should reject webhook events whose timestamp is more than 5 minutes old.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Kovrith-Signature header holds an HMAC-SHA256 of the timestamp and the raw body.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "After a Kovrith secret rotation, the old secret stops signing events immediately.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Kovrith turns off unsigned webhook delivery after 2027-06-30.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kovrith's Python SDK gains a verifyWebhook helper.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Each Kovrith webhook endpoint gets its own signing secret.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

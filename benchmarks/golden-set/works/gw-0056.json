@@ -1,0 +1,99 @@
+{
+  "id": "gw-0056",
+  "artifactType": "doc",
+  "title": "The Mississippi River",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Mississippi River rises at Lake Itasca in northern Minnesota and flows south for about 3,770 kilometres to its delta below New Orleans. Together with its largest tributary, the Missouri, it forms one of the longest river systems in the world. The Ohio River joins it at Cairo, Illinois, and adds more water than any other tributary. Its basin drains all or part of 31 US states and two Canadian provinces."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The river has shaped American history and trade. The steamboat New Orleans made the first steam voyage down the lower river in 1811 and 1812. Mark Twain worked as a riverboat pilot on the Mississippi before the Civil War and later wrote Life on the Mississippi, published in 1883. In 1927 the Great Mississippi Flood covered about 70,000 square kilometres. The US Army Corps of Engineers now maintains a system of levees and locks along the river."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Mississippi River rises at Lake Itasca in Minnesota.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Life on the Mississippi was published in 1883.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Ohio River joins the Mississippi at Cairo, Illinois.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Great Mississippi Flood took place in 1937.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Mississippi basin drains part of two Canadian provinces.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mark Twain worked as a riverboat pilot on the Mississippi.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

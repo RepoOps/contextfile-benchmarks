@@ -1,0 +1,99 @@
+{
+  "id": "gw-0058",
+  "artifactType": "doc",
+  "title": "Absolute zero",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Absolute zero is the lowest possible temperature, at which a system has the least possible thermal energy. It is 0 kelvin, which equals minus 273.15 degrees Celsius and minus 459.67 degrees Fahrenheit. The Kelvin scale is named after William Thomson, Lord Kelvin, who proposed an absolute temperature scale in 1848. One kelvin is the same size as one degree Celsius. Unlike Celsius and Fahrenheit temperatures, kelvins are written without the word degree."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The third law of thermodynamics implies that absolute zero cannot be reached in a finite number of steps. Laboratories have cooled atoms to within a billionth of a kelvin of it. In 1995 Eric Cornell and Carl Wieman made the first Bose-Einstein condensate, a state of matter that appears near absolute zero, using rubidium atoms. Helium stays liquid at normal pressure even at the lowest temperatures reached, and it becomes a superfluid below about 2.17 kelvin."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Zero kelvin equals minus 273.15 degrees Celsius.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Cornell and Wieman made the first Bose-Einstein condensate using rubidium atoms.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lord Kelvin proposed an absolute temperature scale in 1848.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "One kelvin is twice the size of one degree Celsius.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Helium becomes a superfluid below about 2.17 kelvin.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Zero kelvin equals minus 459.67 degrees Fahrenheit.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

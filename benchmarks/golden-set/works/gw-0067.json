@@ -1,0 +1,99 @@
+{
+  "id": "gw-0067",
+  "artifactType": "open_spec",
+  "title": "Fennick proxy retry budgets",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal FEN-112: retry budgets for the Fennick HTTP proxy. Today Fennick retries a failed upstream request up to 3 times, with no limit on retries across requests. During the outage on 4 March, these retries tripled traffic to an already overloaded backend and slowed recovery by about 40 minutes. This change adds a retry budget per upstream cluster: retries may add at most 20 percent on top of the cluster's normal request rate, measured over a 10 second window. Requests over the budget fail at once with status 503."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The budget is set with the retry_budget.ratio key in each cluster block and defaults to 0.2. A cluster may set the ratio to 0 to turn off retries entirely. Fennick will always allow at least 5 retries per second per cluster, so low-traffic services can still recover from a single error. A new counter, fennick_retry_budget_exhausted_total, records each request refused by the budget. The change ships in Fennick 2.8 behind the flag --retry-budget and becomes the default in Fennick 2.9."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Retries refused by the Fennick retry budget fail at once with status 503.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The retry budget becomes the default behavior in Fennick 2.8.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Setting retry_budget.ratio to 0 turns off retries for a Fennick cluster.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Fennick measures the retry budget over a 60 second window.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Fennick always allows at least 5 retries per second per cluster.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Fennick currently retries a failed upstream request up to 3 times.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0042",
+  "artifactType": "open_spec",
+  "title": "Bexlo bucket lifecycle rules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal BX-14: lifecycle rules for Bexlo buckets. Motivation: Bexlo users keep old object versions forever, and storage costs for the largest tenants grew 40 percent in 2025. Change: bucket owners can attach lifecycle rules that move objects to the cold tier after a set number of days and delete noncurrent versions after another. A rule matches objects by key prefix. Each bucket may hold at most 100 rules. Rules run once a day at 03:00 UTC."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scope: this proposal covers versioned and unversioned buckets but not buckets under legal hold, which lifecycle rules never touch. The minimum age for a cold-tier move is 30 days. Deletions write an audit event to the bucket's access log. Rollout: the feature ships behind the flag bexlo.lifecycle, first to internal tenants in March, then to all tenants after four weeks with no data-loss incidents. Owners can turn the rules off per bucket at any time."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Each Bexlo bucket may hold at most 100 lifecycle rules.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Bexlo lifecycle rules never touch buckets under legal hold.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Bexlo lifecycle rules ship behind the flag bexlo.lifecycle.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Bexlo lifecycle rules run once a day at 03:00 UTC.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The minimum age for a Bexlo cold-tier move is 7 days.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A Bexlo lifecycle rule matches objects by key prefix.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0194",
+  "artifactType": "brain_wiki",
+  "title": "Mariana Trench",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Mariana Trench is a crescent-shaped trench in the western Pacific Ocean, east of the Mariana Islands. It forms where the Pacific Plate sinks beneath the smaller Mariana Plate, a process called subduction. The trench is about 2,500 kilometres long and averages about 70 kilometres wide. Its deepest known point, the Challenger Deep, lies near its southern end at a depth of roughly 10,900 metres. If Mount Everest were placed at that spot, its peak would still sit more than 2 kilometres underwater. Water pressure at the bottom is more than 1,000 times the air pressure at sea level."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The first people to reach the Challenger Deep were Jacques Piccard and Don Walsh, who descended in the bathyscaphe Trieste on 23 January 1960. Their dive down took almost five hours, and they spent about 20 minutes on the bottom. No one returned for more than 50 years. In 2012 the film director James Cameron made the first solo dive to the bottom in a submersible called Deepsea Challenger. Since 2019 several more crewed dives have reached the deep. In 2009 the United States made the trench part of the Marianas Trench Marine National Monument."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jacques Piccard and Don Walsh reached the Challenger Deep in the bathyscaphe Trieste.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "James Cameron made a solo dive to the Challenger Deep in 2012.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Mariana Trench forms where the Pacific Plate sinks beneath the Mariana Plate.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Mariana Trench lies in the eastern Pacific Ocean.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Challenger Deep lies near the southern end of the Mariana Trench.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Piccard and Walsh spent about 20 minutes on the bottom of the Challenger Deep.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

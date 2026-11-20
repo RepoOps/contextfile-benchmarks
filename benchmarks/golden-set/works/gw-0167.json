@@ -1,0 +1,99 @@
+{
+  "id": "gw-0167",
+  "artifactType": "context_file",
+  "title": "Sablewick .cursorrules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# .cursorrules for Sablewick. Sablewick is a web dashboard that shows the layer cache of container build servers. The frontend is TypeScript with React 18 and lives in `web/`; the API server is in `server/` and runs on Node.js 20. Install with `pnpm install` at the repository root. Start both parts with `pnpm dev`; the frontend serves on port 5173 and the API on port 4100. Tests run with `pnpm test`, which uses Vitest."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for edits. Use function components only; no class components. Fetch API data through the hooks in `web/src/api/`, never with fetch calls inside components. Styles use CSS modules, one `.module.css` file per component. Server routes must validate input with zod schemas kept in `server/schemas/`. Do not change `pnpm-lock.yaml` unless the task adds or removes a dependency. Keep each pull request to one feature. Name React components in PascalCase and start hook names with use."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Sablewick API server runs on Node.js 18.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Sablewick server routes validate input with zod schemas.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Sablewick frontend serves on port 5173 during development.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Sablewick styles use CSS modules.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Sablewick components may fetch API data with fetch calls inside the component.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Sablewick tests run with Vitest.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

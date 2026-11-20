@@ -1,0 +1,99 @@
+{
+  "id": "gw-0202",
+  "artifactType": "doc",
+  "title": "Zembrisk notification policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Zembrisk notification policy, for product teams. Every notification the Zembrisk app sends must belong to one of four categories: account, billing, activity or marketing. Marketing notifications require the user's explicit opt-in and are never sent between 21:00 and 08:00 in the user's time zone. No user may receive more than 3 marketing pushes in a 7-day period. Account and billing messages cannot be turned off, because they cover security and payment events. New notification types need approval from the Growth Council, which meets every Tuesday."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Writing and measuring notifications. Push titles must stay under 40 characters and body text under 120 characters. Every push must open a specific screen in the app, never only the home screen. Teams track each type's opt-out rate weekly; any type whose opt-out rate passes 2 percent over 30 days is paused until the owning team reviews it. Copy is written in sentence case and avoids exclamation marks. The policy owner is the Messaging Platform team, reachable in the #notify-help channel."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Zembrisk marketing notifications require the user's explicit opt-in.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Zembrisk push titles must stay under 40 characters.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A Zembrisk user may receive up to 5 marketing pushes in a 7-day period.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A Zembrisk notification type is paused when its opt-out rate passes 2 percent over 30 days.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Zembrisk Growth Council meets every Tuesday.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Every Zembrisk push must open a specific screen in the app.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0119",
+  "artifactType": "doc",
+  "title": "A short history of pi",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The number pi is the ratio of a circle's circumference to its diameter, about 3.14159. Around 250 BC the Greek mathematician Archimedes of Syracuse bounded it by drawing polygons with 96 sides inside and outside a circle. He showed that pi lies between 3 10/71 and 3 1/7. In the fifth century AD the Chinese mathematician Zu Chongzhi found the value 355/113, which is correct to six decimal places. Earlier, some Babylonian scribes had used the value 3 1/8."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The Welsh mathematician William Jones first used the Greek letter pi for the ratio in 1706, and Leonhard Euler's use of it from the 1730s made the symbol standard. In the 1760s Johann Heinrich Lambert proved that pi is irrational, so its decimal digits never end or repeat. In 1882 Ferdinand von Lindemann proved that pi is transcendental, which showed that squaring the circle with compass and straightedge is impossible. Pi Day is celebrated on 14 March."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lindemann proved in 1882 that pi is transcendental.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Archimedes used polygons with 64 sides to bound pi.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Zu Chongzhi found the value 355/113 for pi.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "William Jones first used the Greek letter pi for the ratio in 1806.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Pi Day is celebrated on 14 March.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lambert proved that pi is irrational.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

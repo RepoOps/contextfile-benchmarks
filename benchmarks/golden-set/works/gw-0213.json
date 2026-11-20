@@ -1,0 +1,99 @@
+{
+  "id": "gw-0213",
+  "artifactType": "context_file",
+  "title": "Thrummet CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Thrummet. Thrummet is a notification delivery service written in TypeScript on Node.js 20. It sends email through a provider adapter in `src/channels/email/`, SMS through `src/channels/sms/`, and mobile push through `src/channels/push/`. Start a local copy with `npm run dev`, which listens on port 4310. Jobs are queued in Redis 7; set `REDIS_URL` in `.env.local`. Run `npm test` for unit tests and `npm run test:e2e` for end-to-end tests. Configuration defaults live in `config/default.json`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Never log a recipient's phone number or email address in full; use the `maskRecipient()` helper in `src/lib/mask.ts`. Retries use exponential backoff with at most 5 attempts per message, then the message moves to the dead-letter queue. Templates live in `templates/` as Handlebars files, one folder per locale. A new channel needs an adapter that implements the `Channel` interface in `src/channels/types.ts`. Do not edit `src/generated/`; run `npm run codegen` instead."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Thrummet retries each message up to 10 times.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Thrummet queues jobs in Redis 7.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Thrummet templates are Handlebars files.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A new Thrummet channel needs an adapter that implements the Channel interface.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Thrummet local dev server listens on port 3000.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Thrummet code must not log a recipient's full email address.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

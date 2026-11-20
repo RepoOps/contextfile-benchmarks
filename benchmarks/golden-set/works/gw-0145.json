@@ -1,0 +1,99 @@
+{
+  "id": "gw-0145",
+  "artifactType": "doc",
+  "title": "The Globe Theatre",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Globe Theatre was an open-air playhouse built in 1599 on the south bank of the River Thames in Southwark, London. It belonged to the Lord Chamberlain's Men, the acting company in which William Shakespeare was a shareholder. The timber for its frame came from an earlier playhouse called the Theatre, which the company took apart and carried across the river. The Globe had many sides, with three levels of galleries around an open yard where standing spectators, called groundlings, paid a penny."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "On 29 June 1613, a cannon fired during a performance of Henry VIII set fire to the thatched roof, and the first Globe burned to the ground. No one was killed. A second Globe, with a tiled roof, opened on the same site in 1614. It closed in 1642, when Parliament shut the London theatres, and was pulled down a few years later. A modern reconstruction, Shakespeare's Globe, opened near the original site in 1997, after a campaign led by the American actor Sam Wanamaker."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The first Globe Theatre was built in 1599.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The first Globe burned down during a performance of Henry VIII.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The second Globe had a thatched roof.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Globe Theatre belonged to the Lord Chamberlain's Men.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Groundlings at the Globe paid a shilling to stand in the yard.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The modern Shakespeare's Globe opened in 1997.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

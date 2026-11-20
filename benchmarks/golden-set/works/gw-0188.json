@@ -1,0 +1,99 @@
+{
+  "id": "gw-0188",
+  "artifactType": "doc",
+  "title": "Pendrake Analytics data retention policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Pendrake Analytics data retention policy. This policy covers all customer and company data held in Pendrake systems. Customer project data is kept for the life of the contract and deleted within 60 days after the contract ends. Application logs are kept for 90 days. Security audit logs are kept for 2 years. Backups are kept for 35 days and then overwritten. The data protection officer reviews this policy every 12 months."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Deletion and holds. Deletion means removal from live systems and from backups once the backup period runs out. A legal hold, issued only by the general counsel, pauses deletion for the named data until the hold is lifted in writing. Employees must not keep customer data on laptops or personal drives. Requests from customers to delete their data early are handled by the support team within 30 days. Deviations from this policy need written approval from the data protection officer."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Pendrake Analytics keeps application logs for 90 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Only the general counsel can issue a legal hold at Pendrake Analytics.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Pendrake Analytics handles customer requests for early deletion within 30 days.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pendrake Analytics keeps security audit logs for 2 years.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Pendrake Analytics keeps backups for 90 days before overwriting them.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Pendrake Analytics data protection officer reviews the retention policy every 12 months.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

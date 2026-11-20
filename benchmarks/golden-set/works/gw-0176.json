@@ -1,0 +1,99 @@
+{
+  "id": "gw-0176",
+  "artifactType": "open_spec",
+  "title": "Selvorn registry garbage collection proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal SLV-07: scheduled garbage collection for the Selvorn image registry. Selvorn keeps every image layer that was ever pushed, and the busiest install has grown to 41 TB of storage. Most of that space belongs to layers that no tag points to any more. This proposal adds a gc job that runs nightly at 03:00 in the registry's local time and deletes layers that have had no tag reference for at least 7 days."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Safety and rollout. The gc job takes a write lock on each repository while it runs, so pushes to that repository wait until it finishes. A dry run mode, selvorn gc --dry-run, lists what would be deleted without deleting it. Deleted layers move to a trash area for 48 hours before final removal. The job ships in Selvorn 3.1 with dry run as the default; real deletion must be turned on with gc.enabled: true. Garbage collection across registry mirrors is out of scope."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Deleted Selvorn layers stay in a trash area for 48 hours before final removal.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Selvorn gc job runs nightly at 03:00.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Selvorn gc job deletes layers that have had no tag reference for at least 7 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pushes to a Selvorn repository continue normally while the gc job holds its lock.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Garbage collection across Selvorn registry mirrors is out of scope.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Selvorn gc job ships in Selvorn 3.1.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

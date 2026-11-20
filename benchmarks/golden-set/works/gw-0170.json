@@ -1,0 +1,99 @@
+{
+  "id": "gw-0170",
+  "artifactType": "brain_wiki",
+  "title": "Erie Canal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Erie Canal. The Erie Canal links the Hudson River at Albany with Lake Erie at Buffalo, across upstate New York. Governor DeWitt Clinton was its chief backer, and critics mocked the project as Clinton's Ditch. Work began on July 4, 1817, at Rome, New York, and the full canal opened on October 26, 1825. As first built it ran about 363 miles and had 83 locks. The original channel was 40 feet wide and 4 feet deep."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Effects and later history. The canal gave the port of New York a water route to the Great Lakes, and New York City grew into the leading port of the United States. To mark the opening, Clinton travelled by boat to New York City and poured a keg of Lake Erie water into the Atlantic Ocean, a ceremony called the Wedding of the Waters. The canal was enlarged starting in the 1830s and was later replaced in large part by the New York State Barge Canal, completed in 1918."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Erie Canal opened in full on October 26, 1825.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Erie Canal's original channel was 4 feet deep.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The ceremony marking the opening of the Erie Canal was called the Wedding of the Waters.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Construction on the Erie Canal began at Buffalo.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The New York State Barge Canal was completed in 1918.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Erie Canal as first built had 83 locks.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0160",
+  "artifactType": "open_spec",
+  "title": "Pelloran stale-while-revalidate proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Change proposal PLR-48 adds stale-while-revalidate reads to the Pelloran caching proxy. Today, when an entry expires, the next request waits on the origin, and p99 latency on cold keys reaches about 900 ms. With the change, Pelloran serves the expired entry right away and refreshes it in the background. A new setting, swr_window, sets how long past expiry a stale entry may be served; it defaults to 30 seconds. Only one background refresh runs per key at a time."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Stale serving applies only to GET and HEAD requests. Responses marked Cache-Control: no-store are never served stale. If the origin returns a 5xx error during a refresh, Pelloran keeps the stale entry and retries after 10 seconds. The feature ships in Pelloran 2.3 and is disabled by default; operators enable it per route with swr: true in routes.toml. Each stale response carries the header X-Pelloran-Stale: 1. Pelloran counts stale hits in the metric pelloran_stale_served_total."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The swr_window setting defaults to 30 seconds.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Pelloran runs at most one background refresh per key at a time.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Operators enable Pelloran stale serving per route in routes.toml.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pelloran stale serving applies to POST requests.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Pelloran stale responses carry the header X-Pelloran-Stale: 1.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Under the change, Pelloran serves an expired entry immediately while it refreshes in the background.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

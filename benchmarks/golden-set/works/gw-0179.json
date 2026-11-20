@@ -1,0 +1,99 @@
+{
+  "id": "gw-0179",
+  "artifactType": "open_spec",
+  "title": "Soraway machine-readable output proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Change proposal SRW-33: machine-readable output for the Soraway command line tool. Soraway manages DNS zones, and scripts that wrap it currently parse its table output with regular expressions, which break whenever a column is added. This change adds a global --output flag with three values: table, json and yaml. The default stays table, so current users see no change. JSON output follows a schema published at docs/schema/v1.json. YAML output uses the same field names as JSON output."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Error messages always go to standard error as plain text, even when --output json is set. The exit code is 0 on success, 1 on a user error and 2 on a server error. Field names in JSON output use snake_case and will not change within schema version 1. The flag ships in Soraway 0.14; the SORAWAY_OUTPUT environment variable sets a default when the flag is absent. Streaming output for long lists is out of scope."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Soraway's --output flag accepts table, json and yaml.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Soraway exits with code 1 on a server error.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The SORAWAY_OUTPUT environment variable sets a default output format when --output is absent.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Soraway JSON field names use snake_case.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The default value of Soraway's --output flag becomes json.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Soraway prints error messages to standard error as plain text even with --output json.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0072",
+  "artifactType": "oci_image",
+  "title": "ellowen-collector image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The ellowen-collector image packages the Ellowen metrics collector, which scrapes targets and forwards samples to long-term storage. It is built on gcr.io/distroless/static and runs as user ID 65532. The collector exposes its own status page and metrics on port 9099. Scrape targets are listed in /etc/ellowen/targets.yaml. Mount a volume at /var/lib/ellowen/wal to keep the write-ahead log, which holds samples that have not yet been forwarded. On SIGTERM the collector stops scraping and flushes pending samples before it exits."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "ELLOWEN_REMOTE_URL sets the storage endpoint and has no default; the collector exits at startup if it is missing. ELLOWEN_SCRAPE_INTERVAL defaults to 30s. ELLOWEN_WAL_MAX_SIZE caps the write-ahead log and defaults to 2GB; when it is full, the oldest samples are dropped. Because the base image has no shell, the image defines no HEALTHCHECK; use a probe against /ready instead. The entrypoint is /ellowen with the argument --config=/etc/ellowen/collector.yaml. Set ELLOWEN_LOG_FORMAT to json or text; it defaults to text."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "ELLOWEN_SCRAPE_INTERVAL defaults to 30s.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The ellowen-collector image defines no HEALTHCHECK.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "ellowen-collector exposes its own metrics on port 9099.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "When the Ellowen write-ahead log is full, the newest samples are dropped.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The ellowen-collector image runs as user ID 65532.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Ellowen write-ahead log volume is mounted at /var/lib/ellowen/wal.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

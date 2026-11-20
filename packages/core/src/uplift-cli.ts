@@ -204,6 +204,11 @@ export function importGitChameleon(datasetJsonl: string, sources: { picks: { exa
   });
 }
 
+/** The operator's OpenRouter key for the harnesses (this one and probe-uplift-cli.ts), or undefined. The one place they read it. */
+export function harnessModelKey(env: Record<string, string | undefined>): string | undefined {
+  return env.OPENROUTER_API_KEY;
+}
+
 export function resultFileName(body: UpliftResultBody): string {
   return `${body.ranAt.slice(0, 10)}-${body.harnessVersion}.json`;
 }
@@ -244,7 +249,7 @@ export async function runUpliftCli(argv: readonly string[], env: Record<string, 
       const config = loadUpliftRunConfig(root);
       const models = values.model?.length ? values.model : config.models;
       if (models.length === 0) throw new Error("[uplift] no models: pass --model <id> or list them in benchmarks/uplift/config.json");
-      const apiKey = env.OPENROUTER_API_KEY;
+      const apiKey = harnessModelKey(env);
       if (!apiKey) throw new Error("[uplift] OPENROUTER_API_KEY is not set; the harness cannot call models");
       if (!env.CONTEXTFILE_UPLIFT_TOKEN) throw new Error("[uplift] CONTEXTFILE_UPLIFT_TOKEN is not set; the with arm cannot reach the ContextFile MCP server");
       const set = loadUpliftSet(root);

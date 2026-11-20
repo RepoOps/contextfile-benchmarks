@@ -1,0 +1,99 @@
+{
+  "id": "gw-0068",
+  "artifactType": "open_spec",
+  "title": "Glimmet per-tenant series limits",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec GLM-41: per-tenant series limits in Glimmet. Glimmet stores metrics for many tenants in one shared cluster. Last quarter a single tenant added a request_id label to one metric and created 9 million new series in an hour, which pushed ingest latency past 30 seconds for every tenant. This spec adds a hard cap on active series per tenant, with a default of 500,000. A series counts as active if it received a sample in the last 2 hours. Caps are stored per tenant in the cluster's limits table."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "When a tenant reaches its cap, Glimmet rejects samples for new series and keeps accepting samples for existing ones. The write API returns HTTP 429 with the header Glimmet-Limit: series. Operators change a tenant's cap with glimmetctl limits set. Rejected samples are counted in glimmet_rejected_samples_total with a reason label. Recording rules run inside Glimmet and are exempt from the limit. Rollout starts in staging on 3 February, then reaches production two weeks later."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Glimmet's write API returns HTTP 429 when a tenant hits its series cap.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A Glimmet series counts as active if it received a sample in the last 2 hours.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Glimmet keeps accepting samples for existing series after a tenant reaches its cap.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Recording rules count toward a tenant's series limit in Glimmet.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The default Glimmet cap is 500,000 active series per tenant.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "One tenant's request_id label created 9 million new Glimmet series in an hour.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0031",
+  "artifactType": "brain_wiki",
+  "title": "Amazon River",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Amazon River flows across northern South America and empties into the Atlantic Ocean. It carries more water than any other river on Earth, discharging on average about 200,000 cubic metres per second, which is roughly a fifth of all river water reaching the oceans. Its drainage basin covers about 7 million square kilometres, the largest of any river. Most of the basin lies in Brazil, but it also extends into Peru, Bolivia, Colombia, Ecuador and other countries. The river's headwaters rise high in the Andes of Peru."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Near the city of Manaus in Brazil, the dark Rio Negro meets the pale, muddy Solimoes. The two streams run side by side without mixing for several kilometres, a sight known as the Meeting of the Waters. No bridge crosses the main stem of the Amazon. The river is home to the Amazon river dolphin, or boto, which can be pink in colour. The giant fish called the arapaima, also known as pirarucu, lives in its waters and breathes air at the surface. Large ocean-going ships can reach Manaus, about 1,500 kilometres upstream from the sea."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Rio Negro and the Solimoes meet near Manaus.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Amazon's drainage basin covers about 3 million square kilometres.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Amazon river dolphin is also called the boto.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The headwaters of the Amazon rise in the Andes of Peru.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The arapaima breathes air at the water's surface.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Amazon empties into the Pacific Ocean.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

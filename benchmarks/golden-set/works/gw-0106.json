@@ -1,0 +1,99 @@
+{
+  "id": "gw-0106",
+  "artifactType": "brain_wiki",
+  "title": "Polio vaccines",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Jonas Salk developed the first widely used polio vaccine at the University of Pittsburgh. It used poliovirus that had been killed with formaldehyde, and it was given by injection. A large field trial in 1954 involved more than a million children in the United States. On 12 April 1955 the results were announced at the University of Michigan, and the vaccine was declared safe and effective. Salk chose not to patent the vaccine."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Albert Sabin developed an oral polio vaccine that used live but weakened virus. Because it was given by mouth, often on a sugar cube, it was cheap and easy to give in mass campaigns. Large trials took place in the Soviet Union in the late 1950s, and the vaccine was licensed in the United States in the early 1960s. In 1988 the World Health Assembly launched the Global Polio Eradication Initiative. Of the three wild poliovirus types, type 2 was declared eradicated in 2015 and type 3 in 2019."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Sabin's polio vaccine used live but weakened virus.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Salk developed his polio vaccine at the University of Pittsburgh.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The results of the 1954 Salk vaccine field trial were announced in April 1957.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Salk's vaccine used poliovirus killed with formaldehyde.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Wild poliovirus type 2 was declared eradicated in 2015.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Global Polio Eradication Initiative was launched in 1988.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

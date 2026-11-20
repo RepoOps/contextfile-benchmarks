@@ -1,0 +1,99 @@
+{
+  "id": "gw-0162",
+  "artifactType": "context_file",
+  "title": "Rillwick AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Rillwick. Rillwick is a command line tool that copies container images between registries. It is written in Go 1.22. Build the binary with `make build`, which writes it to `bin/rillwick`. Run unit tests with `make test` and the registry integration tests with `make itest`; the integration tests start a local registry on port 5005 through Docker Compose. Never commit files from `testdata/cache/`, which the tests regenerate on every run."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Conventions. Command definitions live in `cmd/rillwick/` and use the cobra library, one file per subcommand. Flags use kebab case, such as `--dry-run`. Wrap every returned error with fmt.Errorf and the %w verb. Do not add a new third party dependency without an issue that a maintainer has approved. Run `make lint` before pushing; it runs golangci-lint with the config in `.golangci.yml`. Changelog entries go in `CHANGELOG.md` under the Unreleased heading."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Rillwick's `make build` writes the binary to `bin/rillwick`.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Rillwick subcommands are defined with the cobra library.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Rillwick flags use kebab case.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Rillwick's integration tests start a local registry on port 5000.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In Rillwick, `make lint` runs golangci-lint.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Rillwick is written in Go 1.22.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

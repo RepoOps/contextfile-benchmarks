@@ -1,0 +1,99 @@
+{
+  "id": "gw-0174",
+  "artifactType": "context_file",
+  "title": "Pruvane AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Pruvane. Pruvane is a Python library that adds a disk-backed cache in front of slow function calls. It supports Python 3.10 through 3.13. The project uses Poetry: install with `poetry install` and run tests with `poetry run pytest`. Source lives in `src/pruvane/`. The default cache directory is `~/.cache/pruvane`, and the default entry lifetime is 3600 seconds. Docs are built with MkDocs from the `docs/` folder. CI runs on GitHub Actions for every supported Python version."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Coding rules. The public API is whatever `src/pruvane/__init__.py` exports; anything else may change without notice. Keep the library free of runtime dependencies outside the standard library. Format with black at line length 100 and sort imports with isort. Every bug fix needs a regression test in `tests/regressions/` named after the issue number, such as `test_issue_212.py`. Never pickle objects across major versions of the cache format. Type hints are required on all public functions."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Pruvane formats code with black at line length 100.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Pruvane's default cache entry lifetime is 3600 seconds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Pruvane may add runtime dependencies outside the standard library.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pruvane regression tests go in `tests/regressions/`.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Pruvane supports Python 3.10 through 3.13.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Pruvane's default cache directory is `~/.cache/pruvane`.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

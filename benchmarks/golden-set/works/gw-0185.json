@@ -1,0 +1,99 @@
+{
+  "id": "gw-0185",
+  "artifactType": "oci_image",
+  "title": "stonrick-backup image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The stonrick-backup image runs Stonrick, a tool that backs up mounted volumes to object storage on a schedule. It is built on alpine:3.19 and runs as user ID 1000 by default; run it as root only when the source files need it. Mount the data to back up read only at /source. Stonrick keeps a local index at /var/lib/stonrick, which should be a volume. The entrypoint is /usr/local/bin/stonrick daemon. The image exposes no ports."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Settings. STONRICK_SCHEDULE takes a cron expression and defaults to 0 2 * * *, a run at 02:00 each day. STONRICK_BUCKET names the target bucket and is required. STONRICK_KEEP_DAILY defaults to 7 and STONRICK_KEEP_WEEKLY defaults to 4. Backups are encrypted with the key in STONRICK_PASSPHRASE; if it is unset, the container refuses to start. Health is checked by stonrick status every 5 minutes. STONRICK_ENDPOINT sets the object storage URL for services other than AWS S3."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The stonrick-backup image exposes port 8080.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "STONRICK_KEEP_WEEKLY defaults to 4.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Stonrick expects the data to back up at /source.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The stonrick-backup container refuses to start when STONRICK_PASSPHRASE is unset.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "By default, Stonrick runs a backup at 02:00 each day.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "STONRICK_BUCKET is optional.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

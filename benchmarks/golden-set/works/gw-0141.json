@@ -1,0 +1,99 @@
+{
+  "id": "gw-0141",
+  "artifactType": "doc",
+  "title": "Don Quixote",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Don Quixote is a novel by the Spanish writer Miguel de Cervantes. The first part was published in Madrid in 1605, and the second part followed in 1615, a year before the author's death. The story follows a minor nobleman from La Mancha who reads so many tales of chivalry that he decides to become a knight errant himself. He renames his thin old horse Rocinante and takes a farm labourer, Sancho Panza, as his squire."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "One of the best known episodes is the one in which Don Quixote charges at windmills, believing they are giants. His imagined lady, Dulcinea del Toboso, is in fact a peasant woman named Aldonza Lorenzo. In 1614, before Cervantes finished his own second part, an unauthorized sequel appeared under the name Alonso Fernandez de Avellaneda, and Cervantes mocked it in his second part. Many critics regard Don Quixote as one of the first modern novels."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The first part of Don Quixote was published in 1605.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Don Quixote's horse is named Rocinante.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "An unauthorized sequel to Don Quixote appeared in 1620.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Sancho Panza serves as Don Quixote's squire.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In one episode Don Quixote attacks windmills he believes are giants.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The second part of Don Quixote was published in 1625.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

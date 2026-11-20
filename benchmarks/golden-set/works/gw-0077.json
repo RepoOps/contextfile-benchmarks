@@ -1,0 +1,99 @@
+{
+  "id": "gw-0077",
+  "artifactType": "doc",
+  "title": "Dorvane DNS resolver guide",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Dorvane is a caching DNS resolver for small offices. After installing it, edit /etc/dorvane/dorvane.conf. The resolver listens on UDP and TCP port 53 on all interfaces by default. Set listen_address to 127.0.0.1 to answer only local queries. Dorvane forwards queries it cannot answer from cache to the upstream servers listed under upstreams, and it tries them in the order listed. The cache holds 50,000 records by default. Run dorvane-ctl flush to empty the cache without restarting the service."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Dorvane caps every cached answer at a maximum time to live of 86400 seconds, even when the upstream server returns a longer one. Failed lookups that return NXDOMAIN are cached for 300 seconds. To block a domain, add it to /etc/dorvane/blocklist.txt, one name per line; blocked names receive an NXDOMAIN answer. Dorvane writes one log line per query to /var/log/dorvane/queries.log when query_log is set to true. The query_log setting is off by default."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Dorvane tries its upstream servers in random order.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Dorvane caches NXDOMAIN answers for 300 seconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Running dorvane-ctl flush empties the Dorvane cache without a restart.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Blocked domains receive an NXDOMAIN answer from Dorvane.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Dorvane's query log is on by default.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Dorvane cache holds 50,000 records by default.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

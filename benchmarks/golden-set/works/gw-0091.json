@@ -1,0 +1,99 @@
+{
+  "id": "gw-0091",
+  "artifactType": "oci_image",
+  "title": "durnhollow-relay image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The durnhollow-relay image runs Durnhollow, a relay that receives syslog messages and forwards them to a central store. It is built on alpine:3.19 and runs as user ID 1514. It accepts plain syslog on port 5514 over both UDP and TCP, and syslog over TLS on port 6514. The relay buffers messages in /var/spool/durnhollow, which should be a mounted volume so nothing is lost on restart. Messages are forwarded in the order they arrive."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Set DURNHOLLOW_FORWARD_TO to the address of the central store, for example logs.internal:6514. DURNHOLLOW_SPOOL_LIMIT caps the spool and defaults to 1GB. DURNHOLLOW_PARSE_MODE accepts rfc5424, rfc3164 or auto and defaults to auto. The entrypoint is /usr/sbin/durnhollow with the flag --foreground. The health check runs durnhollow ping every 15 seconds, and the container is marked unhealthy after 4 failures. Set DURNHOLLOW_LOG_LEVEL to debug, info or warn; it defaults to info. The relay prints its version at startup."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "durnhollow-relay accepts syslog over TLS on port 6514.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "DURNHOLLOW_PARSE_MODE defaults to auto.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "DURNHOLLOW_SPOOL_LIMIT defaults to 10GB.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The durnhollow-relay entrypoint is /usr/sbin/durnhollow with the flag --foreground.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The durnhollow-relay image is built on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The durnhollow-relay health check runs every 15 seconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0083",
+  "artifactType": "brain_wiki",
+  "title": "The fall of Constantinople",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Ottoman forces under Sultan Mehmed II captured Constantinople on 29 May 1453, ending the Byzantine Empire. The siege lasted about 53 days. The city's last emperor, Constantine XI Palaiologos, died during the final assault. The Byzantines had stretched a heavy chain across the Golden Horn to keep enemy ships out of the harbor. Mehmed answered by having ships hauled overland on greased logs into the Golden Horn behind the chain. Mehmed was 21 years old at the time of the conquest."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Gunpowder artillery played a large part in the siege. A Hungarian cannon founder named Orban cast huge bronze guns for the Ottomans, which fired heavy stone balls. These guns battered the Theodosian Walls, the land walls that had protected the city for about a thousand years. After the conquest Mehmed made the city his capital, and the Hagia Sophia, which had been a church for over 900 years, was converted into a mosque."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Orban cast large bronze guns for the Ottoman army.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Mehmed II was 31 years old when he captured Constantinople.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Byzantines stretched a chain across the Golden Horn to block enemy ships.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Theodosian Walls were the sea walls of Constantinople.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Constantine XI Palaiologos died during the final assault on Constantinople.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mehmed II had ships hauled overland into the Golden Horn.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

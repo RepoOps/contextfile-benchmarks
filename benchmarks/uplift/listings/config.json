@@ -1,0 +1,8 @@
+{
+  "note": "seeds, temperature, maxTokens and bootstrap are Example values until the operator confirms them. models is empty until the operator picks the models to score.",
+  "models": [],
+  "seeds": 5,
+  "temperature": 0.7,
+  "maxTokens": 800,
+  "bootstrap": { "resamples": 10000, "confidence": 0.95, "rngSeed": 20261119 }
+}

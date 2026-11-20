@@ -1,0 +1,99 @@
+{
+  "id": "gw-0178",
+  "artifactType": "doc",
+  "title": "The Panama Canal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Panama Canal crosses the Isthmus of Panama and joins the Atlantic and Pacific Oceans. A French company led by Ferdinand de Lesseps began work in 1881 but gave up after disease and money troubles. The United States took over in 1904 and opened the canal on August 15, 1914, when the ship SS Ancon made the first official transit. George Washington Goethals led the work as chief engineer from 1907."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Ships pass through three sets of locks: Gatun on the Atlantic side, and Pedro Miguel and Miraflores on the Pacific side. The locks raise ships about 26 meters to Gatun Lake, an artificial lake formed by damming the Chagres River. Under the Torrijos-Carter Treaties of 1977, the United States handed control of the canal to Panama on December 31, 1999. A third, larger set of locks opened in June 2016 for bigger ships."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Panama Canal's locks raise ships to Gatun Lake.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The United States handed control of the Panama Canal to Panama on December 31, 1999.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The SS Ancon made the first official transit of the Panama Canal.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Panama Canal opened on August 15, 1915.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "A French company led by Ferdinand de Lesseps began work on a Panama canal in 1881.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Gatun Lake was formed by damming the Chagres River.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

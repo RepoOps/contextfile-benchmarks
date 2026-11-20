@@ -1,0 +1,99 @@
+{
+  "id": "gw-0120",
+  "artifactType": "context_file",
+  "title": "Kimbrelle CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Kimbrelle. Kimbrelle is a front-end component framework that compiles `.kim` single-file components to plain JavaScript. The compiler is in `packages/compiler/` and is written in Rust; the runtime is in `packages/runtime/` and is written in TypeScript. Build the compiler with `cargo build --release` and the runtime with `pnpm --filter runtime build`. The runtime must stay under 6 KB minified and gzipped. The VS Code extension for `.kim` files lives in `packages/vscode/` and is published separately."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Testing and review. Compiler tests compare output to fixtures in `packages/compiler/tests/fixtures/`; run them with `cargo test`. Browser tests run in Chromium, Firefox and WebKit through Playwright with `pnpm test:browser`. A pull request that changes generated code must include a before and after fixture. Do not use `eval` or `new Function` in the runtime, because many sites block them with a Content Security Policy. Releases happen on the first Tuesday of each month."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Kimbrelle runtime must stay under 6 KB minified and gzipped.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Kimbrelle browser tests run in Chromium, Firefox and WebKit.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Kimbrelle's runtime is written in TypeScript.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Kimbrelle runtime is allowed to use new Function.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kimbrelle releases happen on the first Tuesday of each month.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Kimbrelle compiles .kim single-file components to plain JavaScript.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0113",
+  "artifactType": "context_file",
+  "title": "Kalvorin agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Kalvorin. Kalvorin generates and sends invoices for subscription businesses. The backend is Elixir 1.17 on Phoenix; start it locally with `mix phx.server`, which serves on port 4000. Run tests with `mix test`. Database migrations live in `priv/repo/migrations/` and run with `mix ecto.migrate`. Invoice PDFs are rendered by a separate Node service in `pdf/`, started with `npm run start` on port 4010. Load local seed data with `mix run priv/repo/seeds.exs`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Billing rules. Invoice numbers are sequential per account and must never be reused, even after a void. A sent invoice is never edited; corrections go out as a credit note linked to the original. Tax amounts are computed by `Kalvorin.Tax.calculate/2` and nowhere else. Due dates default to net 30. Overdue reminders go out 3, 7 and 14 days after the due date. Any change to `lib/kalvorin/ledger/` needs two approving reviews."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "In Kalvorin, corrections to a sent invoice go out as a credit note linked to the original.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Kalvorin invoice due dates default to net 15.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Kalvorin database migrations run with mix ecto.migrate.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Changes to lib/kalvorin/ledger/ need two approving reviews.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kalvorin's PDF service runs on port 4000.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Kalvorin's backend runs on Elixir 1.17 with Phoenix.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0207",
+  "artifactType": "doc",
+  "title": "The zipper",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The zipper began with Whitcomb Judson, an inventor in Chicago, who patented a hook-and-eye device he called a clasp locker in 1893. He showed it at the World's Columbian Exposition in Chicago that year, but it jammed often and sold poorly. Judson's company later hired Gideon Sundback, an engineer born in Sweden, who in 1913 designed a far better fastener with interlocking teeth on two fabric tapes. Sundback's design is the basis of the modern zipper."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Sundback received a US patent for his separable fastener in 1917, and he also built a machine that could mass-produce it. The name zipper came from the B. F. Goodrich Company, which used the fastener on rubber boots in 1923 and trademarked the word. For years zippers appeared mainly on boots and tobacco pouches. Clothing makers adopted them more widely in the 1930s, helped by a campaign promoting them for children's clothing because children could dress themselves. The Japanese company YKK is now the largest zipper maker."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The B. F. Goodrich Company gave the zipper its name.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Gideon Sundback was born in Norway.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Whitcomb Judson patented the clasp locker in 1893.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Sundback received a US patent for his separable fastener in 1927.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "YKK is the largest zipper maker.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Judson's clasp locker jammed often.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

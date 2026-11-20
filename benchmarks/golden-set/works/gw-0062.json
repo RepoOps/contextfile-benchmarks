@@ -1,0 +1,99 @@
+{
+  "id": "gw-0062",
+  "artifactType": "oci_image",
+  "title": "banterol image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The banterol image runs Banterol, a server that stores build artifacts for CI pipelines. It is built on alpine:3.20 and runs as user banterol with user ID 2000. The HTTP API listens on port 8350. Artifacts are stored under /srv/banterol/artifacts, and the metadata database lives in /srv/banterol/meta; mount volumes at both paths. The entrypoint is /usr/bin/tini, which starts /usr/bin/banterol with the serve command. Mount the volumes before first start, because Banterol creates its database schema on first run."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "BANTEROL_MAX_UPLOAD sets the largest artifact a client may upload and defaults to 5GB. BANTEROL_RETENTION_DAYS sets how long artifacts are kept and defaults to 90. BANTEROL_AUTH_MODE accepts token or none and defaults to token. BANTEROL_LOG_FORMAT accepts json or text and defaults to json. The health check requests /api/ping every 30 seconds with a 5 second timeout and marks the container unhealthy after three failures. BANTEROL_PORT is not supported; change the published port instead."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The banterol image runs as user ID 2000.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "BANTEROL_AUTH_MODE defaults to none.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Banterol HTTP API listens on port 8350.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "BANTEROL_RETENTION_DAYS defaults to 90.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The banterol image uses /usr/bin/tini as its entrypoint.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "BANTEROL_LOG_FORMAT defaults to json.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

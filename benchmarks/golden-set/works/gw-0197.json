@@ -1,0 +1,99 @@
+{
+  "id": "gw-0197",
+  "artifactType": "doc",
+  "title": "The microwave oven",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The microwave oven grew out of radar research during the Second World War. In 1945 Percy Spencer, an engineer at the American company Raytheon, noticed that a candy bar in his pocket had melted while he worked near an active magnetron, the tube that generates microwaves for radar sets. He went on to test popcorn kernels, which popped. Raytheon filed a patent for cooking with microwaves that same year. The first commercial model, the Radarange, went on sale in 1947. It stood almost 1.8 metres tall and weighed around 340 kilograms."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Home microwave ovens became practical in 1967, when Amana, a company then owned by Raytheon, sold a countertop model for 495 US dollars. Most household ovens run at a frequency of 2.45 gigahertz. The waves make water molecules in food rotate back and forth, and that motion produces heat. Metal walls keep the waves inside the oven, and the mesh screen in the door has holes far smaller than the wavelength of about 12 centimetres, so the waves cannot pass through while visible light can. A turntable helps even out hot and cold spots."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Percy Spencer worked as an engineer at Raytheon.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Most household microwave ovens run at a frequency of 5.8 gigahertz.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Radarange went on sale in 1947.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Amana's 1967 countertop microwave oven sold for 495 US dollars.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The first Radarange weighed around 34 kilograms.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Raytheon filed a patent for cooking with microwaves in 1945.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

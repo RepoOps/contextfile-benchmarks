@@ -1,0 +1,99 @@
+{
+  "id": "gw-0100",
+  "artifactType": "doc",
+  "title": "The discovery of penicillin",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "In September 1928 the Scottish bacteriologist Alexander Fleming returned from holiday to his laboratory at St Mary's Hospital in London. On one culture plate of Staphylococcus bacteria, a mould had grown, and the bacteria around it had died. The mould was a Penicillium species, and Fleming named the substance it released penicillin. He published his findings in 1929. He could not purify the substance in useful amounts, and for about a decade little was done with it."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "At the University of Oxford, Howard Florey and Ernst Chain led a team that purified penicillin and showed in 1940 that it protected infected mice. The first human patient, the police constable Albert Alexander, was treated in 1941; he improved but died when the supply ran out. Production in the United States expanded during the Second World War, and penicillin was available for Allied troops by the D-Day landings in 1944. Fleming, Florey and Chain shared the 1945 Nobel Prize in Physiology or Medicine."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Florey and Chain's team showed in 1940 that penicillin protected infected mice.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Fleming, Florey and Chain shared the 1945 Nobel Prize in Physiology or Medicine.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Fleming's laboratory was at St Mary's Hospital in London.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Albert Alexander, the first patient treated with penicillin, made a full recovery.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Fleming published his penicillin findings in 1929.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The mould on Fleming's culture plate was a Penicillium species.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

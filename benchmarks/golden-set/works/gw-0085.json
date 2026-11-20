@@ -1,0 +1,99 @@
+{
+  "id": "gw-0085",
+  "artifactType": "doc",
+  "title": "The launch of the euro",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The euro is the shared currency of most European Union members. The Maastricht Treaty, signed in 1992, set the path toward a single currency and its entry rules. The name euro was chosen at a meeting of EU leaders in Madrid in 1995. The euro launched on 1 January 1999 as an accounting currency for 11 countries, used for bank transfers and financial markets while national notes and coins stayed in circulation. Euro banknotes and coins entered daily use on 1 January 2002. Greece joined the euro in 2001, before the cash changeover."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The European Central Bank, based in Frankfurt, sets interest rates for the whole euro area. Its main goal is price stability, which it defines as inflation of 2 percent over the medium term. Countries joining the euro must meet convergence criteria on inflation, interest rates, government debt and deficits, and exchange rate stability. Euro banknotes look the same in every country, but each country mints coins with its own national design on one side. Croatia became the 20th member of the euro area on 1 January 2023."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Euro banknotes and coins entered daily use on 1 January 1999.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The European Central Bank is based in Frankfurt.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Greece joined the euro in 2001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Croatia became the 20th member of the euro area in 2023.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Each euro area country prints banknotes with its own national design.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Maastricht Treaty was signed in 1992.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

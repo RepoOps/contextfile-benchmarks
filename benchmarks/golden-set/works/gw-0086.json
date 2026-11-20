@@ -1,0 +1,99 @@
+{
+  "id": "gw-0086",
+  "artifactType": "doc",
+  "title": "Gorvel metrics agent how-to",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Gorvel is an agent that collects host metrics and exposes them for scraping. Start it with gorvel run, and it serves metrics in Prometheus text format at /metrics on port 9310. By default it collects CPU, memory, disk and network metrics every 15 seconds. Add the flag --collectors=cpu,memory to collect only those two groups. The agent keeps the most recent sample of each metric in memory and stores nothing on disk."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "To push metrics instead of waiting for scrapes, set push.url in /etc/gorvel/gorvel.toml. Gorvel then sends a batch every 30 seconds and gives up on a batch after 3 failed attempts. Every metric name starts with the prefix gorvel_. The agent adds a host label set to the machine's host name; change it with the host_label setting. Gorvel refuses to start if the config file contains an unknown key, and it prints the line number of that key."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Every Gorvel metric name starts with the prefix gorvel_.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Gorvel serves metrics at /metrics on port 9310.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Gorvel refuses to start when its config file contains an unknown key.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Gorvel collects metrics every 60 seconds by default.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In push mode Gorvel sends a batch every 30 seconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The --collectors flag limits which metric groups Gorvel collects.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

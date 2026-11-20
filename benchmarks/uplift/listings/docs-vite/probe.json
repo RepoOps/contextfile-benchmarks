@@ -1,0 +1,82 @@
+{
+  "seedId": "docs-vite",
+  "title": "Vite 7: knowledge-gap probe set",
+  "subject": "Vite",
+  "version": "7.0",
+  "license": "CC0-1.0",
+  "reviewedBy": null,
+  "tasks": [
+    {
+      "id": "pt-0001",
+      "title": "Minimum Node.js version",
+      "kind": "changed_api",
+      "prompt": "What Node.js versions does Vite 7 require? Give the minimum version for each supported major.",
+      "checks": { "mustMatch": ["\\b20\\.19\\b", "\\b22\\.12\\b"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/guide/migration"
+    },
+    {
+      "id": "pt-0002",
+      "title": "The new default build target",
+      "kind": "changed_api",
+      "prompt": "In Vite 7, what is the default value of `build.target`? Give the exact string.",
+      "checks": { "mustMatch": ["baseline-widely-available"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/guide/migration"
+    },
+    {
+      "id": "pt-0003",
+      "title": "splitVendorChunkPlugin was removed",
+      "kind": "deprecation",
+      "prompt": "Write a Vite 7 vite.config.ts that puts every module from node_modules into one `vendor` chunk.",
+      "checks": { "mustMatch": ["manualChunks", "node_modules"], "mustNotMatch": ["splitVendorChunkPlugin\\s*\\("] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/guide/migration"
+    },
+    {
+      "id": "pt-0004",
+      "title": "transformIndexHtml uses order and handler",
+      "kind": "deprecation",
+      "prompt": "Write a Vite 7 plugin whose transformIndexHtml hook runs before Vite's own HTML processing and replaces __TITLE__ with My App.",
+      "checks": { "mustMatch": ["order\\s*:\\s*['\"`]pre['\"`]", "handler\\s*[:(]"], "mustNotMatch": ["\\btransform\\s*[:(]"] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/guide/migration"
+    },
+    {
+      "id": "pt-0005",
+      "title": "import.meta.glob raw imports",
+      "kind": "deprecation",
+      "prompt": "Using Vite 7, write the import.meta.glob call that eagerly loads every ./content/*.md file as a raw string.",
+      "checks": { "mustMatch": ["eager\\s*:\\s*true","query\\s*:\\s*['\"`]\\?raw['\"`]", "import\\s*:\\s*['\"`]default['\"`]"], "mustNotMatch": ["\\bas\\s*:\\s*['\"`]raw['\"`]"] },
+      "namedCommands": [],
+      "sourceUrl": "https://vite.dev/guide/features#glob-import"
+    },
+    {
+      "id": "pt-0006",
+      "title": "Custom resolve conditions keep the defaults",
+      "kind": "changed_api",
+      "prompt": "In a Vite 7 config, add the custom export condition `custom` for client code without dropping Vite's default client conditions.",
+      "checks": { "mustMatch": ["defaultClientConditions"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/config/shared-options#resolve-conditions"
+    },
+    {
+      "id": "pt-0007",
+      "title": "Scaffold a React TypeScript app",
+      "kind": "exact_command",
+      "prompt": "What npm command scaffolds a new Vite 7 project named my-app from the React TypeScript template?",
+      "checks": { "mustMatch": ["npm create vite@8 my-app -- --template react-ts"], "mustNotMatch": [] },
+      "namedCommands": ["npm create vite@8 my-app -- --template react-ts"],
+      "sourceUrl": "https://v7.vite.dev/guide/"
+    },
+    {
+      "id": "pt-0008",
+      "title": "Sass legacy API is gone",
+      "kind": "deprecation",
+      "prompt": "Write the Vite 7 config that prepends `@use \"src/vars\" as *;` to every SCSS file.",
+      "checks": { "mustMatch": ["preprocessorOptions", "additionalData"], "mustNotMatch": ["api\\s*:\\s*['\"`]legacy['\"`]"] },
+      "namedCommands": [],
+      "sourceUrl": "https://v7.vite.dev/guide/migration"
+    }
+  ]
+}

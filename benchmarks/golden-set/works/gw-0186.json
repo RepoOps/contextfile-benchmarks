@@ -1,0 +1,99 @@
+{
+  "id": "gw-0186",
+  "artifactType": "brain_wiki",
+  "title": "Trans-Siberian Railway",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Trans-Siberian Railway. The Trans-Siberian Railway links Moscow with Vladivostok on the Pacific coast of Russia. At about 9,289 kilometers, it is the longest railway line in the world. Construction began in 1891, and the future Tsar Nicholas II attended the ceremony at Vladivostok that started the eastern section. Work went on from both ends at once. The main route passes through cities such as Yekaterinburg, Novosibirsk and Irkutsk, and the line runs across eight time zones."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Before the all-Russian route was finished, trains to Vladivostok took a shortcut across Manchuria on the Chinese Eastern Railway. The Amur section, which kept the line inside Russian territory, was completed in 1916 when the bridge over the Amur River at Khabarovsk opened. Electrification of the full line was completed in 2002. The railway carried settlers east and opened Siberia to farming and mining. The Rossiya passenger train runs the full route between Moscow and Vladivostok."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Construction of the Trans-Siberian Railway began in 1891.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Trans-Siberian Railway is about 9,289 kilometers long.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Amur section of the Trans-Siberian Railway was completed in 1916.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Electrification of the full Trans-Siberian line was completed in 1992.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Before the Amur section was finished, trains to Vladivostok crossed Manchuria on the Chinese Eastern Railway.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Construction on the Trans-Siberian Railway went on from both ends at once.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

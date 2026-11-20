@@ -1,0 +1,99 @@
+{
+  "id": "gw-0034",
+  "artifactType": "brain_wiki",
+  "title": "Speed of light",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Light travels through a vacuum at exactly 299,792,458 metres per second. This value has been fixed by definition since 1983, when the metre was redefined as the distance light travels in 1/299,792,458 of a second. Physicists write the speed of light with the letter c. Light from the Sun takes about 8 minutes and 20 seconds to reach Earth. In Einstein's special theory of relativity, published in 1905, c is the same for every observer, no matter how they move."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Light slows down when it passes through a material. The ratio of its speed in a vacuum to its speed in a material is called the refractive index. Water has a refractive index of about 1.33, and ordinary glass is about 1.5. In 1849 the French physicist Hippolyte Fizeau made the first measurement of the speed of light that did not rely on astronomy, using a rotating toothed wheel and a distant mirror. Leon Foucault later used a rotating mirror, in 1862."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The speed of light in a vacuum has been fixed by definition since 1983.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Water has a refractive index of about 1.33.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Fizeau measured the speed of light using a rotating toothed wheel.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Einstein published the special theory of relativity in 1915.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Ordinary glass has a refractive index of about 1.5.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

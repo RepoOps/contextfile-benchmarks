@@ -1,0 +1,99 @@
+{
+  "id": "gw-0136",
+  "artifactType": "doc",
+  "title": "The Taj Mahal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Taj Mahal stands on the south bank of the Yamuna River in Agra, India. The Mughal emperor Shah Jahan ordered it built as a tomb for his wife Mumtaz Mahal, who died in 1631 while giving birth to their fourteenth child. Work began around 1632. The main tomb was largely finished by about 1643, and the wider complex around 1653. Court records name Ustad Ahmad Lahauri as the likely chief architect. Shah Jahan himself was later buried beside his wife."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The tomb is faced with white marble from Makrana in Rajasthan, inlaid with semi-precious stones in a technique known as pietra dura. Four minarets stand at the corners of the raised platform, and each leans slightly outward, so that in an earthquake it would fall away from the central tomb. In 1983 UNESCO listed the Taj Mahal as a World Heritage Site. Formal gardens, laid out in four parts, stretch in front of the tomb toward the main gate."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mumtaz Mahal died in 1631.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Taj Mahal's marble came from Makrana in Rajasthan.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "UNESCO listed the Taj Mahal as a World Heritage Site in 1983.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Taj Mahal stands on the north bank of the Yamuna River.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Each of the Taj Mahal's four minarets leans slightly outward.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Shah Jahan is buried beside Mumtaz Mahal.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

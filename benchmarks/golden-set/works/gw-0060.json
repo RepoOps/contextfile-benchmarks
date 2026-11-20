@@ -1,0 +1,99 @@
+{
+  "id": "gw-0060",
+  "artifactType": "doc",
+  "title": "Japan",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Japan is an island country in East Asia, lying in the Pacific Ocean east of the Korean Peninsula. Its four largest islands are Honshu, Hokkaido, Kyushu and Shikoku, and thousands of smaller islands surround them. Honshu is the largest. The capital, Tokyo, is on Honshu, as are the cities of Osaka, Kyoto and Hiroshima. About three quarters of the land is mountainous, so most people live on narrow coastal plains."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Mount Fuji, at 3,776 metres, is Japan's highest mountain. It is an active volcano that last erupted in 1707, and it was added to the UNESCO World Heritage list in 2013. Japan lies where several tectonic plates meet, so earthquakes are frequent. The Tohoku earthquake of 11 March 2011, of magnitude 9.0, caused a tsunami that led to the Fukushima Daiichi nuclear disaster. The Shinkansen high-speed rail line between Tokyo and Osaka opened in 1964."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Honshu is the largest of Japan's islands.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Mount Fuji last erupted in 1707.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Tokyo lies on the island of Honshu.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Shinkansen line between Tokyo and Osaka opened in 1972.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Mount Fuji is 3,776 metres high.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "About three quarters of Japan's land is mountainous.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

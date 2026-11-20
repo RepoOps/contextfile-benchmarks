@@ -1,0 +1,99 @@
+{
+  "id": "gw-0054",
+  "artifactType": "brain_wiki",
+  "title": "Insulin",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Insulin is a hormone made by the beta cells of the islets of Langerhans in the pancreas. It lowers the level of glucose in the blood by helping cells in the muscles, liver and fat take up glucose. In the liver, insulin also promotes storing glucose as glycogen. Its main opposing hormone is glucagon, made by alpha cells, which raises blood glucose. In type 1 diabetes, the immune system destroys the beta cells, so the body makes little or no insulin."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Frederick Banting and Charles Best isolated insulin at the University of Toronto in 1921. In January 1922 Leonard Thompson, a 14-year-old boy, became the first person to receive an insulin injection for diabetes. Banting and John Macleod received the 1923 Nobel Prize in Physiology or Medicine for the discovery. In 1982, human insulin made by genetically engineered bacteria became the first such drug approved for sale in the United States."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Glucagon is made by the alpha cells of the pancreas.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Leonard Thompson was 14 years old when he received insulin.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Banting and Best isolated insulin at the University of Toronto.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Insulin raises the level of glucose in the blood.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In type 1 diabetes, the immune system destroys the beta cells.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Banting and Macleod received the 1923 Nobel Prize in Physiology or Medicine.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

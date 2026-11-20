@@ -1,0 +1,99 @@
+{
+  "id": "gw-0127",
+  "artifactType": "context_file",
+  "title": "Lumenrill agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Lumenrill. Lumenrill is a batch data pipeline runner that reads job definitions from YAML files in `pipelines/`. The code targets Python 3.11 and uses uv for dependency management. Install everything with `uv sync`, then run the unit tests with `uv run pytest tests/unit`. The slower end to end tests live in `tests/e2e` and need a local Postgres 16 database started with `docker compose up db`. Set `LUMENRILL_ENV=test` before running them so jobs write to the `lr_test` schema instead of `lr_main`. The command line entry point is `src/lumenrill/cli.py`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for agents. Every new pipeline step subclasses `BaseStep` from `src/lumenrill/steps/base.py` and must define a `name` and a `run` method. Steps may not open their own database connections; they receive one from the runner. Keep each step under 200 lines. Type hints are required on all public functions, and `uv run mypy src` must pass with no errors. Do not add a new third party package without a note in `docs/dependencies.md`. Branch names use the form `lr-<issue number>-<short-slug>`. Never commit files from the `data/` folder, which holds local sample extracts."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lumenrill end to end tests need a local Postgres 16 database.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lumenrill pipeline steps must stay under 300 lines.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lumenrill steps receive their database connection from the runner.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "With LUMENRILL_ENV set to test, Lumenrill jobs write to the lr_main schema.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Lumenrill requires type hints on all public functions.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lumenrill manages its dependencies with uv.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

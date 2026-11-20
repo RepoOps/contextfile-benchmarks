@@ -1,0 +1,99 @@
+{
+  "id": "gw-0130",
+  "artifactType": "open_spec",
+  "title": "Nubrella typo tolerance",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec NB-9: typo tolerance in Nubrella search. Nubrella is the product search engine behind our storefront. Today a query only matches documents that contain each term exactly after lowercasing, so a search for 'sneker' returns nothing. Support logs show that about 6 percent of queries return zero results, and a sample review found that misspellings caused roughly half of them. This spec adds fuzzy matching based on edit distance. Terms of 4 or fewer characters get no fuzziness. Terms of 5 to 8 characters allow one edit, and longer terms allow two."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Ranking and rollout. An exact match always ranks above a fuzzy match on the same field. Fuzzy matching is never applied to SKU codes or brand names, which come from the `exact_fields` list in `config/search.toml`. The feature ships behind the flag `nb_fuzzy`, starting at 10 percent of traffic. If the zero result rate does not fall by at least 2 points within 14 days, the team will remove the flag and close the spec. Latency budget: p95 query time must stay under 120 milliseconds."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "In Nubrella, a 6 character search term allows one edit.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "About 6 percent of Nubrella queries return zero results.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Nubrella never applies fuzzy matching to SKU codes.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The nb_fuzzy flag starts at 25 percent of traffic.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Nubrella does not apply fuzzy matching to brand names.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Nubrella's p95 query time must stay under 120 milliseconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

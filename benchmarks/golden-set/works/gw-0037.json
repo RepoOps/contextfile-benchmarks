@@ -1,0 +1,99 @@
+{
+  "id": "gw-0037",
+  "artifactType": "doc",
+  "title": "Sodium chloride",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Sodium chloride, the main part of table salt, has the chemical formula NaCl. It is an ionic compound made of positively charged sodium ions and negatively charged chloride ions held in a cubic crystal lattice. Each sodium ion is surrounded by six chloride ions, and each chloride ion by six sodium ions. Pure sodium chloride melts at about 801 degrees Celsius. It dissolves readily in water, and its solution conducts electricity because the ions are free to move."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Most sodium chloride is obtained either by mining rock salt, the mineral called halite, or by evaporating seawater and brine. Seawater contains about 35 grams of dissolved salts in each kilogram, most of it sodium chloride. A large share of the salt produced each year goes to the chemical industry, which uses electrolysis of brine to make chlorine gas and sodium hydroxide. In cold regions, salt is spread on roads because it lowers the freezing point of water."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Pure sodium chloride melts at about 801 degrees Celsius.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Rock salt is the mineral called halite.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "In a sodium chloride crystal, each sodium ion is surrounded by four chloride ions.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Electrolysis of brine produces chlorine gas and sodium hydroxide.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Salt raises the freezing point of water.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A solution of sodium chloride in water conducts electricity.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0203",
+  "artifactType": "open_spec",
+  "title": "Include files for Tarnquill configs",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: add include files to the Tarnquill config format. Tarnquill configs are plain text files with the .tqc extension, and large teams now keep single files of more than 3,000 lines that are hard to review. This change adds an include directive, written as @include followed by a relative path, that pulls another .tqc file into the current one. Paths resolve relative to the file that contains the directive. Keys defined later override earlier ones, so a local file can override shared defaults."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits. Includes may nest at most 8 levels deep, and the parser stops with error TQ214 when it finds a cycle. Glob patterns such as conf.d/*.tqc are out of scope for this version. Included files must use the same encoding, UTF-8, as the parent. The tarnquill check command will print the full include tree with the --tree flag. Rollout: the directive ships behind the include_v1 parser option in version 2.6 and becomes the default in version 3.0."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Tarnquill includes may nest at most 8 levels deep.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Tarnquill include paths resolve relative to the current working directory.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Tarnquill config files use the .tqc extension.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Tarnquill parser stops with error TQ214 when it finds an include cycle.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "This version of Tarnquill includes supports glob patterns such as conf.d/*.tqc.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "In a Tarnquill config, keys defined later override earlier ones.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

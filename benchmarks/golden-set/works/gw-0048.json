@@ -1,0 +1,99 @@
+{
+  "id": "gw-0048",
+  "artifactType": "oci_image",
+  "title": "brisolt-runner image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The brisolt-runner image runs the Brisolt CI job runner, which pulls jobs from a Brisolt server and executes them in isolated workspaces. It is built on ubuntu:24.04 and runs as user runner with user ID 1001. The runner opens an outbound connection to its server, so receiving jobs needs no inbound port. Job workspaces are created under /builds, and the tool cache lives in /opt/brisolt/cache. The entrypoint is /usr/local/bin/brisolt-runner with the default command start."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "BRISOLT_SERVER_URL points the runner at its server and has no default. BRISOLT_TOKEN holds the registration token and must be set. BRISOLT_CONCURRENCY sets how many jobs run at once and defaults to 2. BRISOLT_JOB_TIMEOUT defaults to 3600 seconds. A Prometheus metrics endpoint is served on port 9252 when BRISOLT_METRICS is set to true; it is off by default. The health check runs brisolt-runner status every 20 seconds. Logs are written to standard output in JSON."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "BRISOLT_CONCURRENCY defaults to 2.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The brisolt-runner image is built on ubuntu:24.04.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The brisolt-runner health check runs every 20 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "BRISOLT_JOB_TIMEOUT defaults to 1800 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Brisolt job workspaces are created under /builds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The brisolt-runner metrics endpoint is off by default.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

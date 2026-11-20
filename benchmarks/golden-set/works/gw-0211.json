@@ -1,0 +1,99 @@
+{
+  "id": "gw-0211",
+  "artifactType": "doc",
+  "title": "Treaty of Versailles",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Treaty of Versailles was the main peace settlement between the Allied powers and Germany after the First World War. It was signed on 28 June 1919 in the Hall of Mirrors at the Palace of Versailles, near Paris, five years to the day after the assassination of Archduke Franz Ferdinand. Germany was not allowed to take part in the negotiations. The leading negotiators were Georges Clemenceau of France, David Lloyd George of Britain, Woodrow Wilson of the United States and Vittorio Orlando of Italy."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Under the treaty, Germany returned Alsace-Lorraine to France, lost its overseas colonies, and had its army limited to 100,000 men. Article 231, often called the war guilt clause, held Germany responsible for the loss and damage of the war and became the basis for reparations. The treaty also created the League of Nations. The United States Senate never ratified it, and the United States made a separate peace with Germany in 1921."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Treaty of Versailles was signed in the Hall of Mirrors.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Treaty of Versailles limited the German army to 300,000 men.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Article 231 of the Treaty of Versailles is often called the war guilt clause.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Germany took part in negotiating the Treaty of Versailles.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Treaty of Versailles created the League of Nations.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Vittorio Orlando was a leading negotiator for Italy at Versailles.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0210",
+  "artifactType": "brain_wiki",
+  "title": "Antarctic Treaty",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Antarctic Treaty was signed in Washington, DC, on 1 December 1959 by 12 countries whose scientists had worked in Antarctica during the International Geophysical Year of 1957 to 1958. It entered into force in 1961. The treaty sets Antarctica aside for peaceful purposes and scientific research, bans military activity such as military bases and weapons testing, and prohibits nuclear explosions and the disposal of radioactive waste there. It applies to the area south of 60 degrees south latitude."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The treaty does not settle the territorial claims that seven countries, including Argentina, Australia and the United Kingdom, had made to parts of Antarctica. Instead it freezes them: no new claims may be made while the treaty is in force. Parties may inspect each other's stations at any time. A later agreement, the Protocol on Environmental Protection signed in Madrid in 1991, bans mining and treats Antarctica as a natural reserve. More than 50 countries are now parties to the treaty."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Antarctic Treaty entered into force in 1961.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The 1991 Madrid Protocol bans mining in Antarctica.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Seven countries have made territorial claims in Antarctica.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Antarctic Treaty was first signed by 20 countries.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Antarctic Treaty applies to the area south of 60 degrees south latitude.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Parties to the Antarctic Treaty may inspect each other's stations at any time.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0114",
+  "artifactType": "doc",
+  "title": "John Snow and the 1854 cholera outbreak",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "In late August 1854 a severe outbreak of cholera struck the Soho district of London. The physician John Snow did not accept the common view that cholera spread through bad air, or miasma. He mapped the deaths and found that they clustered around a public water pump on Broad Street. He persuaded the local parish authorities to remove the pump's handle on 8 September 1854. The outbreak was already declining by then, but his map became a famous early example of using data to trace a disease."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Snow strengthened his case with a study of south London households served by two water companies. The Southwark and Vauxhall Company drew water from the Thames downstream of sewage outlets, while the Lambeth Company had moved its intake upstream. Deaths from cholera were far higher among Southwark and Vauxhall customers. The bacterium that causes cholera, Vibrio cholerae, was described by Filippo Pacini in 1854 and identified again by Robert Koch in 1883. Snow died in 1858."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The handle of the Broad Street pump was removed on 8 September 1854.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "John Snow rejected the idea that cholera spread through bad air.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Lambeth Company drew its water from the Thames downstream of sewage outlets.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Filippo Pacini described the cholera bacterium in 1854.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "John Snow died in 1858.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The 1854 cholera outbreak struck the Soho district of London.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

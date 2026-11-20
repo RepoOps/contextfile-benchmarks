@@ -1,0 +1,99 @@
+{
+  "id": "gw-0125",
+  "artifactType": "brain_wiki",
+  "title": "The Andromeda Galaxy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Andromeda Galaxy, also catalogued as Messier 31, is the nearest large spiral galaxy to the Milky Way, about 2.5 million light-years away. On a dark night it can be seen without a telescope as a faint smudge in the constellation Andromeda. The Persian astronomer Abd al-Rahman al-Sufi described it in his Book of Fixed Stars around 964 AD. It has two bright satellite galaxies, M32 and M110. It is one of the most distant objects visible to the naked eye."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "For a long time astronomers argued over whether spiral nebulae such as Andromeda lay inside the Milky Way. In 1923 Edwin Hubble found Cepheid variable stars in Andromeda and used them to measure its distance, which showed that it lies far outside our galaxy. Andromeda is moving toward the Milky Way at roughly 110 kilometers per second, and the two are expected to collide in about 4.5 billion years. Both galaxies belong to the Local Group."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Andromeda Galaxy is also catalogued as Messier 31.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Edwin Hubble found Cepheid variable stars in Andromeda in 1933.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Andromeda and the Milky Way both belong to the Local Group.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Andromeda is moving toward the Milky Way at roughly 110 kilometers per second.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Al-Sufi described the Andromeda Galaxy in his Book of Fixed Stars around 1264 AD.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "M32 and M110 are satellite galaxies of Andromeda.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

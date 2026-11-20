@@ -1,0 +1,99 @@
+{
+  "id": "gw-0052",
+  "artifactType": "brain_wiki",
+  "title": "Australia",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Australia is both a country and the smallest of the continents. Its capital is Canberra, a planned city chosen as a compromise between Sydney and Melbourne; the federal Parliament first met there in 1927. The country is made up of six states and two major mainland territories. Australia became a federation on 1 January 1901, when six British colonies united under one constitution. Its largest state by area is Western Australia."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Much of inland Australia, called the Outback, is arid. Its longest river system is formed by the Murray and the Darling, and the Murray reaches the sea in South Australia. Uluru, a large sandstone rock in the Northern Territory, is sacred to the Anangu people. Off the Queensland coast lies the Great Barrier Reef, the world's largest coral reef system, which became a UNESCO World Heritage Site in 1981. Sydney is the country's largest city. Mount Kosciuszko, at 2,228 metres, is the highest peak on the mainland."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Australia became a federation on 1 January 1901.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Uluru lies in Western Australia.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Great Barrier Reef became a UNESCO World Heritage Site in 1981.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Australia's federal Parliament first met in Canberra in 1927.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Sydney is Australia's largest city.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mount Kosciuszko is the highest peak on the Australian mainland.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

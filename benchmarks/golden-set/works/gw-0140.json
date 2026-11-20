@@ -1,0 +1,99 @@
+{
+  "id": "gw-0140",
+  "artifactType": "context_file",
+  "title": "Lodemire AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md: Lodemire. Lodemire is a feature store that serves precomputed machine learning features to online models with low latency. The repo has two parts: `core/`, written in Rust, and `sdk/`, a Python client. Build the core with `cargo build --release -p lodemire-core`. Install the SDK for development with `pip install -e sdk[dev]`. The local server listens on port 6460 and reads its settings from `lodemire.toml`. Run `scripts/smoke.sh` after any change to the read path; it fails if p99 latency goes above 15 milliseconds."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Feature names follow `entity.feature_name.version`, for example `user.days_active.v2`. Never change the meaning of an existing version; publish a new one. Python SDK code must support Python 3.9 and later, so do not use the match statement. Every pull request that touches `core/src/storage` needs a benchmark result pasted into its description. Secrets come from environment variables that start with `LODEMIRE_`; never read them from files in the repo. Keep the SDK free of heavy dependencies: numpy is allowed, pandas is not."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Lodemire core is written in Rust.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lodemire feature names end with a version part.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lodemire's local server listens on port 6460.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Lodemire SDK may depend on pandas.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Lodemire's smoke script fails when p99 latency exceeds 15 milliseconds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lodemire SDK code must support Python 3.9 and later.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

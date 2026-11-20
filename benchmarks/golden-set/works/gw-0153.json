@@ -1,0 +1,99 @@
+{
+  "id": "gw-0153",
+  "artifactType": "open_spec",
+  "title": "Nethercomb registry approval gates",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec NC-7: approval gates for the Nethercomb model registry. Nethercomb stores trained models and promotes them through three stages: staging, canary and production. Today any engineer with write access can promote a model straight to production, and in September a model with a broken tokenizer reached production this way. This spec requires a passing evaluation report before any promotion out of staging. Promotion to production also needs approval from one person on the model's owner list who did not train it."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Details. The evaluation report must come from the `nc-eval` job and be no more than 72 hours old at promotion time. Canary traffic is fixed at 5 percent, and a model must stay in canary for at least 24 hours. Emergency rollback to the previous production model skips all gates. The registry API returns HTTP 409 when a promotion is blocked, with a reason in the body. Rollout date: 2 February 2027. Out of scope: gates for models used only in offline batch scoring."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nethercomb promotes models through staging, canary and production.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A Nethercomb model must stay in canary for at least 48 hours.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Emergency rollback in Nethercomb skips all promotion gates.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Nethercomb registry API returns HTTP 403 when a promotion is blocked.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Nethercomb production promotion needs approval from an owner who did not train the model.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A Nethercomb evaluation report must be no more than 72 hours old at promotion time.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

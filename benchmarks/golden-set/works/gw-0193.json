@@ -1,0 +1,99 @@
+{
+  "id": "gw-0193",
+  "artifactType": "doc",
+  "title": "Peace of Westphalia",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Peace of Westphalia is the name for a pair of treaties signed in 1648 in the Westphalian cities of Osnabrueck and Muenster, in what is now Germany. Together they ended the Thirty Years' War, which had begun in 1618 and devastated large parts of central Europe. Negotiations ran for several years before the signing. The Holy Roman Emperor signed with Sweden at Osnabrueck and with France at Muenster. The settlement confirmed the 1555 Peace of Augsburg and extended its religious toleration to Calvinists."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "A separate treaty signed at Muenster in 1648, the Peace of Muenster, ended the Eighty Years' War between Spain and the Dutch Republic. Spain formally recognized the Dutch Republic as independent. The Westphalian settlement also recognized the independence of the Swiss Confederation from the Holy Roman Empire. Sweden gained territory on the Baltic coast, including Western Pomerania, and France gained lands in Alsace. Political scientists often trace the idea of sovereign states that do not interfere in each other's internal affairs to Westphalia, though many historians argue the treaties themselves said little about that idea."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Thirty Years' War began in 1630.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Spain recognized the Dutch Republic as independent in the Peace of Muenster.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Sweden gained Western Pomerania under the Westphalian settlement.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Holy Roman Emperor signed with Sweden at Osnabrueck.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Peace of Muenster ended a war between Spain and Portugal.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Westphalian settlement extended religious toleration to Calvinists.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

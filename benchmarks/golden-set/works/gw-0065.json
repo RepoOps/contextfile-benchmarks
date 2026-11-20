@@ -1,0 +1,99 @@
+{
+  "id": "gw-0065",
+  "artifactType": "doc",
+  "title": "The Meiji Restoration",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Meiji Restoration of 1868 returned political power in Japan from the Tokugawa shogunate to the emperor. The young Emperor Mutsuhito, known by his reign name Meiji, was 15 years old when the change took place. The imperial court moved from Kyoto to Edo, which was renamed Tokyo, meaning eastern capital. In 1871 the government abolished the feudal domains, called han, and replaced them with prefectures run by appointed governors. Former samurai lost the right to carry swords in public under an edict of 1876."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The new government set out to build industry and military strength under the slogan fukoku kyohei, rich country, strong army. A national conscription law in 1873 required men to serve in a modern army instead of relying on samurai. Japan's first railway opened in 1872, running between Shimbashi in Tokyo and Yokohama. The Meiji Constitution, issued in 1889, created an elected lower house of the Imperial Diet. The Satsuma Rebellion of 1877, led by Saigo Takamori, was the last major armed revolt by former samurai."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Japan's first railway ran between Shimbashi and Yokohama.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Meiji government abolished the feudal domains in 1881.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Edo was renamed Tokyo, meaning eastern capital.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Saigo Takamori led the Satsuma Rebellion of 1877.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Meiji Constitution created an appointed lower house of the Imperial Diet.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Japan passed a national conscription law in 1873.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

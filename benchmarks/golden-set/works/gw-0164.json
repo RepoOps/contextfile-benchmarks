@@ -1,0 +1,99 @@
+{
+  "id": "gw-0164",
+  "artifactType": "oci_image",
+  "title": "pertwick-cron image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The pertwick-cron image runs Pertwick, a cron style job runner for containers. It is built on debian:12-slim and runs as user pertwick with user ID 2001 and group ID 2001. Job files are read from /etc/pertwick/jobs.d, one YAML file per job. The image exposes port 8125 for its status page. The entrypoint is /usr/local/bin/pertwick run. Mount a volume at /var/lib/pertwick to keep the run history database across restarts. The image is published for amd64 and arm64."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Settings. PERTWICK_TZ sets the time zone used to read schedules and defaults to UTC. PERTWICK_MAX_PARALLEL caps how many jobs run at once and defaults to 3. PERTWICK_HISTORY_DAYS controls how long run records are kept and defaults to 14. When a job overruns its next start time, Pertwick skips that start rather than queuing it. A health check calls /healthz on port 8125 every 30 seconds. Set PERTWICK_LOG_FORMAT to json for structured logs; the default is text."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Pertwick reads job files from /etc/pertwick/jobs.d.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "PERTWICK_TZ defaults to UTC.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The pertwick-cron image runs as user ID 2001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "When a job overruns its next start time, Pertwick queues that start.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "PERTWICK_HISTORY_DAYS defaults to 14.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The pertwick-cron entrypoint is /usr/local/bin/pertwick run.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

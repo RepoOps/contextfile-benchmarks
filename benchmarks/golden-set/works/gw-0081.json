@@ -1,0 +1,99 @@
+{
+  "id": "gw-0081",
+  "artifactType": "context_file",
+  "title": "Edrith cursor rules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": ".cursorrules for edrith. Edrith is a Prometheus exporter for network switches, written in Python 3.12. It polls switches over SNMP and serves metrics on port 9620. Use uv for everything: `uv sync` to install and `uv run pytest` to test. Source lives in `src/edrith/`, and each switch vendor gets its own module in `src/edrith/vendors/`. Type hints are required on all public functions, and `mypy --strict` must pass. Run `uv run ruff check` before committing, because CI fails on any lint error."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Never poll a switch more often than every 60 seconds, because some older models reboot under heavy SNMP load. Metric names start with `edrith_` and use snake_case. Tests must not reach real devices; use the recorded SNMP walks in `tests/walks/`. Keep the default SNMP timeout at 5 seconds with 2 retries. Do not add new runtime dependencies without asking the maintainers. Docs are in `docs/` and built with `mkdocs build`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Edrith tests use the recorded SNMP walks in tests/walks/.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Edrith serves metrics on port 9260.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Each switch vendor gets its own module in src/edrith/vendors/.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Edrith's default SNMP timeout is 10 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Edrith must never poll a switch more often than every 60 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Edrith is written in Python 3.12.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

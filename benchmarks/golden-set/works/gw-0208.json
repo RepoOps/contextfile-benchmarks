@@ -1,0 +1,99 @@
+{
+  "id": "gw-0208",
+  "artifactType": "context_file",
+  "title": "Xorvane agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Xorvane. Xorvane is a feature flag service with a Python 3.12 API and a Postgres 16 database. Start the stack with `docker compose up`; the API answers on port 8085. Run tests with `pytest -q` from the repo root. Database migrations use Alembic and live in `migrations/versions/`; create one with `alembic revision --autogenerate -m \"<summary>\"`. Flag evaluation logic lives in `xorvane/eval/` and must stay free of database calls."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for agents. Never change the evaluation hash in `xorvane/eval/bucket.py`; doing so would move users between variants in live experiments. Every new API endpoint needs an entry in `openapi.yaml` and a test in `tests/api/`. Use `ruff check` and `ruff format` before committing. Flag keys are lowercase with dots, such as `checkout.new_summary`, and at most 64 characters long. Ask a maintainer before deleting any flag older than 90 days. Run `make seed` to load sample flags into a local database."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Xorvane flag keys may be at most 64 characters long.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Xorvane API answers on port 8080.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Every new Xorvane API endpoint needs an entry in openapi.yaml.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Xorvane uses Alembic for database migrations.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Xorvane uses a Postgres 16 database.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Changing the Xorvane evaluation hash would move users between variants in live experiments.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0200",
+  "artifactType": "open_spec",
+  "title": "Percentage rollouts for Vexmorrow flags",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: percentage rollouts for Vexmorrow feature flags. Today a Vexmorrow flag is either on or off for every user in an environment, so teams ship risky changes to everyone at once. This change adds a rollout percentage from 0 to 100 on each flag. A user's bucket is computed by hashing the flag key together with the user ID, so the same user always gets the same result for a given flag. Raising the percentage keeps every user who was already in the rollout. Flags without a percentage keep today's behavior."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Percentages accept whole numbers only. Requests without a user ID fall back to the flag's default value. The SDKs evaluate the hash locally, so no new network calls are added. Server SDKs need version 4.2 or later; older versions treat any percentage flag as off. The dashboard shows a warning when a percentage changes by more than 25 points in one edit. The feature ships to internal projects first, then to all customers in the March release."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A Vexmorrow rollout percentage ranges from 0 to 100.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Vexmorrow server SDKs need version 4.2 or later for percentage rollouts.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Vexmorrow SDKs evaluate the rollout hash locally.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Vexmorrow rollout percentages accept decimal values.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Raising a Vexmorrow rollout percentage keeps users who were already in the rollout.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Vexmorrow flags without a percentage keep their current behavior.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

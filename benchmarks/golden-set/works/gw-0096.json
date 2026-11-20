@@ -1,0 +1,99 @@
+{
+  "id": "gw-0096",
+  "artifactType": "brain_wiki",
+  "title": "Edward Jenner and the end of smallpox",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Edward Jenner was an English country doctor who worked in Berkeley, Gloucestershire. Rural people there believed that milkmaids who caught cowpox, a mild illness passed from cattle, did not later catch smallpox. In May 1796 Jenner tested the idea. He took material from a cowpox sore on the hand of a milkmaid named Sarah Nelmes and put it into small cuts on the arm of James Phipps, an eight-year-old boy. Weeks later he exposed the boy to smallpox matter, and the boy did not fall ill. Jenner published his results in 1798. The word vaccine comes from vacca, the Latin word for cow."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Smallpox is caused by the variola virus. In 1967 the World Health Organization launched an intensified programme to wipe it out. Instead of trying to vaccinate everyone, teams found each new case, isolated the patient, and vaccinated the people around them, a method called ring vaccination. The last natural case was Ali Maow Maalin, a hospital cook in Merca, Somalia, who fell ill in October 1977 and recovered. In 1980 the World Health Assembly declared smallpox eradicated. It remains the only human disease that has been eradicated."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The last natural case of smallpox occurred in Somalia.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Jenner took cowpox material from a milkmaid named Sarah Nelmes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The World Health Assembly declared smallpox eradicated in 1985.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Ring vaccination meant vaccinating the people around each new smallpox case.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "James Phipps was eight years old when Jenner inoculated him.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Jenner published his cowpox results in 1798.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

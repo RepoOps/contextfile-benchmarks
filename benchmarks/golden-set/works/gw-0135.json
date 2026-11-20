@@ -1,0 +1,99 @@
+{
+  "id": "gw-0135",
+  "artifactType": "oci_image",
+  "title": "nimbalt/worker image",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# nimbalt/worker. This image runs a Nimbalt queue worker that pulls jobs from Redis and executes them as Python callables. It is built on `python:3.12-slim-bookworm` and runs as the non-root user `nimbalt` with UID 10001. The entrypoint is `/usr/local/bin/nimbalt-worker`, and the default command is `run --queues default`. The image exposes port 9187 for Prometheus metrics. Mount your job code at `/app/jobs`; the worker adds that path to `PYTHONPATH` at startup."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. `NIMBALT_REDIS_URL` sets the broker address and defaults to `redis://redis:6379/0`. `NIMBALT_CONCURRENCY` sets the number of worker processes and defaults to 4. `NIMBALT_JOB_TIMEOUT` is the maximum run time for one job in seconds, default 300. `NIMBALT_LOG_FORMAT` accepts `json` or `text` and defaults to `json`. Health check: the image runs `nimbalt-worker ping` every 30 seconds and marks the container unhealthy after 3 failed checks in a row. Mount `/tmp` as a tmpfs volume."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The nimbalt/worker image runs as UID 10001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "NIMBALT_CONCURRENCY defaults to 8.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The nimbalt/worker image exposes port 9187 for Prometheus metrics.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The nimbalt/worker health check runs every 30 seconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "NIMBALT_LOG_FORMAT defaults to text.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The nimbalt/worker image is built on python:3.12-slim-bookworm.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

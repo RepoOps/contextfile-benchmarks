@@ -1,0 +1,99 @@
+{
+  "id": "gw-0181",
+  "artifactType": "oci_image",
+  "title": "paldrix-runner image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The paldrix-runner image runs a Paldrix CI build agent. It is built on debian:12 and runs as user runner with user ID 1001. The agent connects out to the Paldrix server and does not listen on any port for jobs; port 9300 serves only its status endpoint. Workspaces are created under /home/runner/work, and a volume at /home/runner/.cache keeps tool caches between jobs. The entrypoint is /usr/local/bin/paldrix-agent. The image includes git, curl and a C toolchain."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. PALDRIX_URL gives the server address and PALDRIX_TOKEN the registration token; both are required. PALDRIX_LABELS sets runner labels as a comma separated list and defaults to linux,x64. PALDRIX_CONCURRENCY sets parallel jobs and defaults to 1. With PALDRIX_EPHEMERAL=true the agent takes one job and then exits. The health check runs paldrix-agent status every 60 seconds. PALDRIX_JOB_TIMEOUT sets the maximum job length in minutes and defaults to 120. Set PALDRIX_DOCKER=true to mount the host Docker socket for jobs that build images."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The paldrix-runner image runs as user ID 1001.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "PALDRIX_LABELS defaults to linux,x64.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Paldrix agent listens on port 9300 for jobs.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The paldrix-runner image keeps tool caches in a volume at /home/runner/.cache.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "PALDRIX_CONCURRENCY defaults to 4.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "With PALDRIX_EPHEMERAL=true, the Paldrix agent exits after one job.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

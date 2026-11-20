@@ -1,0 +1,100 @@
+{
+  "seedId": "docs-nextjs",
+  "title": "Next.js 16: knowledge-gap probe set",
+  "subject": "Next.js",
+  "version": "16.0",
+  "license": "CC0-1.0",
+  "reviewedBy": null,
+  "tasks": [
+    {
+      "id": "pt-0001",
+      "title": "Middleware is now proxy",
+      "kind": "changed_api",
+      "prompt": "Using Next.js 16 with the App Router, write the file that redirects every request under /old to /new before it is routed. Give the file name and its full contents.",
+      "checks": { "mustMatch": ["proxy\\.(ts|js)", "export (async )?function proxy\\b|export default (async )?function proxy\\b|export const proxy\\b"], "mustNotMatch": ["export (async )?function middleware\\b"] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0002",
+      "title": "Page params are a Promise",
+      "kind": "changed_api",
+      "prompt": "Using Next.js 16, write app/blog/[slug]/page.tsx that renders the slug inside an <h1>. Type the props.",
+      "checks": { "mustMatch": ["await (props\\.)?params\\b|use\\((props\\.)?params\\)", "Promise<\\s*\\{\\s*slug|PageProps<"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0003",
+      "title": "cookies() is async only",
+      "kind": "deprecation",
+      "prompt": "Using Next.js 16, write a Server Component that reads the `theme` cookie with `cookies` from next/headers and prints its value.",
+      "checks": { "mustMatch": ["await cookies\\(\\)"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0004",
+      "title": "next lint is gone",
+      "kind": "deprecation",
+      "prompt": "In a Next.js 16 project, write the `lint` script for package.json.",
+      "checks": { "mustMatch": ["\"lint\"\\s*:\\s*\"(eslint|biome)\\b"], "mustNotMatch": ["\"lint\"\\s*:\\s*\"next lint"] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0005",
+      "title": "Build with webpack instead of Turbopack",
+      "kind": "exact_command",
+      "prompt": "A Next.js 16 app has a custom webpack config and must keep building with webpack. What exact build command does it run?",
+      "checks": { "mustMatch": ["next build --webpack"], "mustNotMatch": [] },
+      "namedCommands": ["next build --webpack"],
+      "sourceUrl": "https://nextjs.org/blog/next-16"
+    },
+    {
+      "id": "pt-0006",
+      "title": "revalidateTag takes a profile",
+      "kind": "changed_api",
+      "prompt": "Using Next.js 16, write a Server Action that marks the cached data tagged `posts` stale so it refreshes in the background (stale-while-revalidate).",
+      "checks": { "mustMatch": ["revalidateTag\\(\\s*['\"`]posts['\"`]\\s*,"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/blog/next-16"
+    },
+    {
+      "id": "pt-0007",
+      "title": "Read your own write with updateTag",
+      "kind": "new_api",
+      "prompt": "Using Next.js 16, write a Server Action that adds an item to the cart and expires the `cart` cache tag so the same request sees the new cart right away.",
+      "checks": { "mustMatch": ["updateTag\\(\\s*['\"`]cart['\"`]"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/blog/next-16"
+    },
+    {
+      "id": "pt-0008",
+      "title": "Cache Components replaces experimental.ppr",
+      "kind": "deprecation",
+      "prompt": "Write the Next.js 16 next.config.ts that turns on partial prerendering with Cache Components.",
+      "checks": { "mustMatch": ["cacheComponents\\s*:\\s*true"], "mustNotMatch": ["\\bppr\\s*:"] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0009",
+      "title": "images.domains is deprecated",
+      "kind": "deprecation",
+      "prompt": "Write the Next.js 16 next.config.ts images setting that lets next/image load images over https from the host docs.example.com.",
+      "checks": { "mustMatch": ["remotePatterns"], "mustNotMatch": ["\\bdomains\\s*:"] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    },
+    {
+      "id": "pt-0010",
+      "title": "Minimum Node.js version",
+      "kind": "changed_api",
+      "prompt": "What is the minimum Node.js version Next.js 16 supports? Give the version number.",
+      "checks": { "mustMatch": ["\\b20\\.9\\b"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+    }
+  ]
+}

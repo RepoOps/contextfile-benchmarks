@@ -1,0 +1,99 @@
+{
+  "id": "gw-0046",
+  "artifactType": "open_spec",
+  "title": "Cindral remote build cache",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal CD-22: a shared remote cache for Cindral builds. Motivation: each Cindral pipeline rebuilds dependencies from scratch, and the median pipeline spends 11 minutes on dependency steps. Change: build steps can declare their inputs, and Cindral stores their outputs in a remote cache keyed by a SHA-256 hash of those inputs. A cache hit skips the step. Entries expire 14 days after their last read. Steps that do not declare inputs run as before, with no caching."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits: a single cache entry may not exceed 2 GB, and each project gets a 50 GB quota, after which the least recently used entries are evicted. Caches are never shared between projects, so one project cannot read another's outputs. Rollout: the cache starts in read-only mode for two weeks to measure hit rates, then becomes writable for all projects. Teams can opt out with cache: off in cindral.yml. Cache traffic is encrypted in transit with TLS."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Cindral cache entries are keyed by a SHA-256 hash of the step inputs.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Each Cindral project gets a 50 GB cache quota.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Teams can opt out of the Cindral cache with cache: off in cindral.yml.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Cindral cache entries expire 30 days after their last read.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The median Cindral pipeline spends 11 minutes on dependency steps.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A single Cindral cache entry may not exceed 2 GB.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

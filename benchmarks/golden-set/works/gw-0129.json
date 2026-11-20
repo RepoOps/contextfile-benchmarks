@@ -1,0 +1,99 @@
+{
+  "id": "gw-0129",
+  "artifactType": "open_spec",
+  "title": "Marrowlane dead letter retention",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal MRL-41: configurable dead letter retention for Marrowlane. Motivation: Marrowlane, our internal message queue, moves a message to the dead letter queue after 5 failed deliveries and keeps dead letters for a fixed 7 days. Teams that process payroll batches have asked to keep failed messages longer for audits, while the search indexing team wants them gone after one day to save disk. Today the 7 day value is hard coded in `broker/dlq.go`. Change: add a per queue setting, `dlq_retention_hours`, read from the queue manifest."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. The `dlq_retention_hours` setting accepts values from 1 to 2,160 hours (90 days). Values outside that range cause the manifest to be rejected at deploy time. When the setting is absent, the broker keeps the current default of 168 hours. This proposal does not change how many delivery attempts happen before a message is dead lettered. Rollout runs in two stages: staging clusters first, for two weeks, then production. Owner: the queue platform team. Out of scope: replaying dead letters automatically."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Marrowlane moves a message to the dead letter queue after 5 failed deliveries.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The dlq_retention_hours setting accepts values up to 2,160 hours.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Manifests with out-of-range retention values are accepted with a warning.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Marrowlane currently keeps dead letters for 14 days.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The retention change rolls out to staging clusters before production.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The current dead letter retention value is hard coded in broker/dlq.go.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

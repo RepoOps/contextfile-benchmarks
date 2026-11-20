@@ -1,0 +1,99 @@
+{
+  "id": "gw-0084",
+  "artifactType": "doc",
+  "title": "The Federal Reserve",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Federal Reserve is the central bank of the United States. Congress created it with the Federal Reserve Act, which President Woodrow Wilson signed in December 1913. A series of bank panics, especially the Panic of 1907, had convinced lawmakers that the country needed a lender of last resort. The system has 12 regional Federal Reserve Banks, including those in New York and San Francisco, overseen by a Board of Governors in Washington, D.C. The board has seven members, each appointed by the President and confirmed by the Senate for a 14-year term."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Monetary policy is set by the Federal Open Market Committee, or FOMC. It has 12 voting members: the seven governors, the president of the Federal Reserve Bank of New York, and four of the other eleven regional bank presidents, who serve one-year rotating terms. The committee holds eight scheduled meetings a year. Its main tool is a target range for the federal funds rate, the rate banks charge each other for overnight loans. Congress has given the Fed a dual mandate of maximum employment and stable prices."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "President Woodrow Wilson signed the Federal Reserve Act in December 1913.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The FOMC holds eight scheduled meetings a year.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The FOMC has 10 voting members.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The federal funds rate is the rate banks charge each other for overnight loans.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Members of the Federal Reserve Board of Governors serve 14-year terms.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Panic of 1907 helped convince lawmakers that the United States needed a lender of last resort.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

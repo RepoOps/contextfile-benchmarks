@@ -1,0 +1,99 @@
+{
+  "id": "gw-0105",
+  "artifactType": "context_file",
+  "title": "Jettlemark cursor rules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# .cursorrules for Jettlemark. Jettlemark is a Python 3.12 library that wraps several card payment gateways behind one interface. Install dev dependencies with `uv sync --dev`. Run tests with `uv run pytest`; tests that hit a gateway sandbox are marked `@pytest.mark.live` and skipped unless `JTM_LIVE=1` is set. Gateway adapters live in `src/jettlemark/gateways/`, one module per gateway. Type checking uses mypy in strict mode through `uv run mypy src`. The shared interface is the `Gateway` protocol in `src/jettlemark/base.py`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Money rules. Store every amount as an integer count of the smallest currency unit, never as a float. Currency codes are three-letter ISO 4217 strings in uppercase. Every call that creates a charge must pass an idempotency key; adapters reject calls without one. Never write card numbers to logs; the logging filter in `src/jettlemark/redact.py` masks all but the last 4 digits. Retries on network errors stop after 3 attempts, with exponential backoff starting at 200 milliseconds."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jettlemark retries network errors up to 5 times.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Jettlemark tests marked live are skipped unless JTM_LIVE=1 is set.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Jettlemark adapters reject charge calls that lack an idempotency key.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Jettlemark stores amounts as integers in the smallest currency unit.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Jettlemark gateway adapters live in src/jettlemark/adapters/.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Jettlemark's logging filter masks all but the last 4 digits of card numbers.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

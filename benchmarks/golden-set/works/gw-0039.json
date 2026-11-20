@@ -1,0 +1,99 @@
+{
+  "id": "gw-0039",
+  "artifactType": "doc",
+  "title": "Red blood cells",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Red blood cells, also called erythrocytes, carry oxygen from the lungs to the tissues of the body. They are packed with hemoglobin, an iron-containing protein that binds oxygen and gives blood its red colour. A mature human red blood cell has no nucleus, which leaves more room for hemoglobin. The cells have a flattened disc shape that is thinner in the middle than at the edge, and they measure about 7 to 8 micrometres across."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In adults, red blood cells are made in the bone marrow, a process called erythropoiesis. The kidneys control the rate by releasing a hormone called erythropoietin when oxygen levels in the blood fall. A red blood cell lasts about 120 days in circulation. Old cells are removed mainly by the spleen and the liver. A healthy adult has about 4 to 6 million red blood cells in each microlitre of blood."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mature human red blood cells have no nucleus.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A red blood cell lasts about 120 days in circulation.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The kidneys release erythropoietin when blood oxygen levels rise.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hemoglobin contains iron.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Red blood cells measure about 15 micrometres across.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "In adults, red blood cells are made in the bone marrow.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

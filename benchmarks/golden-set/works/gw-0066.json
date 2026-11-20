@@ -1,0 +1,99 @@
+{
+  "id": "gw-0066",
+  "artifactType": "doc",
+  "title": "The Inca road system",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Inca road system, known in Quechua as Qhapaq Nan, tied together an empire that ran along the Andes of western South America, with its capital at Cusco. The Inca did not use wheeled vehicles, so the roads carried people on foot and pack trains of llamas. Steep sections used stone stairways, and rivers in deep gorges were crossed on rope suspension bridges woven from grass. One such bridge, Q'eswachaka in Peru, is still rebuilt by local communities every year. In 2014 UNESCO listed the road system as a World Heritage Site shared by six countries."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Messages moved along the roads by relay. Trained runners called chasquis waited at small posts spaced a short run apart, and each runner carried a spoken message or a quipu to the next post. A quipu was a set of knotted cords that recorded numbers, such as tax and census counts. Larger way stations called tambos stored food, cloth and weapons for travelling officials and armies. Men built and repaired the roads as part of a labor tax called mit'a, and ordinary people needed permission to travel on them."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Inca capital was Cusco.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Q'eswachaka bridge in Peru is rebuilt every year.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Chasquis were relay runners who carried messages along the Inca roads.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "UNESCO listed the Inca road system as a World Heritage Site in 2004.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Tambos stored food, cloth and weapons for travelling officials.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A quipu used knotted cords to record numbers.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

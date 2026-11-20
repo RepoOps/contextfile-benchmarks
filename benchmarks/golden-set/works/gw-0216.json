@@ -1,0 +1,99 @@
+{
+  "id": "gw-0216",
+  "artifactType": "brain_wiki",
+  "title": "Ocean tides",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Ocean tides are the regular rise and fall of sea level caused mainly by the gravitational pull of the Moon, with a smaller contribution from the Sun. The Sun's effect on tides is a little less than half that of the Moon. Most coasts see two high tides and two low tides in a period of about 24 hours and 50 minutes, the time it takes the Moon to return to the same position in the sky. As a result, high tide comes roughly 50 minutes later each day."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The size of tides changes over each lunar month. Spring tides, which have the largest range, occur near new moon and full moon, when the Sun, Moon and Earth line up. Neap tides, with the smallest range, occur near the first and third quarter moons. Spring tides have nothing to do with the season. The difference between high and low water also depends on the shape of the coast. The Bay of Fundy in eastern Canada has the largest tidal range in the world, reaching about 16 metres."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Spring tides occur near new moon and full moon.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "High tide comes roughly 50 minutes later each day.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Sun has a stronger effect on tides than the Moon.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Most coasts see two high tides in about 24 hours and 50 minutes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Bay of Fundy has the largest tidal range in the world.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Neap tides have the smallest tidal range.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

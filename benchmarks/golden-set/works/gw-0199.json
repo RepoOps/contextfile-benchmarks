@@ -1,0 +1,99 @@
+{
+  "id": "gw-0199",
+  "artifactType": "doc",
+  "title": "The United States Constitution",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The United States Constitution was written at a convention held in Philadelphia during the summer of 1787. George Washington presided over the meeting. On 17 September 1787, 39 of the delegates signed the finished document. The Constitution would take effect once 9 of the 13 states had ratified it. Delaware ratified first, in December 1787, and New Hampshire became the ninth state in June 1788. The new government began operating in 1789."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The original text set up three branches of government: a Congress to make laws, a President to carry them out, and a federal judiciary headed by a Supreme Court. Several states agreed to ratify only after supporters promised to add protections for individual rights. James Madison drafted those amendments, and ten of them, known as the Bill of Rights, were ratified in 1791. The Constitution has been amended 27 times. The most recent amendment, which limits when changes to congressional pay take effect, was ratified in 1992, more than 200 years after it was first proposed."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "George Washington presided over the 1787 Philadelphia convention.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Virginia was the first state to ratify the Constitution.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Bill of Rights was ratified in 1791.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The United States Constitution has been amended 33 times.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "James Madison drafted the amendments that became the Bill of Rights.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "New Hampshire was the ninth state to ratify the Constitution.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

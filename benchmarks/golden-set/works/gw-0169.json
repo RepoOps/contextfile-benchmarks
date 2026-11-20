@@ -1,0 +1,99 @@
+{
+  "id": "gw-0169",
+  "artifactType": "context_file",
+  "title": "Qeltrin CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Qeltrin. Qeltrin is a remote build cache server that stores compiler outputs keyed by content hash. The code is Rust 1.81 in a Cargo workspace with three crates: qeltrin-server, qeltrin-store and qeltrin-cli. Build with `cargo build --release`. Run tests with `cargo nextest run`; plain `cargo test` also works but is slower. The server reads `qeltrin.toml` from the working directory and listens on port 9092 by default. Clients send the header X-Qeltrin-Token when the server has auth turned on."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "House rules. Never use unwrap or expect in qeltrin-server; return an error instead. Storage backends implement the `Store` trait in `qeltrin-store/src/lib.rs`, and each new backend needs a test against the shared suite in `qeltrin-store/tests/conformance.rs`. Benchmarks run with `cargo bench -p qeltrin-store`. Do not bump the minimum Rust version in a feature pull request. Use the `bytes` crate for buffers on hot paths. Public items in qeltrin-store need doc comments with an example."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Qeltrin storage backends implement the `Store` trait.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Qeltrin workspace has four crates.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Qeltrin benchmarks run with `cargo bench -p qeltrin-store`.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Qeltrin server listens on port 9092 by default.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Code in qeltrin-server may call unwrap.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Qeltrin stores compiler outputs keyed by content hash.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

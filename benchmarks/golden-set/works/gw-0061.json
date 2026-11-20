@@ -1,0 +1,99 @@
+{
+  "id": "gw-0061",
+  "artifactType": "brain_wiki",
+  "title": "Hydrogen",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Hydrogen is the chemical element with atomic number 1 and the symbol H. It is the lightest element and the most abundant in the universe, making up about three quarters of all normal matter by mass. At standard conditions it is a colourless, odourless gas made of two-atom molecules, H2. Its most common isotope, protium, has a nucleus of a single proton and no neutrons. Hydrogen boils at about minus 253 degrees Celsius."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Henry Cavendish identified hydrogen as a distinct substance in 1766, calling it inflammable air. Antoine Lavoisier later gave it its name, from Greek words meaning water former, because it burns in oxygen to make water. Hydrogen has two heavier isotopes: deuterium, with one neutron in its nucleus, and radioactive tritium, with two. Today most hydrogen is produced from natural gas by a process called steam methane reforming. Water made with deuterium is called heavy water."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hydrogen has atomic number 1.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Henry Cavendish identified hydrogen as a distinct substance in 1776.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The nucleus of tritium has two neutrons.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The nucleus of protium has one proton and one neutron.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Antoine Lavoisier gave hydrogen its name.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Hydrogen boils at about minus 253 degrees Celsius.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

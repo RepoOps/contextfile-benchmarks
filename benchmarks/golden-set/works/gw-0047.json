@@ -1,0 +1,99 @@
+{
+  "id": "gw-0047",
+  "artifactType": "brain_wiki",
+  "title": "Mount Kilimanjaro",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mount Kilimanjaro rises in northeastern Tanzania, close to the border with Kenya. At 5,895 metres, it is the highest mountain in Africa and the tallest free-standing mountain on Earth, meaning it is not part of a range. It is a dormant volcano with three volcanic cones: Kibo, Mawenzi and Shira. The summit, Uhuru Peak, lies on the crater rim of Kibo, the highest cone. The mountain and its forests form Kilimanjaro National Park."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The first recorded ascent to the summit was made in 1889 by the German geographer Hans Meyer and the Austrian climber Ludwig Purtscheller. Climbers pass through distinct zones on the way up, from farmland and rainforest to heath, alpine desert and finally an arctic summit. The glaciers near the top have shrunk sharply since the early twentieth century. Kilimanjaro National Park was named a UNESCO World Heritage Site in 1987."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Kilimanjaro is the highest mountain in Africa.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Hans Meyer and Ludwig Purtscheller first reached the summit of Kilimanjaro in 1899.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Uhuru Peak lies on the crater rim of Mawenzi.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Kilimanjaro National Park became a UNESCO World Heritage Site in 1987.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kibo is the highest of Kilimanjaro's three volcanic cones.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The glaciers near Kilimanjaro's summit have shrunk sharply since the early twentieth century.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

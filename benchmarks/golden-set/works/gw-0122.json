@@ -1,0 +1,99 @@
+{
+  "id": "gw-0122",
+  "artifactType": "open_spec",
+  "title": "Ivrosect smart retries proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal IR-61: smart retries for failed subscription payments in Ivrosect. Motivation: 9 percent of Ivrosect renewals fail on the first charge attempt, most because of insufficient funds or an expired card. Today Ivrosect retries once after 24 hours and then cancels the subscription. This proposal retries up to 4 times over 21 days, at 1, 3, 7 and 21 days after the first failure. The subscription stays active during the retry period."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Customer notices and limits. After each failed attempt the customer gets an email with a link to update the card. Retries stop at once when the card issuer returns a hard decline such as `stolen_card`. If all retries fail, the subscription moves to `past_due` for 7 days before it is canceled. Merchants can turn smart retries off in Settings under Billing. Rollout begins on 2027-01-10 with merchants on the Growth plan."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Today Ivrosect retries a failed renewal once after 24 hours before canceling the subscription.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Under IR-61, an Ivrosect subscription stays active during the retry period.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Ivrosect stops retrying when the issuer returns a hard decline such as stolen_card.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Proposal IR-61 retries a failed payment up to 6 times.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Merchants can turn Ivrosect smart retries off under Billing in Settings.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Ivrosect smart retries roll out first to merchants on the Growth plan.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

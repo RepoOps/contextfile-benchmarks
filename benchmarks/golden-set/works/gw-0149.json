@@ -1,0 +1,99 @@
+{
+  "id": "gw-0149",
+  "artifactType": "doc",
+  "title": "The Great Pyramid of Giza",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Great Pyramid of Giza was built for the pharaoh Khufu of Egypt's Fourth Dynasty, around 2560 BC. It is the oldest of the Seven Wonders of the Ancient World and the only one still largely standing. When finished it rose about 146 metres, and it remained the tallest human-made structure on Earth for more than 3,800 years. Its base is close to a perfect square, with each side about 230 metres long. The sides line up closely with the four points of the compass."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Two other large pyramids stand beside it on the Giza plateau: one built for Khafre, Khufu's son, and a smaller one for Menkaure. The Great Sphinx, which lies near Khafre's pyramid, is usually linked to that king. The Great Pyramid was first covered with smooth white limestone casing stones, most of which were later carried off for building work. Inside, a passage called the Grand Gallery leads up to the King's Chamber, which is lined with granite. The site became part of a UNESCO World Heritage Site in 1979."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Great Pyramid was built for the pharaoh Khufu.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The King's Chamber in the Great Pyramid is lined with granite.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "When finished, the Great Pyramid rose about 186 metres.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Khafre was Khufu's grandson.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Each side of the Great Pyramid's base is about 230 metres long.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Great Pyramid was first covered with white limestone casing stones.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

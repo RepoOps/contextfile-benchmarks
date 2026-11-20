@@ -1,0 +1,99 @@
+{
+  "id": "gw-0089",
+  "artifactType": "doc",
+  "title": "Early paper money in China",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "China was the first country to issue paper money backed by a government. In the early 11th century, merchants in Sichuan used private paper notes called jiaozi, because the region's iron coins were heavy and awkward to carry in large amounts. In 1024 the Song government took over the issue of jiaozi and made it a state monopoly. Notes were printed from carved blocks, used more than one color, and carried official seals to make forgery harder."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The Mongol Yuan dynasty went further and made paper notes the main currency of its empire. Kublai Khan issued the chao notes in 1260. The Venetian traveller Marco Polo described how the Great Khan's paper, stamped with the ruler's seal, was accepted as payment across his lands. Over time the Yuan printed too many notes, and prices rose sharply. The Ming dynasty later issued its own notes, but by the 15th century silver had largely replaced paper in trade."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Kublai Khan issued paper notes in 1260.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Merchants in Sichuan used private paper notes called jiaozi.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Under the Ming dynasty, paper notes had largely replaced silver in trade by the 15th century.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Marco Polo described the paper money of the Great Khan.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Song government took over the issue of jiaozi in 1124.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Jiaozi notes carried official seals to make forgery harder.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

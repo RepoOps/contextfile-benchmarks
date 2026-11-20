@@ -1,0 +1,99 @@
+{
+  "id": "gw-0082",
+  "artifactType": "brain_wiki",
+  "title": "Great Zimbabwe",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Great Zimbabwe is the ruin of a stone city in the southeast of modern Zimbabwe. It was built by ancestors of the Shona people and flourished from roughly the 11th to the 15th century. Its walls were made of granite blocks fitted together without mortar. The largest structure, the Great Enclosure, has an outer wall about 250 metres long and up to 11 metres high. The country took its name from the site when it became independent in 1980; the Shona phrase dzimba dza mabwe means houses of stone."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Great Zimbabwe grew rich from long-distance trade. Gold from the interior moved to the Swahili coast, especially the port of Kilwa, and from there across the Indian Ocean. Archaeologists at the site have found glass beads and Chinese porcelain that arrived through this trade. Eight carved soapstone birds were recovered from the ruins, and the bird now appears on Zimbabwe's national flag. UNESCO named Great Zimbabwe a World Heritage Site in 1986."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Archaeologists found Chinese porcelain at Great Zimbabwe.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The walls of Great Zimbabwe were built without mortar.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The walls of Great Zimbabwe were built from sandstone blocks.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Great Zimbabwe was built by ancestors of the Shona people.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "UNESCO named Great Zimbabwe a World Heritage Site in 1986.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Eight carved soapstone birds were recovered from Great Zimbabwe.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

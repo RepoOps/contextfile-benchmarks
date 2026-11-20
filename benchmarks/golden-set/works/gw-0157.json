@@ -1,0 +1,99 @@
+{
+  "id": "gw-0157",
+  "artifactType": "doc",
+  "title": "The Tale of Genji",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Tale of Genji is a long work of fiction written in the early 11th century by Murasaki Shikibu, a lady-in-waiting at the Japanese imperial court during the Heian period. It is often called the world's first novel, though scholars debate the label. The book has 54 chapters. It follows Hikaru Genji, the handsome son of an emperor and a low-ranking consort, who is removed from the line of succession and made a commoner."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Murasaki Shikibu wrote in Japanese using kana script, at a time when men at court mostly wrote formal prose in Chinese. Her real name is not known; Murasaki is a nickname taken from a character in the tale. She also kept a diary, now known as The Diary of Lady Murasaki. The last 10 chapters, set after Genji's death, are called the Uji chapters after the town where much of their action takes place. Arthur Waley published an English translation in six volumes between 1925 and 1933."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Tale of Genji has 54 chapters.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Murasaki Shikibu wrote The Tale of Genji in Chinese.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Arthur Waley's English translation of The Tale of Genji appeared in six volumes.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hikaru Genji is the son of an emperor.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Tale of Genji was written in the early 13th century.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The last 10 chapters of The Tale of Genji are known as the Uji chapters.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

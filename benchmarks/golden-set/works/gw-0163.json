@@ -1,0 +1,99 @@
+{
+  "id": "gw-0163",
+  "artifactType": "context_file",
+  "title": "Pomberly CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Pomberly. Pomberly provisions and retires build runner machines in a server rack. The control service is Python 3.12 managed with uv. Install dependencies with `uv sync`, start the service locally with `uv run pomberly serve`, and run tests with `uv run pytest`. The local service listens on port 8640. Database migrations live in `migrations/` and use Alembic; create one with `uv run alembic revision -m \"<summary>\"`. Lint the code with `uv run ruff check` before every commit."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Never call the power control API in tests; use the fake in `tests/fakes/power.py`. Any change to `pomberly/retire.py` needs a second reviewer, because a bug there can wipe a live machine. Type hints are required on every function, and `uv run mypy pomberly` must pass with no errors. Keep functions under 60 lines. Secrets come from environment variables that start with POMBERLY_, never from files in the repository. Log through the standard logging module, never with print."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Pomberly control service runs on Python 3.11.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Changes to `pomberly/retire.py` need a second reviewer.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Pomberly tests use a fake power controller in `tests/fakes/power.py`.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pomberly database migrations use Alembic.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Type hints are optional on Pomberly functions.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The local Pomberly service listens on port 8640.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

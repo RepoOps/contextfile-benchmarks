@@ -1,0 +1,99 @@
+{
+  "id": "gw-0142",
+  "artifactType": "context_file",
+  "title": "Nevarith CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md (Nevarith). Nevarith collects application events from browsers and ships them to a warehouse as hourly Parquet files. It is a TypeScript monorepo managed with pnpm workspaces on Node 20. Packages: `packages/collector` (the HTTP intake), `packages/batcher`, and `packages/loader`. Start everything locally with `pnpm dev`; the collector then accepts events on port 8088. Tests use Vitest, and `pnpm test` runs all of them. The batcher flushes a file when it reaches 128 MB or when an hour ends, whichever comes first."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Agent rules for Nevarith. Do not change the event envelope in `packages/schema/envelope.ts` without a new schema version; old clients still send version 3. Never drop events silently: anything that fails validation goes to the `rejects/` prefix with a reason. Use the shared logger from `packages/common/log.ts`. All dates are stored in UTC as ISO 8601 strings. Do not import from one package's `src/` into another; use the package's public entry point. Run `pnpm typecheck` and `pnpm lint` before you commit."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Nevarith uses Vitest for its tests.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Events that fail validation in Nevarith go to the rejects/ prefix.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Nevarith stores dates in local time.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Nevarith collector accepts events on port 8088 when run locally.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Old Nevarith clients still send schema version 3.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Nevarith batcher flushes a file when it reaches 128 MB.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0134",
+  "artifactType": "context_file",
+  "title": "Mintervale .cursorrules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mintervale .cursorrules. Mintervale is a search indexing service that turns product catalog updates into documents for an inverted index. Language: Kotlin 2.0 on JVM 21, built with Gradle. Use `./gradlew build` to compile and `./gradlew test` to run tests. Integration tests are tagged `@Tag(\"slow\")` and run only with `./gradlew slowTest`. The indexer reads updates from the topic `catalog.changes` and writes batches of at most 500 documents. Configuration lives in `app/src/main/resources/application.yaml`; never hard code hostnames."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Style for Mintervale code. Prefer data classes for messages and sealed classes for results. Do not use `!!` in production code. Coroutines are allowed only in the `ingest` module. Every new analyzer, such as a stemmer or synonym filter, needs a test file in `analyzers/src/test` with at least one non-English example. Log with SLF4J, never `println`. Public classes need KDoc. When you change the document schema, bump `SCHEMA_VERSION` in `Schema.kt` and add a reindex note to `docs/reindex.md`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mintervale builds with Gradle.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Changing the Mintervale document schema requires bumping SCHEMA_VERSION.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Mintervale writes index batches of at most 500 documents.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Mintervale code logs with println.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Mintervale allows coroutines only in the ingest module.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Mintervale indexer reads updates from the catalog.changes topic.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0079",
+  "artifactType": "open_spec",
+  "title": "Garrowind passive health checks",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal GRW-55: passive health checks for Garrowind. Garrowind, our layer 4 load balancer, checks backends only with active TCP probes every 10 seconds. A backend that accepts connections but resets them under load stays in rotation, and in May one such host failed 30 percent of requests for 2 hours. This proposal adds passive checks: Garrowind will eject a backend after 5 consecutive connection failures seen in real traffic. The networking team owns the work and tracks it in its third quarter plan."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "An ejected backend stays out of rotation for 30 seconds, and the time doubles each time it is ejected again, up to 5 minutes. Garrowind never ejects more than 50 percent of the backends in a pool at once, so a broad failure cannot empty the pool. Active TCP probes continue unchanged. Operators turn the feature on per pool with passive_checks: enabled. The first release ships it off by default, and the team will review ejection logs from two pools before changing the default."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Garrowind may eject up to 75 percent of a pool's backends at once.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Garrowind's active TCP probes run every 10 seconds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "An ejected Garrowind backend first stays out of rotation for 30 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Garrowind's first release ships passive checks off by default.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Under the proposal, Garrowind ejects a backend after 3 consecutive connection failures.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Garrowind is a layer 4 load balancer.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

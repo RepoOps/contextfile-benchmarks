@@ -1,0 +1,99 @@
+{
+  "id": "gw-0152",
+  "artifactType": "open_spec",
+  "title": "Mallowby column-level lineage",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal MB-112: column-level lineage in Mallowby. Mallowby, our data pipeline platform, records lineage today only at the table level, so when a source column changes, owners cannot tell which downstream dashboards use it. In the last quarter, 11 incidents came from renamed or dropped columns. The change: parse every SQL transform at deploy time and store, for each output column, the input columns it reads. Lineage is stored in a new table, `lineage_columns`, in the metadata database."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scope and limits. Version 1 covers SQL transforms only; Python transforms keep table-level lineage. Queries that use `SELECT *` are expanded using the schema at deploy time. Parsing may add at most 2 seconds to a deploy; transforms that take longer are marked as partial and skipped. The lineage view in the web console shows at most 3 levels upstream and downstream by default. Rollout: an internal beta in January 2027 for the analytics team, then general availability once parse failures stay under 1 percent for a month."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mallowby version 1 column lineage covers SQL transforms only.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "In the last quarter, 11 Mallowby incidents came from renamed or dropped columns.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Mallowby stores column lineage in a table named lineage_columns.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Mallowby lineage view shows 5 levels upstream and downstream by default.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The internal beta of Mallowby column lineage is planned for January 2027.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mallowby will parse SQL transforms at deploy time.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

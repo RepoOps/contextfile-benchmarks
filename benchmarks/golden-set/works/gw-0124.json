@@ -1,0 +1,99 @@
+{
+  "id": "gw-0124",
+  "artifactType": "context_file",
+  "title": "Junaplex agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Junaplex. Junaplex issues and verifies API keys for other services. It is a TypeScript service on Bun 1.1; install with `bun install`, start with `bun run dev` on port 7070, and test with `bun test`. The key store is Postgres, accessed through Drizzle; schema files are in `src/db/schema/`. Generate a migration with `bun run db:generate` and never edit a generated migration after it has merged. Environment variables are listed in `.env.example`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Key rules. Keys are shown to the user once at creation and stored only as SHA-256 hashes. Every key carries a prefix of `jpx_live_` or `jpx_test_` so leaked keys are easy to spot in scans. Key checks must use a constant-time comparison. A revoked key must fail verification within 60 seconds across all regions. Do not return different errors for unknown and revoked keys; both return `invalid_key`. Keys never expire by default, but an owner can set an expiry date."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Junaplex stores API keys only as SHA-256 hashes.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A revoked Junaplex key must fail verification within 60 seconds across all regions.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Junaplex's development server runs on port 7070.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Junaplex returns a different error for revoked keys than for unknown keys.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Junaplex accesses its Postgres key store through Drizzle.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Junaplex migrations are generated with bun run db:generate.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

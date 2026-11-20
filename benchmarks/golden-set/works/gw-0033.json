@@ -1,0 +1,99 @@
+{
+  "id": "gw-0033",
+  "artifactType": "brain_wiki",
+  "title": "Mitochondria",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mitochondria are organelles found in most eukaryotic cells, including those of plants, animals and fungi. They produce most of the cell's supply of adenosine triphosphate, or ATP, the molecule cells use to carry energy. This happens through cellular respiration, which uses oxygen and releases carbon dioxide. Each mitochondrion has two membranes. The inner membrane is folded into ridges called cristae, which increase the surface area available for the reactions. The fluid inside the inner membrane is called the matrix, and the citric acid cycle takes place there."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Mitochondria carry their own DNA, separate from the DNA in the cell nucleus. In humans this mitochondrial DNA is a small circular molecule of about 16,500 base pairs that holds 37 genes. In most animals, including humans, it is inherited almost entirely from the mother. Mitochondria are thought to descend from free-living bacteria that were taken up by an ancestral cell, an idea called the endosymbiotic theory. Lynn Margulis argued for this theory in the 1960s, and it is now widely accepted."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Human mitochondrial DNA holds 37 genes.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The inner mitochondrial membrane is folded into ridges called cristae.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Human mitochondrial DNA is inherited mainly from the father.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The citric acid cycle takes place in the space between the two mitochondrial membranes.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Lynn Margulis argued for the endosymbiotic theory.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mitochondria are found in the cells of fungi.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

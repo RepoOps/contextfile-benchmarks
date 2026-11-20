@@ -1,0 +1,99 @@
+{
+  "id": "gw-0190",
+  "artifactType": "doc",
+  "title": "Quellmark Systems incident response policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Quellmark Systems security incident response policy. Any employee who suspects a security incident must report it in the #sec-incident channel or by calling the security on-call line within 1 hour of noticing it. The on-call engineer assigns a severity from SEV1, the most serious, to SEV4. A SEV1 incident pages the head of security at once and opens a bridge call within 15 minutes. Employees must not try to investigate an incident on their own."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "After containment. The incident lead writes a timeline in the incident record as events happen. Affected customers are told within 72 hours when their data is involved, and the legal team approves the wording. Every SEV1 and SEV2 incident gets a written review within 10 business days, which names causes, not people. Logs and disk images tied to an incident are kept for at least 1 year. The security team runs a practice exercise every quarter."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Quellmark Systems employees must report a suspected incident within 1 hour.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Quellmark Systems tells affected customers within 72 hours when their data is involved.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "At Quellmark Systems, SEV1 is the most serious severity level.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Quellmark Systems security team runs its practice exercise once a year.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Quellmark Systems incident reviews name causes, not people.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A SEV1 incident at Quellmark Systems opens a bridge call within 15 minutes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

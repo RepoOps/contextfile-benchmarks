@@ -1,0 +1,99 @@
+{
+  "id": "gw-0159",
+  "artifactType": "open_spec",
+  "title": "Ruskvale per-queue concurrency limits",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal RSK-212: per-queue concurrency limits for the Ruskvale job scheduler. Today Ruskvale applies one global limit of 64 running jobs, so a burst of report jobs can starve the billing queue. This proposal adds a max_running field to each queue definition in ruskvale.yaml. When a queue reaches its limit, new jobs stay in the pending state and the scheduler checks again every 5 seconds. Queues without the field keep using the global limit. The platform team proposed the change on 2026-03-02."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scope and rollout. The limit counts only jobs in the running state; retries waiting for backoff do not count. The minimum allowed value is 1 and the maximum is 512; values outside that range fail config validation at startup. Rollout happens behind the feature flag queue_limits, off by default in release 4.6 and on by default in release 4.7. Out of scope: limits per tenant and limits based on CPU or memory use. Metrics will expose a new gauge named ruskvale_queue_running for each queue."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Ruskvale's current global limit is 128 running jobs.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The queue_limits flag is on by default in release 4.7.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The max_running value must be at least 1.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A Ruskvale queue that reaches its limit leaves new jobs in the pending state.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Retries waiting for backoff count toward a Ruskvale queue's running limit.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Ruskvale queues that omit max_running fall back to the global limit.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

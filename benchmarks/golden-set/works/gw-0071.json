@@ -1,0 +1,99 @@
+{
+  "id": "gw-0071",
+  "artifactType": "oci_image",
+  "title": "gorsefield-proxy image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The gorsefield-proxy image runs the Gorsefield reverse proxy. It is built on debian:12-slim and runs as the non-root user gorse with user ID 7001. It listens for HTTP on port 8080 and HTTPS on port 8443. Route definitions are read from /etc/gorsefield/routes.yaml. Mount a volume at /var/cache/gorsefield to keep the response cache across restarts. The entrypoint is /opt/gorsefield/bin/gorsefield, and the image sets no default command arguments. The compressed image is about 40 MB."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "GORSEFIELD_WORKERS sets the number of worker threads and defaults to 4. GORSEFIELD_CACHE_SIZE sets the response cache size and defaults to 512m. Set GORSEFIELD_ACME_EMAIL to request certificates automatically from an ACME provider; when it is unset, the proxy expects certificate files in /etc/gorsefield/certs. Access logs use the combined format. The health check requests /_gorse/health on port 8080 every 20 seconds, with a 3 second timeout. Set GORSEFIELD_LOG_LEVEL to debug for verbose output; it defaults to info."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The gorsefield-proxy image listens for HTTPS on port 443.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "GORSEFIELD_WORKERS defaults to 4.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The gorsefield-proxy health check runs every 20 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "gorsefield-proxy reads route definitions from /etc/gorsefield/routes.yaml.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "GORSEFIELD_CACHE_SIZE defaults to 256m.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The gorsefield-proxy image runs as user ID 7001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

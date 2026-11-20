@@ -1,0 +1,99 @@
+{
+  "id": "gw-0139",
+  "artifactType": "brain_wiki",
+  "title": "Hangul",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Hangul is the alphabet used to write Korean. It was created under King Sejong the Great of the Joseon dynasty and announced in 1446 in a document called the Hunminjeongeum, meaning the proper sounds for the instruction of the people. Before Hangul, Koreans wrote mainly with Chinese characters, which few common people had the chance to learn. South Korea celebrates Hangul Day on 9 October, while North Korea marks its own alphabet day on 15 January."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The modern Hangul alphabet has 24 basic letters: 14 consonants and 10 vowels. Letters are not written one after another in a single line; instead they are grouped into square syllable blocks, each with at least one consonant letter and one vowel. Several consonant shapes were designed to suggest the position of the mouth or tongue when making the sound. The vowels are built from three elements that stood for heaven, earth and humans. Today Hangul is usually written left to right in horizontal lines."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hangul was announced in 1446.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The modern Hangul alphabet has 14 consonants.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The modern Hangul alphabet has 12 vowels.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hangul was created under King Taejo of the Joseon dynasty.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Hangul letters are grouped into square syllable blocks.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "South Korea celebrates Hangul Day on 9 October.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

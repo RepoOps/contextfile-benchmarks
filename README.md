@@ -9,7 +9,7 @@ Three benchmarks live here:
 - **Golden set** (`benchmarks/golden-set/`, results in `benchmarks/results/`): how well
   ContextFile's verifier judge scores claims against their cited passages. It reports
   precision, recall, the misgrounded-citation rate and the false-claim pass rate. The
-  set is a pilot: 30 works of a planned 220.
+  set holds 220 works and 1,320 claims.
 - **Uplift scorecard** (`benchmarks/uplift/`): the same model on version-pinned coding
   tasks, with and without the ContextFile MCP server. No result is published yet.
 - **Tool selection evals** (`benchmarks/tool-selection/`): how often a model calls
@@ -17,7 +17,7 @@ Three benchmarks live here:
   installed beside it; and whether it calls `context_load` at the start of a session.
 
 Each folder has its own README with the method. This repository is generated from the
-private ContextFile monorepo at commit `d14d3b325714b0e4821f4dd47984af7e44db8105` by `scripts/publish-benchmarks.mjs`;
+private ContextFile monorepo at commit `f9a9a14138e8d87171d80f653cb2ada123c09894` by `scripts/publish-benchmarks.mjs`;
 `source.json` maps every file here to the monorepo file it came from. Do not send pull
 requests that edit the copied files: report a problem in an issue and the fix lands in
 the monorepo, then here.
@@ -72,7 +72,7 @@ counts for results signed while it was active (`valid_from` to `valid_to`).
 ## Rerun the golden set with your own key
 
 The judge runs through OpenRouter on your key, at temperature 0. One full run makes one
-model call per claim (180 claims in the pilot set), billed to your OpenRouter account.
+model call per claim (1,320 claims in the set), billed to your OpenRouter account.
 
 ```
 OPENROUTER_API_KEY=<your key> npm run golden -- run --backend openrouter --model <model id> --out my-run.json

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0090",
+  "artifactType": "doc",
+  "title": "Galloran Networks log retention policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "This policy covers how Galloran Networks keeps application and network logs. Application logs are kept in hot storage for 14 days, where engineers can search them in the log console. After 14 days they move to cold storage in the archive bucket and are deleted after 400 days. Firewall and VPN logs are kept for 2 years because customer contracts require it. The security team owns this policy and reviews it every January."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Logs must never contain passwords, API keys or full payment card numbers. Each service masks email addresses before writing a log line, keeping only the first character and the domain. Engineers who find a secret in a log must report it in the #sec-incidents channel within 24 hours. Requests to keep logs longer than this policy allows, such as during a legal hold, need written approval from the legal team. Access to cold storage requires a ticket approved by a team lead."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Galloran services mask email addresses before writing a log line.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Galloran keeps firewall and VPN logs for 5 years.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Access to Galloran's cold storage requires a ticket approved by a team lead.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Galloran application logs are deleted after 400 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The security team owns Galloran's log retention policy.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Galloran engineers must report a secret found in a log within 24 hours.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

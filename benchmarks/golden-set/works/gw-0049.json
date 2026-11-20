@@ -1,0 +1,99 @@
+{
+  "id": "gw-0049",
+  "artifactType": "doc",
+  "title": "Diamond and graphite",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Carbon is the chemical element with atomic number 6 and the symbol C. Pure carbon occurs in several forms, called allotropes. In diamond, each carbon atom bonds to four others in a rigid three-dimensional network, which makes diamond the hardest natural material and rates it 10 on the Mohs scale. Diamond does not conduct electricity well. Most natural diamonds formed deep in the Earth's mantle under high pressure and temperature."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In graphite, carbon atoms form flat sheets of hexagons, with each atom bonded to three others. The sheets slide over one another easily, so graphite is soft and works as a lubricant and as the 'lead' in pencils. Unlike diamond, graphite conducts electricity. A single sheet of graphite is called graphene; Andre Geim and Konstantin Novoselov isolated it in 2004 and shared the 2010 Nobel Prize in Physics for their work."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Carbon has atomic number 6.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "In graphite, each carbon atom bonds to four others.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Diamond rates 10 on the Mohs scale.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Geim and Novoselov shared the 2010 Nobel Prize in Chemistry.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Graphite conducts electricity.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A single sheet of graphite is called graphene.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

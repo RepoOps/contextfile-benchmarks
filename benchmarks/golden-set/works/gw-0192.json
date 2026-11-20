@@ -1,0 +1,99 @@
+{
+  "id": "gw-0192",
+  "artifactType": "brain_wiki",
+  "title": "Maillard reaction",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Maillard reaction is a set of chemical reactions between amino acids and reducing sugars that browns food and creates new flavors. It is named after the French chemist Louis-Camille Maillard, who described it in 1912. The reaction is responsible for the brown crust on bread, the color and flavor of seared steak, and much of the aroma of roasted coffee beans. It proceeds slowly at room temperature but speeds up sharply once food passes about 140 degrees Celsius. Because water cannot heat above 100 degrees Celsius at sea level, boiled meat does not brown."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Caramelization is often confused with the Maillard reaction, but it involves sugars alone, with no amino acids. Table sugar, or sucrose, begins to caramelize at around 160 degrees Celsius. Cooks can speed up Maillard browning by raising the pH, which is why some pretzel recipes dip the dough in an alkaline solution before baking. Drying the surface of meat before searing also helps, since energy spent evaporating water does not raise the surface temperature. The reaction can also form acrylamide, a compound of health concern, in fried potatoes and other starchy foods cooked at high heat."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Sucrose begins to caramelize at around 160 degrees Celsius.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Louis-Camille Maillard described the reaction in 1912.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Caramelization requires amino acids as well as sugars.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Raising the pH speeds up Maillard browning.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Maillard reaction gives roasted coffee beans much of their aroma.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Maillard reaction speeds up sharply above about 140 degrees Celsius.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

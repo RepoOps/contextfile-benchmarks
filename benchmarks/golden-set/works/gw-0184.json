@@ -1,0 +1,99 @@
+{
+  "id": "gw-0184",
+  "artifactType": "open_spec",
+  "title": "Pirrow SSD cache tier spec",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec PRW-101: a second cache tier on local SSD for the Pirrow content cache. Pirrow keeps hot objects in RAM, and today any object evicted from RAM must be fetched again from object storage, which costs about 40 ms per fetch. This spec adds an SSD tier: objects evicted from RAM move to SSD instead of being dropped. The SSD tier is sized by the setting ssd_tier_gb, which defaults to 0, meaning the tier is off."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Objects larger than 64 MB skip the SSD tier and go straight back to object storage. The SSD tier uses its own LRU list, separate from the RAM tier. On restart the SSD tier starts empty in this version; keeping it warm across restarts is left for later. The tier ships in Pirrow 5.2 for Linux only. A new counter, pirrow_ssd_hits_total, tracks hits served from SSD. The SSD tier needs its own mount point, set with ssd_tier_path."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "In Pirrow, objects evicted from RAM move to the SSD tier instead of being dropped.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Objects larger than 64 MB skip Pirrow's SSD tier.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Pirrow's SSD tier ships in Pirrow 5.2.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "In this version, Pirrow's SSD tier keeps its contents across restarts.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Pirrow ssd_tier_gb setting defaults to 0.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Fetching an object again from object storage costs Pirrow about 40 ms.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

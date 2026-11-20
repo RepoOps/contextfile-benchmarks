@@ -1,0 +1,99 @@
+{
+  "id": "gw-0116",
+  "artifactType": "open_spec",
+  "title": "Hurnbeck admin two-factor proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal HB-305: required two-factor sign-in for Hurnbeck workspace admins. Motivation: in 2026 two admin accounts were taken over with reused passwords, and one attacker exported a full customer list. This proposal makes a second factor mandatory for every account with the Admin or Owner role. Accepted factors are authenticator apps (TOTP) and security keys; SMS codes are not accepted. Admins without a second factor are asked to add one at their next sign-in and cannot reach admin pages until they do."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rollout and limits. Admins get a 14-day grace period that starts when the proposal ships; during it, a banner reminds them on every visit. After the grace period, the block on admin pages applies. Each account gets 10 single-use recovery codes when it adds a factor. Support can reset a lost factor only after a video identity check. Members without admin roles are not affected. The target ship date is 2027-03-02, and the owner is the Trust and Safety team."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Proposal HB-305 does not accept SMS codes as a second factor.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Each Hurnbeck account gets 10 single-use recovery codes when it adds a second factor.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Hurnbeck admins get a 14-day grace period after the two-factor proposal ships.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Under HB-305, Hurnbeck members without admin roles must also add a second factor.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Hurnbeck accepts security keys as a second factor for admins.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Hurnbeck support resets a lost factor only after a video identity check.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

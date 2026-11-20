@@ -1,0 +1,99 @@
+{
+  "id": "gw-0131",
+  "artifactType": "doc",
+  "title": "The Rosetta Stone",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Rosetta Stone is a slab of granodiorite carrying a decree issued at Memphis, Egypt, in 196 BC on behalf of King Ptolemy V. The same text appears three times: in Egyptian hieroglyphs, in Demotic script, and in ancient Greek. French soldiers found the stone in 1799 near the town of Rashid, which Europeans called Rosetta, during Napoleon's campaign in Egypt. After the French defeat it passed to the British under the Capitulation of Alexandria in 1801, and it has been on display in the British Museum since 1802."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Because scholars could read the Greek section, the stone gave them a key to the two Egyptian scripts. The English scholar Thomas Young made early progress, showing that hieroglyphs inside oval rings, called cartouches, spelled the name of Ptolemy. The decisive work came from Jean-Francois Champollion, who announced in 1822 that hieroglyphs combined signs for sounds with signs for whole ideas. His Lettre a M. Dacier set out the system. The stone is broken, and much of the hieroglyphic section at the top is lost."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Rosetta Stone's decree was issued in 196 BC.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Champollion announced his decipherment of hieroglyphs in 1832.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Thomas Young showed that cartouches spelled the name of Ptolemy.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Rosetta Stone carries its text in four scripts.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Rosetta Stone has been displayed in the British Museum since 1802.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Champollion set out his system in a work called Lettre a M. Dacier.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

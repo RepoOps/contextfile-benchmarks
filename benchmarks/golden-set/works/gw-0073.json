@@ -1,0 +1,99 @@
+{
+  "id": "gw-0073",
+  "artifactType": "context_file",
+  "title": "Dunmarrow agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "AGENTS.md for dunmarrow. Dunmarrow is a Rust library for parsing and building DNS messages. The minimum supported Rust version is 1.75. Run `cargo test --all-features` before every commit; CI runs the same command on Linux and macOS. Parser code lives in `src/wire/`, and the record types live in `src/rdata/`, one file per type. Never add a dependency without opening an issue first. Fuzz targets live in `fuzz/` and run with `cargo fuzz run parse_message`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Public API changes need an entry in `CHANGELOG.md` under the Unreleased heading. Do not use unsafe code anywhere; the crate sets `forbid(unsafe_code)` in `src/lib.rs`. Name compression must stay off by default when building messages. Test fixtures are captured packets in `tests/fixtures/`, stored as `.bin` files, and each new fixture needs a matching `.txt` file that describes the packet. Format with `cargo fmt` and keep clippy clean with `-D warnings`. Only maintainers cut releases."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Dunmarrow's minimum supported Rust version is 1.75.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Name compression is on by default when Dunmarrow builds messages.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Dunmarrow sets forbid(unsafe_code) in src/lib.rs.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Each new Dunmarrow test fixture needs a matching .txt file that describes the packet.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Dunmarrow's record types live in src/wire/.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Dunmarrow's CI runs cargo test --all-features on Linux and macOS.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

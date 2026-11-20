@@ -1,0 +1,99 @@
+{
+  "id": "gw-0146",
+  "artifactType": "context_file",
+  "title": "Mossgrade agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mossgrade agent notes. Mossgrade runs evaluation suites against language models and writes scores to a results database. Python 3.12, managed with Poetry. Install with `poetry install` and run tests with `poetry run pytest -q`. Each suite is a folder in `suites/` holding a `suite.yaml` and a `cases.jsonl` file. Run one suite with `poetry run mossgrade run suites/<name>`. By default a run uses 8 parallel workers and a per case timeout of 90 seconds; change these with `--workers` and `--timeout`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for Mossgrade. Never edit `cases.jsonl` in a released suite; copy it into a new suite with a higher version number. Scores are floats between 0 and 1, rounded to four decimal places only at display time. Model API keys come from the file whose path is set in `MOSSGRADE_KEYS`, and they must never appear in logs or results. Add a line to `CHANGELOG.md` for any change to scoring code. Use Black with a line length of 100. Do not add network calls to scorers; scorers must be pure functions."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A Mossgrade run uses 8 parallel workers by default.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Mossgrade scorers must be pure functions.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Mossgrade code is formatted with Black at a line length of 120.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Each Mossgrade suite folder holds a suite.yaml file.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Mossgrade scores are floats between 0 and 1.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Mossgrade manages its dependencies with Poetry.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

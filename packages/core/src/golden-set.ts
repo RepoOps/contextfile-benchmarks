@@ -20,7 +20,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import { ARTIFACT_TYPES } from "./types/registry.ts";
-import { canonicalize } from "./report.ts";
+import { canonicalize, type JudgeCalibration } from "./report.ts";
 import { verifySignature, type Signer, type Signature } from "./signing.ts";
 import { constantsTable } from "./constants.ts";
 
@@ -559,4 +559,53 @@ export function judgeGate(input: {
 
 export function loadJudgeGatePin(root: string = benchmarksRoot()): z.infer<typeof JudgeGatePinSchema> {
   return JudgeGatePinSchema.parse(JSON.parse(readFileSync(join(root, "judge-gate.json"), "utf8")));
+}
+
+// ---------------------------------------------------------------------------
+// Judge calibration for a report (roadmap item 3)
+// ---------------------------------------------------------------------------
+
+/** Cohen's kappa between the judge's pass and the human label "supported", from a
+ *  result's counts. A failed judge call counts as not passed, as in the counts. */
+export function judgeKappa(c: GoldenCounts): number | null {
+  const a = c.supportedPassed;
+  const b = c.supportedFailed;
+  const p = c.wrongPassed + c.misgroundedPassed;
+  const d = c.wrongFailed + c.misgroundedFailed;
+  const n = a + b + p + d;
+  if (n === 0) return null;
+  const po = (a + d) / n;
+  const pe = ((a + b) * (a + p) + (p + d) * (b + d)) / (n * n);
+  return pe === 1 ? null : round4((po - pe) / (1 - pe));
+}
+
+/**
+ * The calibration block for a report: the newest publishable result (signed with a
+ * stable key) for this exact judge model and prompt hash. Undefined when there is none,
+ * so a report never claims a calibration that was not measured.
+ */
+export function judgeCalibrationFor(pin: { model: string; promptHash: string }, results: readonly LoadedResult[]): JudgeCalibration | undefined {
+  const r = results.find((x) => x.check.publishable && x.result.body.judge.model === pin.model && x.result.body.judge.promptHash === pin.promptHash);
+  if (!r) return undefined;
+  const b = r.result.body;
+  return {
+    goldenSet: { id: b.set.id, version: b.set.version, digest: b.set.digest, ...(b.set.stage ? { stage: b.set.stage } : {}) },
+    resultDigest: r.result.digest,
+    ranAt: b.ranAt,
+    claims: b.set.claims,
+    kappa: judgeKappa(b.counts),
+    precision: b.metrics.precision,
+    recall: b.metrics.recall,
+    wrongPassRate: b.metrics.wrongPassRate,
+    misgroundedRate: b.metrics.misgroundedRate,
+  };
+}
+
+/** judgeCalibrationFor over the committed results. Undefined when they cannot be read. */
+export function loadJudgeCalibration(pin: { model: string; promptHash: string }, root: string = benchmarksRoot()): JudgeCalibration | undefined {
+  try {
+    return judgeCalibrationFor(pin, loadResults(root).results);
+  } catch {
+    return undefined;
+  }
 }

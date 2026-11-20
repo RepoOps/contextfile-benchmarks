@@ -1,0 +1,99 @@
+{
+  "id": "gw-0108",
+  "artifactType": "context_file",
+  "title": "Hollisk CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Hollisk. Hollisk is an async Python web framework built on ASGI. Supported Python versions are 3.10 to 3.13. Set up with `hatch env create`, run tests with `hatch run test`, and run the linter with `hatch run lint`, which calls Ruff. Source lives in `src/hollisk/`; the request and response classes are in `src/hollisk/http.py`. Docs are built with MkDocs from the `docs/` folder by `hatch run docs:build`. Example apps live in `examples/`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Contribution rules. Keep the core free of third-party runtime dependencies other than `anyio`. Middleware classes must implement `__call__(scope, receive, send)` and live in `src/hollisk/middleware/`. Test coverage for the core package must stay at or above 95 percent; CI enforces this. Do not change the public signature of `Hollisk.route` without an approved design note in `design/`. Each release is tagged `vX.Y.Z` and published to PyPI by the `release.yml` workflow. Commit messages follow the Conventional Commits format."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The only third-party runtime dependency allowed in Hollisk's core is anyio.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Hollisk's linter is Ruff.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The oldest Python version Hollisk supports is 3.9.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hollisk's CI requires core test coverage of at least 95 percent.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Hollisk's request and response classes are in src/hollisk/http.py.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Hollisk releases are published to PyPI by the release.yml workflow.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

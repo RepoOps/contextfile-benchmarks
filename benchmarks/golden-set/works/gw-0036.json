@@ -1,0 +1,99 @@
+{
+  "id": "gw-0036",
+  "artifactType": "oci_image",
+  "title": "brontavo-agent image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The brontavo-agent image runs the Brontavo backup agent, which copies database dumps to object storage on a schedule. It is built on alpine:3.20 and runs as a non-root user named brontavo with user ID 10500. The agent exposes a status API on port 8085. Mount the directory to back up read-only at /data, and mount a writable volume at /var/cache/brontavo for staging files before upload. The entrypoint is /usr/bin/brontavo-agent with the default command run."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Set BRONTAVO_SCHEDULE to a cron expression to choose when backups run; it defaults to 0 2 * * *, which is 02:00 every day. BRONTAVO_RETENTION_DAYS sets how long old backups are kept and defaults to 30. BRONTAVO_BUCKET names the target bucket and has no default, so the container exits at startup if it is unset. BRONTAVO_COMPRESSION accepts zstd or gzip and defaults to zstd. The health check queries /status/health every 30 seconds and allows two failures before marking the container unhealthy."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "BRONTAVO_RETENTION_DAYS defaults to 30.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The brontavo-agent image runs as user ID 10500.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The brontavo-agent status API listens on port 8085.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "BRONTAVO_COMPRESSION defaults to gzip.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The brontavo-agent image is built on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The brontavo-agent container exits at startup when BRONTAVO_BUCKET is unset.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

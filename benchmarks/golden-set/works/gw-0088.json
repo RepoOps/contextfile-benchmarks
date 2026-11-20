@@ -1,0 +1,99 @@
+{
+  "id": "gw-0088",
+  "artifactType": "open_spec",
+  "title": "Gleaven tiered retention",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec GLV-73: tiered retention in Gleaven. Gleaven keeps every log index on local NVMe disks for its full 30 day retention, and disk is now 70 percent of the cluster's cost. Most searches look at recent data: 92 percent of queries cover only the last 3 days. This spec moves index segments older than 3 days to object storage. Segments in object storage stay searchable, but queries that touch them run slower."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "A cache of 200 GB per node holds recently read cold segments, so repeated searches over the same old range stay fast. Each tenant may change the hot period with the hot_days setting, from 1 to 14 days. Deleting data at the end of retention works the same on both tiers. The project will migrate one cluster at a time, starting with logs-eu-2 in March. Moving segments back from object storage to local disk is out of scope."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "92 percent of Gleaven queries cover only the last 3 days.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Gleaven keeps log indexes for 30 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Each Gleaven node gets a 200 GB cache for cold segments.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Tenants may set Gleaven's hot_days anywhere from 1 to 30 days.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Under the spec, Gleaven segments in object storage stay searchable.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Gleaven migration starts with the logs-eu-2 cluster.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

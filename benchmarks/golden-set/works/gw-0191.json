@@ -1,0 +1,99 @@
+{
+  "id": "gw-0191",
+  "artifactType": "doc",
+  "title": "Magna Carta",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Magna Carta is a charter that King John of England agreed to at Runnymede, a meadow beside the River Thames, on 15 June 1215. A group of rebel barons forced the agreement after John's costly wars in France and his heavy taxes. The charter was written in Latin and contained 63 clauses. Its best known clause said that no free man could be imprisoned or stripped of his rights except by the lawful judgment of his peers or by the law of the land. The deal failed within months: Pope Innocent III declared it void in August 1215, and civil war followed."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "After John died in 1216, the regents ruling for his young son Henry III reissued Magna Carta to win back support, and further versions followed in 1217 and 1225. The 1225 version was granted in return for a new tax. Over the centuries most of its clauses were repealed. Only three clauses remain in force in England and Wales today, including the guarantee of the freedom of the English Church. Four copies of the 1215 charter survive: two are held by the British Library, one by Lincoln Cathedral and one by Salisbury Cathedral."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "King John agreed to Magna Carta at Runnymede.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The 1215 Magna Carta contained 45 clauses.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Four copies of the 1215 Magna Carta survive.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Magna Carta was reissued in 1217.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Lincoln Cathedral holds two of the surviving 1215 copies of Magna Carta.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Pope Innocent III declared Magna Carta void.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

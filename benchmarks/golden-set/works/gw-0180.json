@@ -1,0 +1,99 @@
+{
+  "id": "gw-0180",
+  "artifactType": "doc",
+  "title": "The Haber-Bosch process",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Haber-Bosch process makes ammonia from nitrogen in the air and hydrogen. The German chemist Fritz Haber showed in 1909 that the reaction could run at useful rates, and Carl Bosch, an engineer at the chemical firm BASF, scaled it up for industry. The first commercial plant opened at Oppau, Germany, in 1913. Haber received the Nobel Prize in Chemistry for 1918, and Bosch shared the 1931 prize with Friedrich Bergius."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In the process, nitrogen and hydrogen gases pass over an iron-based catalyst at high pressure and at temperatures of about 400 to 500 degrees Celsius. Each pass converts only part of the gas, so the unreacted gas is recycled. Most of the ammonia made goes into nitrogen fertilizers for crops. Today most of the hydrogen comes from natural gas through steam reforming, which makes the process a large source of carbon dioxide."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The first commercial Haber-Bosch plant opened at Oppau in 1913.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Haber-Bosch process uses an iron-based catalyst.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Carl Bosch was an engineer at Bayer when he scaled up the process.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "In the Haber-Bosch process, unreacted gas is recycled.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Fritz Haber received the Nobel Prize in Chemistry for 1918.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Most of the ammonia from the Haber-Bosch process goes into nitrogen fertilizers.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

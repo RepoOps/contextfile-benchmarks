@@ -1,0 +1,99 @@
+{
+  "id": "gw-0177",
+  "artifactType": "doc",
+  "title": "Rasselby Freight travel expense policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Rasselby Freight travel expense policy. Employees book flights through the company travel portal at least 14 days before departure where possible. Economy class is the standard for flights under 6 hours; flights of 6 hours or longer may be booked in premium economy. Hotel costs are reimbursed up to 180 dollars per night in most cities and up to 260 dollars per night in cities on the high-cost list kept by the finance team."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Meals and claims. The daily meal allowance is 65 dollars on travel days and covers breakfast, lunch and dinner. Alcohol is not reimbursed. Submit expense claims in the finance app within 30 days of the trip's end, with a receipt for every item over 25 dollars. Claims older than 90 days are refused. A manager approves every claim; claims over 2,000 dollars also need approval from the finance director. Taxis are allowed when public transport is not practical."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Rasselby Freight reimburses alcohol.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "At Rasselby Freight, flights of 6 hours or longer may be booked in premium economy.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Rasselby Freight claims over 2,000 dollars need approval from the finance director.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Rasselby Freight daily meal allowance on travel days is 65 dollars.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Rasselby Freight reimburses hotels up to 220 dollars per night in most cities.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Rasselby Freight expense claims must be submitted within 30 days of the trip's end.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

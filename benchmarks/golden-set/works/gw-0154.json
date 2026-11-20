@@ -1,0 +1,99 @@
+{
+  "id": "gw-0154",
+  "artifactType": "doc",
+  "title": "The Cyrillic script",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Cyrillic script is used to write Russian, Ukrainian, Bulgarian, Serbian and other languages. It developed in the First Bulgarian Empire in the late 9th or early 10th century. It is named after Saint Cyril, who with his brother Methodius created the earlier Glagolitic alphabet for Slavic speakers, although Cyrillic itself was most likely shaped by their followers. Many of its letters were adapted from the Greek alphabet, with extra letters added for Slavic sounds that Greek lacked."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The modern Russian alphabet has 33 letters. The Ukrainian alphabet also has 33, but includes some letters that Russian lacks. Serbian Cyrillic has 30 letters and follows the principle of one letter for each sound. In 1708 Peter the Great introduced a simplified civil script that brought letter shapes closer to Latin type. When Bulgaria joined the European Union in 2007, Cyrillic became the third official script of the EU, after Latin and Greek."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The modern Russian alphabet has 33 letters.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Serbian Cyrillic has 30 letters.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Peter the Great introduced a simplified civil script in 1708.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Cyrillic script developed in the First Bulgarian Empire.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Bulgaria joined the European Union in 2004.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Saint Cyril and his brother Methodius created the Glagolitic alphabet.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Harness constants
 
-The thresholds and tolerances the harness reads, copied from ContextFile's audited config table at commit d14d3b325714b0e4821f4dd47984af7e44db8105. Values marked Example are not yet confirmed by the operator.
+The thresholds and tolerances the harness reads, copied from ContextFile's audited config table at commit f9a9a14138e8d87171d80f653cb2ada123c09894. Values marked Example are not yet confirmed by the operator.
 
 | Constant | Value | Meaning |
 | --- | --- | --- |

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0143",
+  "artifactType": "brain_wiki",
+  "title": "Jackie Robinson",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Jackie Robinson broke the color line in Major League Baseball when he played first base for the Brooklyn Dodgers on 15 April 1947. Before that, Black players had been kept out of the major leagues for decades and played in the Negro leagues instead; Robinson himself had played for the Kansas City Monarchs in 1945. Branch Rickey, the Dodgers' president and general manager, signed him, choosing him partly for his ability to stay calm under abuse. Robinson won the first Rookie of the Year award that season."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Robinson played ten seasons, all with the Dodgers, and helped the team win the World Series in 1955. He was named the National League's Most Valuable Player in 1949, when he led the league with a .342 batting average. He was elected to the Baseball Hall of Fame in 1962. In 1997 Major League Baseball retired his number 42 across every team, and each year on 15 April, Jackie Robinson Day, players throughout the league wear 42."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jackie Robinson debuted for the Brooklyn Dodgers on 15 April 1947.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Jackie Robinson won the National League MVP award in 1949.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Jackie Robinson was elected to the Baseball Hall of Fame in 1972.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Jackie Robinson played for the Kansas City Monarchs in 1945.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Branch Rickey was president of the New York Yankees when he signed Jackie Robinson.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Major League Baseball retired Jackie Robinson's number 42 across all teams in 1997.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7967 @@
+{
+  "digest": "sha256:24cae1e2165c63365111b13da5f799dbc00c522f045a75abfc76c033a1a68dbb",
+  "body": {
+    "kind": "contextfile.benchmark.golden/v1",
+    "harnessVersion": "golden-harness-1",
+    "ranAt": "2026-11-18T15:49:59.651Z",
+    "set": {
+      "id": "contextfile-golden",
+      "version": "1.0.0",
+      "digest": "sha256:753418d53978af10ed67dbec7c49f6847a375f5810292fe815a228cf63043c9d",
+      "works": 220,
+      "claims": 1320,
+      "stage": "full"
+    },
+    "judge": {
+      "model": "google/gemini-4-argon",
+      "promptVersion": "v0-dev",
+      "promptHash": "sha256:1e64388843ffb61194ac8007b4992da06d5edd7ac2671ec35b1e82d8c2a9d04d",
+      "backend": "openrouter"
+    },
+    "passThreshold": 0.9,
+    "tolerance": 0.02,
+    "metrics": {
+      "precision": 1,
+      "recall": 0.8939,
+      "misgroundedRate": 0,
+      "wrongPassRate": 0
+    },
+    "counts": {
+      "supportedPassed": 590,
+      "supportedFailed": 70,
+      "wrongPassed": 0,
+      "wrongFailed": 331,
+      "misgroundedPassed": 0,
+      "misgroundedFailed": 329,
+      "errors": 0
+    },
+    "items": [
+      {
+        "id": "gw-0001/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0001/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0001/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0001/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0002/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0002/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0002/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0003/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0003/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0003/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0004/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0004/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0005/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0005/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0006/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0006/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0007/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0007/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0008/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0008/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0009/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0009/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0010/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0010/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0011/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0011/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c1",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0012/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0013/c1",
+        "expected": "supported",
+        "entailment": 0.3,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c5",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0013/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0014/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0014/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0015/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0015/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0016/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0016/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0016/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0017/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0017/c6",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0018/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0018/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0019/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0019/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0020/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0020/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0021/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0021/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0021/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0022/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c5",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0022/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0023/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0023/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0023/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0024/c1",
+        "expected": "supported",
+        "entailment": 0.2,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0024/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0024/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0025/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0025/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0025/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0025/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0026/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0026/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0027/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0027/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0027/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0028/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0028/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0028/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0029/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0029/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0029/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0030/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0030/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0030/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0031/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0031/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0031/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0031/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0031/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0031/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0032/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0032/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0032/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0032/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0032/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0032/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0033/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0033/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0033/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0033/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0033/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0033/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0034/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0034/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0034/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0034/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0034/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0034/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0035/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0035/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0035/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0035/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0035/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0035/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0036/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0036/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0036/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0036/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0036/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0036/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0037/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0037/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0037/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0037/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0037/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0037/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0038/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0038/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0038/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0038/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0038/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0038/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0039/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0039/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0039/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0039/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0039/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0039/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0040/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0040/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0040/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0040/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0040/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0040/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0041/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0041/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0041/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0041/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0041/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0041/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0042/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0042/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0042/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0042/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0042/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0042/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0043/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0043/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0043/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0043/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0043/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0043/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0044/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0044/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0044/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0044/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0044/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0044/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0045/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0045/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0045/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0045/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0045/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0045/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0046/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0046/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0046/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0046/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0046/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0046/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0047/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0047/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0047/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0047/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0047/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0047/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0048/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0048/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0048/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0048/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0048/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0048/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0049/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0049/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0049/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0049/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0049/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0049/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0050/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0050/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0050/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0050/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0050/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0050/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0051/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0051/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0051/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0051/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0051/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0051/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0052/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0052/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0052/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0052/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0052/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0052/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0053/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0053/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0053/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0053/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0053/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0053/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0054/c1",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0054/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0054/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0054/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0054/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0054/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0055/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0055/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0055/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0055/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0055/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0055/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0056/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0056/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0056/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0056/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0056/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0056/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0057/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0057/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0057/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0057/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0057/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0057/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0058/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0058/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0058/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0058/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0058/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0058/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0059/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0059/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0059/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0059/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0059/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0059/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0060/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0060/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0060/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0060/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0060/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0060/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0061/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0061/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0061/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0061/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0061/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0061/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0062/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0062/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0062/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0062/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0062/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0062/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0063/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0063/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0063/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0063/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0063/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0063/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0064/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0064/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0064/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0064/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0064/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0064/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0065/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0065/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0065/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0065/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0065/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0065/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0066/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0066/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0066/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0066/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0066/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0066/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0067/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0067/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0067/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0067/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0067/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0067/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0068/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0068/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0068/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0068/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0068/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0068/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0069/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0069/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0069/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0069/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0069/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0069/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0070/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0070/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0070/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0070/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0070/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0070/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0071/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0071/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0071/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0071/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0071/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0071/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0072/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0072/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0072/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0072/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0072/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0072/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0073/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0073/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0073/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0073/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0073/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0073/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0074/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0074/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0074/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0074/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0074/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0074/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0075/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0075/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0075/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0075/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0075/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0075/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0076/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0076/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0076/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0076/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0076/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0076/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0077/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0077/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0077/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0077/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0077/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0077/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0078/c1",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0078/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0078/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0078/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0078/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0078/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0079/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0079/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0079/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0079/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0079/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0079/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0080/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0080/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0080/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0080/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0080/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0080/c6",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0081/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0081/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0081/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0081/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0081/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0081/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0082/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0082/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0082/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0082/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0082/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0082/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0083/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0083/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0083/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0083/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0083/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0083/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0084/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0084/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0084/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0084/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0084/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0084/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0085/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0085/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0085/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0085/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0085/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0085/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0086/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0086/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0086/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0086/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0086/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0086/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0087/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0087/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0087/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0087/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0087/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0087/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0088/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0088/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0088/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0088/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0088/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0088/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0089/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0089/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0089/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0089/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0089/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0089/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0090/c1",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0090/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0090/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0090/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0090/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0090/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0091/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0091/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0091/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0091/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0091/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0091/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0092/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0092/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0092/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0092/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0092/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0092/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0093/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0093/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0093/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0093/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0093/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0093/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0094/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0094/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0094/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0094/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0094/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0094/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0095/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0095/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0095/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0095/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0095/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0095/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0096/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0096/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0096/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0096/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0096/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0096/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0097/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0097/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0097/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0097/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0097/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0097/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0098/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0098/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0098/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0098/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0098/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0098/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0099/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0099/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0099/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0099/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0099/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0099/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0100/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0100/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0100/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0100/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0100/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0100/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0101/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0101/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0101/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0101/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0101/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0101/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0102/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0102/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0102/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0102/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0102/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0102/c6",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0103/c1",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0103/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0103/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0103/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0103/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0103/c6",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0104/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0104/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0104/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0104/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0104/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0104/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0105/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0105/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0105/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0105/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0105/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0105/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0106/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0106/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0106/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0106/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0106/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0106/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0107/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0107/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0107/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0107/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0107/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0107/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0108/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0108/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0108/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0108/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0108/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0108/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0109/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0109/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0109/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0109/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0109/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0109/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0110/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0110/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0110/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0110/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0110/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0110/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0111/c1",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0111/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0111/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0111/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0111/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0111/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0112/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0112/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0112/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0112/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0112/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0112/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0113/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0113/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0113/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0113/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0113/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0113/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0114/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0114/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0114/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0114/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0114/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0114/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0115/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0115/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0115/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0115/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0115/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0115/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0116/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0116/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0116/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0116/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0116/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0116/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0117/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0117/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0117/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0117/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0117/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0117/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0118/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0118/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0118/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0118/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0118/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0118/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0119/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0119/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0119/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0119/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0119/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0119/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0120/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0120/c2",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0120/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0120/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0120/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0120/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0121/c1",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0121/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0121/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0121/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0121/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0121/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0122/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0122/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0122/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0122/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0122/c5",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0122/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0123/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0123/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0123/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0123/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0123/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0123/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0124/c1",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0124/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0124/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0124/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0124/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0124/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0125/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0125/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0125/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0125/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0125/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0125/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0126/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0126/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0126/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0126/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0126/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0126/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0127/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0127/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0127/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0127/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0127/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0127/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0128/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0128/c2",
+        "expected": "supported",
+        "entailment": 0.6,
+        "passed": false
+      },
+      {
+        "id": "gw-0128/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0128/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0128/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0128/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0129/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0129/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0129/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0129/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0129/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0129/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0130/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0130/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0130/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0130/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0130/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0130/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0131/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0131/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0131/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0131/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0131/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0131/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0132/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0132/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0132/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0132/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0132/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0132/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0133/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0133/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0133/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0133/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0133/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0133/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0134/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0134/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0134/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0134/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0134/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0134/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0135/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0135/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0135/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0135/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0135/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0135/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0136/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0136/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0136/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0136/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0136/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0136/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0137/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0137/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0137/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0137/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0137/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0137/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0138/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0138/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0138/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0138/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0138/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0138/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0139/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0139/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0139/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0139/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0139/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0139/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0140/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0140/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0140/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0140/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0140/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0140/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0141/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0141/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0141/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0141/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0141/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0141/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0142/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0142/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0142/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0142/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0142/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0142/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0143/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0143/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0143/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0143/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0143/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0143/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0144/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0144/c2",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0144/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0144/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0144/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0144/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0145/c1",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0145/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0145/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0145/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0145/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0145/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0146/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0146/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0146/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0146/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0146/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0146/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0147/c1",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0147/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0147/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0147/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0147/c5",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0147/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0148/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0148/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0148/c3",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0148/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0148/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0148/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0149/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0149/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0149/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0149/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0149/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0149/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0150/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0150/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0150/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0150/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0150/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0150/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0151/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0151/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0151/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0151/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0151/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0151/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0152/c1",
+        "expected": "supported",
+        "entailment": 0.4,
+        "passed": false
+      },
+      {
+        "id": "gw-0152/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0152/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0152/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0152/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0152/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0153/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0153/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0153/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0153/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0153/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0153/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0154/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0154/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0154/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0154/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0154/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0154/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0155/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0155/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0155/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0155/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0155/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0155/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0156/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0156/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0156/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0156/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0156/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0156/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0157/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0157/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0157/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0157/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0157/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0157/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0158/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0158/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0158/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0158/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0158/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0158/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0159/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0159/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0159/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0159/c4",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0159/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0159/c6",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0160/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0160/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0160/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0160/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0160/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0160/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0161/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0161/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0161/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0161/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0161/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0161/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0162/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0162/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0162/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0162/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0162/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0162/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0163/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0163/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0163/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0163/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0163/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0163/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0164/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0164/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0164/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0164/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0164/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0164/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0165/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0165/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0165/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0165/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0165/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0165/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0166/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0166/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0166/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0166/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0166/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0166/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0167/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0167/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0167/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0167/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0167/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0167/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0168/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0168/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0168/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0168/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0168/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0168/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0169/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0169/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0169/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0169/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0169/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0169/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0170/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0170/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0170/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0170/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0170/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0170/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0171/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0171/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0171/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0171/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0171/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0171/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0172/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0172/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0172/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0172/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0172/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0172/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0173/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0173/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0173/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0173/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0173/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0173/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0174/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0174/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0174/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0174/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0174/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0174/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0175/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0175/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0175/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0175/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0175/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0175/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0176/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0176/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0176/c3",
+        "expected": "supported",
+        "entailment": 0.2,
+        "passed": false
+      },
+      {
+        "id": "gw-0176/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0176/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0176/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0177/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0177/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0177/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0177/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0177/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0177/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0178/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0178/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0178/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0178/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0178/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0178/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0179/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0179/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0179/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0179/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0179/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0179/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0180/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0180/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0180/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0180/c4",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0180/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0180/c6",
+        "expected": "supported",
+        "entailment": 0.4,
+        "passed": false
+      },
+      {
+        "id": "gw-0181/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0181/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0181/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0181/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0181/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0181/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0182/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0182/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0182/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0182/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0182/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0182/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0183/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0183/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0183/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0183/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0183/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0183/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0184/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0184/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0184/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0184/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0184/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0184/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0185/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0185/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0185/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0185/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0185/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0185/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0186/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0186/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0186/c3",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0186/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0186/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0186/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0187/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0187/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0187/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0187/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0187/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0187/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0188/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0188/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0188/c3",
+        "expected": "supported",
+        "entailment": 0.4,
+        "passed": false
+      },
+      {
+        "id": "gw-0188/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0188/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0188/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0189/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0189/c2",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0189/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0189/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0189/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0189/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0190/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0190/c2",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0190/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0190/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0190/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0190/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0191/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0191/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0191/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0191/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0191/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0191/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0192/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0192/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0192/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0192/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0192/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0192/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0193/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0193/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0193/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0193/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0193/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0193/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0194/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0194/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0194/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0194/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0194/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0194/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0195/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0195/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0195/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0195/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0195/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0195/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0196/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0196/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0196/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0196/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0196/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0196/c6",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0197/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0197/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0197/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0197/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0197/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0197/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0198/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0198/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0198/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0198/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0198/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0198/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0199/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0199/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0199/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0199/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0199/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0199/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0200/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0200/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0200/c3",
+        "expected": "supported",
+        "entailment": 0.4,
+        "passed": false
+      },
+      {
+        "id": "gw-0200/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0200/c5",
+        "expected": "supported",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0200/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0201/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0201/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0201/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0201/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0201/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0201/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0202/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0202/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0202/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0202/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0202/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0202/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0203/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0203/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0203/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0203/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0203/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0203/c6",
+        "expected": "supported",
+        "entailment": 0.2,
+        "passed": false
+      },
+      {
+        "id": "gw-0204/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0204/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0204/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0204/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0204/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0204/c6",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0205/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0205/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0205/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0205/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0205/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0205/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0206/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0206/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0206/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0206/c4",
+        "expected": "supported",
+        "entailment": 0.8,
+        "passed": false
+      },
+      {
+        "id": "gw-0206/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0206/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0207/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0207/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0207/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0207/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0207/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0207/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0208/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0208/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0208/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0208/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0208/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0208/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0209/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0209/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0209/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0209/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0209/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0209/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0210/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0210/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0210/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0210/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0210/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0210/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0211/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0211/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0211/c3",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0211/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0211/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0211/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0212/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0212/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0212/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0212/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0212/c5",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0212/c6",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0213/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0213/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0213/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0213/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0213/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0213/c6",
+        "expected": "supported",
+        "entailment": 0.9,
+        "passed": true
+      },
+      {
+        "id": "gw-0214/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0214/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0214/c3",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0214/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0214/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0214/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0215/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0215/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0215/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0215/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0215/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0215/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0216/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0216/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0216/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0216/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0216/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0216/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0217/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0217/c2",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0217/c3",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0217/c4",
+        "expected": "supported",
+        "entailment": 0.5,
+        "passed": false
+      },
+      {
+        "id": "gw-0217/c5",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0217/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0218/c1",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0218/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0218/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0218/c4",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0218/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0218/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0219/c1",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0219/c2",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0219/c3",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0219/c4",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0219/c5",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0219/c6",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0220/c1",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0220/c2",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0220/c3",
+        "expected": "wrong",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0220/c4",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      },
+      {
+        "id": "gw-0220/c5",
+        "expected": "misgrounded",
+        "entailment": 0,
+        "passed": false
+      },
+      {
+        "id": "gw-0220/c6",
+        "expected": "supported",
+        "entailment": 1,
+        "passed": true
+      }
+    ]
+  },
+  "signature": {
+    "keyId": "pem-9ec90d53d901e315",
+    "alg": "Ed25519",
+    "value": "pT6UAgPETQ5/E4QKB4QBXCo3Sy5WR4/mj+9hPfLlrBgyCjcRtFZL0HtLeUFnA15kNFhI7m4y1Cdgj5ZNYhHxCQ=="
+  },
+  "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEATtuUMx2XosYSPb/FgkQyxG5DTUzJEB/vTt+oVEVgJSY=\n-----END PUBLIC KEY-----\n"
+}

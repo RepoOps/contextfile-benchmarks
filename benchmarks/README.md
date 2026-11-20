@@ -1,19 +1,21 @@
 # ContextFile golden set and accuracy harness
 
 This folder measures the ContextFile verifier's judge against labeled claims and
-publishes precision, recall and the misgrounded-citation rate. It is built to be
-copied to a public repo so anyone can rerun it.
+publishes precision, recall and the misgrounded-citation rate. Anyone can verify and
+rerun it from the public repo https://github.com/RepoOps/contextfile-benchmarks, which
+`scripts/publish-benchmarks.mjs` writes from this folder and the harness code (see
+Publishing below).
 
 ## What is here
 
 | Path | What it holds |
 | --- | --- |
 | `golden-set/works/*.json` | One labeled work per file: its source passages and its claims, each with an expected verdict and its labels. |
-| `golden-set/manifest.json` | Set id and version, the target size (220 works), the stage (`pilot` until the set reaches its target), each work's digest and the set digest. |
+| `golden-set/manifest.json` | Set id and version, the target size (220 works), the stage (`pilot` before the set reached its target, `full` since), each work's digest and the set digest. |
 | `results/*.json` | Signed results, one per run. |
 | `judge-gate.json` | The judge allowed to stand without a result (the one live before the first run). |
 | `judge-prompt.json` | The live judge prompt: its version, its hash and the exact text the hash covers. Generated from `packages/core/src/judge.ts`; also served at https://contextfile.ai/benchmarks/judge-prompt.json. |
-| `publication.json` | The public harness repo URL, once published. |
+| `publication.json` | The public harness repo URL. /benchmarks links to it. |
 | `uplift/` | The uplift scorecard: the same model with and without ContextFile on version-pinned coding tasks. See `uplift/README.md`. |
 
 The harness code is `packages/core/src/golden-set.ts` (schema, digests, metrics,
@@ -82,11 +84,33 @@ are data: they only ever reach the judge as the text to check.
 
 ## Status
 
-The set is published as a pilot: 30 of 220 works, all authored for this set and
-released under CC0-1.0, each labeled once (labeler `claude-draft`). The manifest says
-`"stage": "pilot"`, and /benchmarks labels the set and every result on it a pilot. A
-blind second pass by a separate model labeler agreed on every claim; that is a sanity
-check, not inter-labeler agreement, so the set records no second label. One second
-labeler, a person, labels the pilot's claims for the agreement score. The remaining
-works are operator tasks; set the stage to `full` in `golden-cli.ts` once the set
-reaches its target.
+The set is full: 220 works and 1,320 claims (660 supported, 331 wrong, 329
+misgrounded), all authored for this set and released under CC0-1.0. The manifest says
+`"stage": "full"` (version 1.0.0). The first 30 works ran as a pilot from 2026-11-11;
+results on that pilot keep their pilot label. Works gw-0031 to gw-0220 were added on
+2026-11-18 with the pilot's mix of artifact types and verdicts.
+
+Every claim carries one label (labeler `claude-draft`). A blind second pass by a
+separate model labeler agreed on every pilot claim; that is a sanity check, not
+inter-labeler agreement, so the set records no second label. One second labeler, a
+person, still has to label the claims for the agreement score.
+
+## Publishing
+
+https://github.com/RepoOps/contextfile-benchmarks holds this folder (all but
+`publication.json`) and the harness code, with no import of a ContextFile workspace package.
+`scripts/publish-benchmarks.mjs` writes that tree; files in `scripts/publish-benchmarks/`
+are the parts that are not copies (README, LICENSE, NOTICE, the npm lockfile, the
+offline `verify.ts`, a constants reader and the OpenRouter client without the paths for
+a customer's own key). To publish a change, write the tree, read it, then commit it to a
+clone of the public repo:
+
+```
+node --experimental-strip-types scripts/publish-benchmarks.mjs --out <empty folder>
+```
+
+`pnpm gates` runs `publish-benchmarks.mjs --check`, which writes the tree to a temp
+folder, runs its `verify.ts` and eval checks there, and fails when the tool list
+snapshot, the trimmed OpenRouter client or the constants behave differently from the
+monorepo code. A change to a harness file that the generator rewrites fails the check
+until `REWRITES` in the script is updated.

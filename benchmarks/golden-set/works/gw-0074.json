@@ -1,0 +1,99 @@
+{
+  "id": "gw-0074",
+  "artifactType": "brain_wiki",
+  "title": "The Mali Empire",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Mali Empire rose in West Africa in the 13th century. Its founder, Sundiata Keita, defeated the Sosso king Sumanguru at the Battle of Kirina, traditionally dated around 1235. The empire grew wealthy by controlling trade in gold from the Bambuk and Bure regions and in salt from the Sahara. At its height it stretched from the Atlantic coast inland along the Niger River. The story of Sundiata survives mainly through oral epics performed by griots, hereditary singers and keepers of history."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Mansa Musa, who ruled Mali in the early 14th century, became famous across North Africa and Europe after his pilgrimage to Mecca in 1324. He travelled through Cairo with a large caravan and gave away so much gold there that its value in Egypt fell for years. After returning, he funded building in Timbuktu, including the Djinguereber Mosque, linked to the Andalusian architect Abu Ishaq al-Sahili. The Catalan Atlas of 1375 shows Mansa Musa seated on a throne holding a gold nugget."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mansa Musa made his pilgrimage to Mecca in 1324.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Catalan Atlas of 1375 shows Mansa Musa holding a gold nugget.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Sundiata Keita defeated the Sosso king Sumanguru at the Battle of Kirina.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Mansa Musa's gifts of gold in Cairo raised the value of gold in Egypt.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Mali's gold came from the Bambuk and Bure regions.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The story of Sundiata survives mainly through oral epics performed by griots.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

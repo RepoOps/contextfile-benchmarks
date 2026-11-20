@@ -1,0 +1,99 @@
+{
+  "id": "gw-0118",
+  "artifactType": "context_file",
+  "title": "Jovrath agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Jovrath. Jovrath turns an OpenAPI 3.1 document into typed client SDKs for TypeScript and Go. The CLI entry point is `src/cli.ts`; build with `npm run build` and run the generator locally with `node dist/cli.js --spec examples/petstore.yaml`. Snapshot tests live in `test/snapshots/` and run with `npm test`. When generated output changes on purpose, update the snapshots with `npm run test:update` and review the diff before committing. Lint with `npm run lint`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Generated SDKs must have no runtime dependencies beyond the language's standard library. Every new OpenAPI feature needs an example spec in `examples/` and a snapshot test. Templates live in `templates/ts/` and `templates/go/`; do not put logic in templates beyond loops and conditionals. Support for OpenAPI 2.0 (Swagger) was dropped in version 2.0 of Jovrath and must not come back. The minimum Node version is 20. Source code in `src/` uses ES modules only."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jovrath generates client SDKs for TypeScript and Go.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Jovrath's minimum Node version is 20.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Jovrath's generated SDKs may depend on third-party HTTP libraries.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Jovrath snapshot tests live in test/snapshots/.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Jovrath snapshots are updated with npm run test:update.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Jovrath's Go templates live in templates/go/.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0138",
+  "artifactType": "doc",
+  "title": "Orvenlit getting started guide",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Getting started with Orvenlit. Orvenlit is a hosted scheduler for data pipelines. Each workspace starts on the Starter plan, which allows 3 pipelines and 1,000 task runs per month. A pipeline is a set of tasks connected in a directed graph, defined in a file named `orvenlit.yaml` at the root of a Git repository. Orvenlit checks the default branch for changes every 5 minutes. To run a pipeline by hand, open it in the console and choose Run now, or call `orv run <pipeline>` from the command line."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Schedules and failures. Schedules use cron syntax and are evaluated in UTC unless the pipeline sets a `timezone` field. When a task fails, Orvenlit retries it twice by default, waiting 60 seconds before the first retry and 120 seconds before the second. If every attempt fails, downstream tasks are marked skipped and the pipeline owner gets an email. Run logs are kept for 30 days on the Starter plan and 365 days on the Team plan. A task that runs longer than 6 hours is stopped."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Orvenlit Starter plan allows 3 pipelines.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Orvenlit evaluates schedules in UTC unless a timezone is set.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Orvenlit retries a failed task twice by default.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Orvenlit keeps run logs for 90 days on the Starter plan.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Orvenlit pipelines are defined in a file named orvenlit.yaml.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Orvenlit stops a task that runs longer than 6 hours.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

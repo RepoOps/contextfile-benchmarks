@@ -1,0 +1,99 @@
+{
+  "id": "gw-0175",
+  "artifactType": "doc",
+  "title": "The Wright brothers' first flight",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Wright brothers' first flight. On December 17, 1903, Orville and Wilbur Wright made the first sustained, controlled flights of a powered airplane at Kill Devil Hills, near Kitty Hawk, North Carolina. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet. The brothers made four flights that day, taking turns at the controls. The longest, flown by Wilbur, lasted 59 seconds and covered 852 feet. The flights took off from level ground into a strong, cold wind."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The brothers ran a bicycle shop in Dayton, Ohio, and paid for their aircraft work with its income. Their mechanic Charlie Taylor built the engine for the 1903 Flyer, which produced about 12 horsepower. The Wrights chose the Outer Banks of North Carolina for steady winds and soft sand. A local man, John T. Daniels, took the famous photograph of the first flight. The 1903 Flyer is displayed at the Smithsonian's National Air and Space Museum in Washington."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Charlie Taylor built the engine for the 1903 Wright Flyer.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Wilbur Wright piloted the first flight on December 17, 1903.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "John T. Daniels took the photograph of the Wrights' first flight.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Wright brothers made four flights on December 17, 1903.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Wright brothers ran a bicycle shop in Cleveland, Ohio.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The first Wright flight on December 17, 1903 covered 120 feet.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

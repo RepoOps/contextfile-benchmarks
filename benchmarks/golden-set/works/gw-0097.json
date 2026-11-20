@@ -1,0 +1,99 @@
+{
+  "id": "gw-0097",
+  "artifactType": "brain_wiki",
+  "title": "Hubble Space Telescope",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Hubble Space Telescope is a joint project of NASA and the European Space Agency. The Space Shuttle Discovery carried it into orbit in April 1990. Its primary mirror is 2.4 meters across. Soon after launch, engineers found that the mirror had been ground to a slightly wrong shape, a flaw called spherical aberration that blurred its images. In December 1993 astronauts on the shuttle Endeavour installed corrective optics during the first servicing mission, and the images became sharp. The telescope is named after the astronomer Edwin Hubble."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Astronauts visited Hubble on five shuttle servicing missions between 1993 and 2009, replacing gyroscopes, batteries and instruments. The last of these missions installed Wide Field Camera 3. In December 1995 the telescope pointed at a small, seemingly empty patch of sky in the constellation Ursa Major for about ten days. The resulting image, the Hubble Deep Field, showed roughly 3,000 galaxies, some of them very distant. Because Hubble orbits above the atmosphere, its view is not blurred by moving air, and it can observe ultraviolet light that the atmosphere blocks."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Astronauts serviced Hubble on five shuttle missions.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Hubble's primary mirror is 3.5 meters across.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Corrective optics were installed on Hubble in December 1993.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Hubble Deep Field image showed roughly 3,000 galaxies.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Hubble Deep Field observations pointed at a patch of sky in the constellation Orion.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The shuttle Discovery carried Hubble into orbit in 1990.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

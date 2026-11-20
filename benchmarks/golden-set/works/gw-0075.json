@@ -1,0 +1,99 @@
+{
+  "id": "gw-0075",
+  "artifactType": "context_file",
+  "title": "Fenwold CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "CLAUDE.md for fenwold. Fenwold is a log router written in Go 1.22 that reads logs from Kafka and writes them to object storage and search clusters. Build with `make build`; the binary lands in `bin/fenwold`. Run `make test` for unit tests and `make itest` for integration tests, which need Docker running. Each output plugin lives in `internal/outputs/<name>/` and must implement the Output interface in `internal/outputs/output.go`. Do not log message bodies at info level, because they may contain customer data."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Config files use YAML, and the schema is in `docs/config-schema.json`; update it whenever you add a config key. Every new config key needs a default in `internal/config/defaults.go`. Metrics use the `fenwold_` prefix and follow Prometheus naming, with `_total` for counters. Commit messages follow Conventional Commits, such as `fix(outputs): handle empty batch`. Never change the Kafka consumer group name `fenwold-main`, because doing so replays every retained message. Ask before touching anything under `deploy/`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Fenwold is written in Go 1.21.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "New Fenwold config keys need a default in internal/config/defaults.go.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Fenwold metrics use the fenwold_ prefix.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Fenwold integration tests need Docker running.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Fenwold's Kafka consumer group is named fenwold-primary.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Fenwold commit messages follow Conventional Commits.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

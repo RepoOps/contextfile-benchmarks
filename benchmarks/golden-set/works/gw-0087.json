@@ -1,0 +1,99 @@
+{
+  "id": "gw-0087",
+  "artifactType": "brain_wiki",
+  "title": "Tenochtitlan",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Tenochtitlan was the capital of the Mexica, often called the Aztecs. According to tradition it was founded in 1325 on an island in Lake Texcoco, at a place where the founders saw an eagle perched on a cactus. That image now appears on the flag of Mexico. Three causeways linked the island city to the shore, and an aqueduct brought fresh water from springs at Chapultepec. Farmers grew crops on chinampas, raised plots built up from lake mud in shallow water."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "At the center of Tenochtitlan stood the Templo Mayor, a great pyramid with twin shrines on top, one to Huitzilopochtli, the god of war and the sun, and one to Tlaloc, the god of rain. Spanish forces led by Hernan Cortes, with thousands of Indigenous allies, captured the city in August 1521 after a long siege. Mexico City was built on its ruins. Excavation of the Templo Mayor began in earnest in 1978, after electrical workers found a large carved stone of the moon goddess Coyolxauhqui."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Templo Mayor had a shrine to Tlaloc, the god of rain.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Tenochtitlan was founded on an island in Lake Titicaca.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Spanish forces led by Hernan Cortes captured Tenochtitlan in 1521.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "An aqueduct brought fresh water to Tenochtitlan from springs at Chapultepec.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Excavation of the Templo Mayor began in earnest in 1958.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Chinampas were raised farming plots built from lake mud.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

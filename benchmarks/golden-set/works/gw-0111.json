@@ -1,0 +1,99 @@
+{
+  "id": "gw-0111",
+  "artifactType": "doc",
+  "title": "Fermat's Last Theorem",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Fermat's Last Theorem says that no three positive whole numbers a, b and c satisfy a^n + b^n = c^n for any whole number n greater than 2. Around 1637 the French lawyer and mathematician Pierre de Fermat wrote the statement in the margin of his copy of Diophantus's Arithmetica, adding that he had a marvelous proof that the margin was too small to contain. No such proof was ever found among his papers. Fermat did prove the case n = 4 himself, using a method now called infinite descent."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The theorem stood unproven for about 358 years. The British mathematician Andrew Wiles, working largely in secret at Princeton University, announced a proof in June 1993. Reviewers found a gap in the argument. Wiles and his former student Richard Taylor repaired it, and the corrected proof was published in 1995 in the journal Annals of Mathematics. The proof works through a special case of the modularity conjecture for elliptic curves. Wiles received the Abel Prize in 2016."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Andrew Wiles announced his proof of Fermat's Last Theorem in June 1993.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Fermat wrote his famous margin note in a copy of Euclid's Elements.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Richard Taylor helped Wiles repair the gap in his proof of Fermat's Last Theorem.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Fermat proved the case n = 4 using infinite descent.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The corrected proof of Fermat's Last Theorem was published in 1999.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Wiles received the Abel Prize in 2016.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

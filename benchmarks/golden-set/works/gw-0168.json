@@ -1,0 +1,99 @@
+{
+  "id": "gw-0168",
+  "artifactType": "oci_image",
+  "title": "plimsby-mirror image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The plimsby-mirror image runs Plimsby, a pull through cache for container registries. It is built on alpine:3.19 and runs as user plimsby with user ID 1200. The mirror serves the registry API on port 5000 and stores cached layers under /var/lib/plimsby, which should be a volume. The entrypoint is /usr/bin/plimsby serve. The image is about 18 MB compressed and contains no package manager after the build. Image tags follow the Plimsby release version, such as 2.4.1."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment. PLIMSBY_UPSTREAM sets the registry to mirror and defaults to registry-1.docker.io. PLIMSBY_CACHE_MAX sets the disk limit and defaults to 50GB; the oldest unused layers go first when the limit is hit. PLIMSBY_TTL sets how long manifests stay fresh and defaults to 6h. Basic auth turns on when both PLIMSBY_USER and PLIMSBY_PASSWORD are set. The health check calls GET /v2/ every 30 seconds. Set PLIMSBY_LOG_LEVEL to debug to log every cache miss."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The plimsby-mirror image runs as user ID 1200.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "PLIMSBY_TTL defaults to 6h.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "When the cache limit is hit, Plimsby removes the oldest unused layers first.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Plimsby stores cached layers under /var/lib/plimsby.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "PLIMSBY_CACHE_MAX defaults to 100GB.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The plimsby-mirror image serves the registry API on port 5000.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

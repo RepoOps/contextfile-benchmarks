@@ -1,0 +1,99 @@
+{
+  "id": "gw-0150",
+  "artifactType": "context_file",
+  "title": "Olvetra AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Olvetra. Olvetra is a Go client library for a durable message queue. Module path: `github.com/olvetra/olvetra-go`. It supports Go 1.21 and newer. Run `go test ./...` for unit tests and `go test -tags integration ./...` for integration tests, which need a broker started with `docker compose -f dev/compose.yaml up`. The broker listens on port 5679 in that setup. The public API lives in the root package; everything under `internal/` may change without notice."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Conventions for Olvetra. Every exported function that does network work takes a `context.Context` as its first argument. The default publish timeout is 5 seconds and the default prefetch count is 50; both are set in `options.go`. Do not add dependencies outside the standard library without an issue that a maintainer has approved. Wrap errors with `fmt.Errorf` and `%w`. Breaking changes to the public API need a new major version. Tests must not sleep; use the fake clock in `internal/clock`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Olvetra supports Go 1.21 and newer.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Olvetra's default prefetch count is 50.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Olvetra's default publish timeout is 10 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Olvetra tests use the fake clock in internal/clock.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In Olvetra's dev compose setup the broker listens on port 5679.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Olvetra integration tests need a broker started with docker compose.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

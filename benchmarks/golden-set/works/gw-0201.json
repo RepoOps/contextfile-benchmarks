@@ -1,0 +1,99 @@
+{
+  "id": "gw-0201",
+  "artifactType": "doc",
+  "title": "Universal Declaration of Human Rights",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Universal Declaration of Human Rights was adopted by the United Nations General Assembly in Paris on 10 December 1948. The vote was 48 in favor and none against, with 8 countries abstaining. Eleanor Roosevelt, the widow of President Franklin D. Roosevelt, chaired the UN Commission on Human Rights that prepared the text. Canadian lawyer John Peters Humphrey wrote the first draft, and the French jurist Rene Cassin helped shape its structure. The anniversary of the vote, 10 December, is marked each year as Human Rights Day."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The Declaration has a preamble and 30 articles. Article 1 says that every human being is born free and equal in dignity and rights. Later articles cover rights such as freedom from torture, freedom of movement, the right to seek asylum and the right to education. The Declaration itself is not a treaty and does not bind states by law. Its principles were later written into two binding treaties adopted in 1966: the International Covenant on Civil and Political Rights and the International Covenant on Economic, Social and Cultural Rights."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Universal Declaration of Human Rights has 40 articles.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Eleanor Roosevelt chaired the UN Commission on Human Rights that prepared the Declaration.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Universal Declaration of Human Rights is not a legally binding treaty.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Declaration includes a right to seek asylum.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "John Peters Humphrey, who wrote the first draft of the Declaration, was a French lawyer.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "No country voted against the Universal Declaration of Human Rights.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

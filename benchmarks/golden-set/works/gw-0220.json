@@ -1,0 +1,99 @@
+{
+  "id": "gw-0220",
+  "artifactType": "brain_wiki",
+  "title": "The barometer",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The barometer measures air pressure. The Italian physicist Evangelista Torricelli made the first mercury barometer in 1643. He filled a glass tube with mercury, turned it upside down into a dish of mercury, and found that the column fell to a height of about 76 centimetres, leaving an empty space at the top. He reasoned that the weight of the air pressing on the dish held the column up. The unit of pressure called the torr is named after him."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Standard atmospheric pressure at sea level is 1013.25 hectopascals, equal to 760 millimetres of mercury. The aneroid barometer, which uses a sealed metal capsule that flexes as pressure changes instead of a liquid, was invented by the French scientist Lucien Vidie in 1844. Falling pressure often signals clouds and rain, and rising pressure usually brings settled weather. Air pressure also drops with height, which is why aircraft altimeters can work on the same principle."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Evangelista Torricelli made the first mercury barometer in 1643.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lucien Vidie invented the aneroid barometer in 1844.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Standard atmospheric pressure at sea level is 1100 hectopascals.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "An aneroid barometer uses a sealed metal capsule instead of a liquid.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The torr unit of pressure is named after Torricelli.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "In Torricelli's experiment, the mercury column fell to about 76 centimetres.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

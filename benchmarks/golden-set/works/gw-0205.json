@@ -1,0 +1,99 @@
+{
+  "id": "gw-0205",
+  "artifactType": "brain_wiki",
+  "title": "Saffir-Simpson scale and hurricanes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Saffir-Simpson Hurricane Wind Scale rates hurricanes from category 1 to category 5 based on their maximum sustained wind speed. It was developed in the early 1970s by Herbert Saffir, a civil engineer, and Robert Simpson, then director of the US National Hurricane Center. Category 1 begins at 74 miles per hour. Storms of category 3 or higher are called major hurricanes. Category 5 covers sustained winds of 157 miles per hour or more. The scale measures wind only, so it does not account for storm surge or rainfall."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Hurricanes, typhoons and tropical cyclones are the same kind of storm under different regional names. The word hurricane is used in the North Atlantic and the northeastern Pacific, typhoon in the northwestern Pacific, and cyclone in the South Pacific and Indian Ocean. These storms draw their energy from warm ocean water, generally at least 26.5 degrees Celsius. In the Northern Hemisphere they spin counterclockwise because of the Coriolis effect. The Atlantic hurricane season officially runs from 1 June to 30 November."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hurricanes of category 3 or higher are called major hurricanes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Tropical cyclones in the Northern Hemisphere spin clockwise.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Atlantic hurricane season officially runs from 1 June to 30 November.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "In the northwestern Pacific, these storms are called typhoons.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Category 1 on the Saffir-Simpson scale begins at 90 miles per hour.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Saffir-Simpson scale does not account for storm surge.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

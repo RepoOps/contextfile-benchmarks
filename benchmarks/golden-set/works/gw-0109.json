@@ -1,0 +1,99 @@
+{
+  "id": "gw-0109",
+  "artifactType": "open_spec",
+  "title": "Ixtolen streaming rendering RFC",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "RFC 0019: streaming server rendering in Ixtolen. Motivation: Ixtolen pages render the full HTML before sending any byte, so a page with one slow data call holds back the whole response. On the docs site the median time to first byte is 820 milliseconds. This RFC lets a route send its layout at once and stream slow sections later. A section opts in by wrapping its content in a `<Deferred>` component with a `fallback` prop. Routes without any `<Deferred>` behave exactly as today."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. A deferred section that does not resolve within 10 seconds renders its fallback and logs a warning. Streaming is turned off for requests from known crawlers, which get the full page in one response. Response headers, including cookies, must be set before the first byte, so a deferred section cannot set cookies. The feature ships as experimental in version 3.4 behind `experimental.streaming: true` in `ixtolen.config.ts`, and becomes stable in 4.0 if no blocking bugs remain."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A deferred Ixtolen section that does not resolve within 30 seconds renders its fallback.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Ixtolen routes without a Deferred component behave as they do today.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Known crawlers receive the full Ixtolen page in one response.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Streaming ships as experimental in Ixtolen version 3.4.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The median time to first byte on the Ixtolen docs site is 820 milliseconds.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Deferred Ixtolen sections can set cookies.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0206",
+  "artifactType": "context_file",
+  "title": "Wispenrow CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Wispenrow. Wispenrow is a habit-tracking mobile app built with React Native 0.74 and TypeScript. Install dependencies with `pnpm install` and start the bundler with `pnpm start`. Run `pnpm ios` or `pnpm android` to launch a simulator build. Screens live in `src/screens/`, and shared components in `src/ui/`. State is managed with Zustand stores in `src/state/`. The minimum supported versions are iOS 15 and Android 8. Run `pnpm typecheck` to check types without building."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Every string shown to users goes through the `t()` helper and has an entry in `locales/en.json`; never hardcode copy. Run `pnpm test` (Jest) and `pnpm lint` before each commit. Do not touch `ios/Pods/` or `android/app/build/`; they are generated. Local notifications are scheduled only through `src/services/reminders.ts`. Any change to the database schema in `src/db/schema.ts` needs a new migration file in `src/db/migrations/`. Release builds are made by CI, never on a laptop."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Wispenrow is built with React Native 0.74.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Wispenrow schedules local notifications only through src/services/reminders.ts.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Wispenrow tests run with Mocha.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Wispenrow release builds are made by CI.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Wispenrow keeps its Zustand stores in src/state/.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The minimum Android version Wispenrow supports is Android 8.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

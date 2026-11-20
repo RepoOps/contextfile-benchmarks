@@ -1,0 +1,99 @@
+{
+  "id": "gw-0093",
+  "artifactType": "brain_wiki",
+  "title": "The Haitian Revolution",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Haitian Revolution began in August 1791 with a large uprising of enslaved people in the northern plain of Saint-Domingue, France's richest Caribbean colony. The colony produced much of the world's sugar and coffee on plantations worked by enslaved Africans. Toussaint Louverture, a formerly enslaved man, rose to lead the revolutionary forces. France abolished slavery in its colonies in 1794. In 1802 Napoleon sent an army under his brother-in-law Charles Leclerc to restore French control, and Toussaint was captured and deported to France, where he died in 1803."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "After Toussaint's capture, Jean-Jacques Dessalines led the fight against the French. Yellow fever killed many French soldiers, and the rebels defeated the remaining troops at the Battle of Vertieres in November 1803. Dessalines declared independence on 1 January 1804 and named the country Haiti, a name drawn from the Taino name for the island. Haiti became the first independent nation in Latin America and the Caribbean. In 1825 France demanded a large indemnity in return for recognizing it."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Dessalines declared Haiti's independence on 1 January 1814.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Napoleon sent an army under Charles Leclerc to Saint-Domingue in 1802.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Battle of Vertieres took place in November 1803.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "France abolished slavery in its colonies in 1804.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "In 1825 France demanded an indemnity from Haiti.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Toussaint Louverture died in France in 1803.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

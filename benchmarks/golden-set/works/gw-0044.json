@@ -1,0 +1,99 @@
+{
+  "id": "gw-0044",
+  "artifactType": "doc",
+  "title": "How sound travels",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Sound is a mechanical wave: it needs a medium such as air, water or a solid to travel, so it cannot cross a vacuum. In dry air at 20 degrees Celsius, sound travels at about 343 metres per second. It moves faster in warmer air, and much faster in water, at roughly 1,480 metres per second. In steel it can exceed 5,000 metres per second. Sound waves in air are longitudinal, meaning the air particles move back and forth along the direction the wave travels."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The pitch of a sound depends on its frequency, measured in hertz. Young people with healthy hearing can detect frequencies from about 20 hertz to 20,000 hertz. Sound above that range is called ultrasound, and bats and dolphins use it to locate prey by echolocation. Loudness is measured on the decibel scale, which is logarithmic: an increase of 10 decibels means ten times the sound intensity. The first piloted aircraft to fly faster than sound was the Bell X-1, flown by Chuck Yeager in 1947."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Sound cannot travel through a vacuum.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "An increase of 10 decibels means ten times the sound intensity.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Sound travels through water at roughly 1,480 metres per second.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Chuck Yeager flew the Bell X-1 faster than sound in 1947.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Sound waves in air are transverse.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Bats use ultrasound to locate prey.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

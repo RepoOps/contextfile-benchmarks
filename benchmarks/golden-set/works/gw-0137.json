@@ -1,0 +1,99 @@
+{
+  "id": "gw-0137",
+  "artifactType": "doc",
+  "title": "Early modern Olympic Games",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The first modern Olympic Games took place in Athens, Greece, in April 1896. They came out of a campaign by the French educator Pierre de Coubertin, who founded the International Olympic Committee in Paris in 1894. About 240 athletes, all men, from 14 nations took part. The American James Connolly won the triple jump and became the first modern Olympic champion. The Greek runner Spyridon Louis won the marathon, a new event inspired by an ancient legend."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Women first competed at the 1900 Games in Paris, in sports including tennis and golf. The Winter Olympics began separately in 1924 at Chamonix, France. Because of the two World Wars, no Summer Games were held in 1916, 1940 or 1944. The five ring symbol, designed by Coubertin, first appeared at the Games in Antwerp in 1920. The 2020 Summer Games in Tokyo were postponed by a year because of the COVID-19 pandemic and held in 2021."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The first modern Olympic Games were held in Athens in 1896.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Pierre de Coubertin founded the International Olympic Committee in 1904.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The first Winter Olympics took place at Chamonix in 1924.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Spyridon Louis won the 1896 Olympic marathon.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Olympic rings first appeared at the 1924 Games.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Pierre de Coubertin designed the five ring Olympic symbol.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

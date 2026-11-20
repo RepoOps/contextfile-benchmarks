@@ -1,0 +1,99 @@
+{
+  "id": "gw-0156",
+  "artifactType": "oci_image",
+  "title": "mubrine/search image",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# mubrine/search. This image runs the Mubrine full text search server. It is based on `eclipse-temurin:21-jre-alpine` and runs as the user `mubrine` (UID 1500, GID 1500). The HTTP API listens on port 7820, and port 7821 carries cluster traffic between nodes. Index data lives in the volume `/var/lib/mubrine`; mount persistent storage there or every restart starts with an empty index. The entrypoint is `/opt/mubrine/bin/mubrine-server`, and it takes no arguments by default."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Configuration. `MUBRINE_HEAP` sets the JVM heap and defaults to `1g`. `MUBRINE_CLUSTER_NAME` defaults to `mubrine-local`. `MUBRINE_API_KEY` has no default; when it is unset the server refuses to start unless `MUBRINE_DEV_MODE=true`. `MUBRINE_REFRESH_INTERVAL` controls how often new documents become searchable and defaults to `1s`. The health check calls `GET /health` on the API port every 15 seconds with a 3 second timeout. Send SIGTERM to stop the server; it flushes open segments before exiting."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The mubrine/search image is based on eclipse-temurin:21-jre-alpine.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "MUBRINE_HEAP defaults to 1g.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The mubrine/search image stores index data in the /var/lib/mubrine volume.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The mubrine/search health check runs every 30 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Mubrine HTTP API listens on port 7820.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "MUBRINE_REFRESH_INTERVAL defaults to 1s.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

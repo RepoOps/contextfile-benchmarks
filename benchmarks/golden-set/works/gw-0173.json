@@ -1,0 +1,99 @@
+{
+  "id": "gw-0173",
+  "artifactType": "context_file",
+  "title": "Rendwell CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Rendwell. Rendwell is a batch job scheduler that places jobs on a pool of worker nodes. The scheduler core is Go 1.23 in `internal/sched/`, and the gRPC API definitions are in `proto/rendwell/v1/`. After editing any `.proto` file, run `make proto` to regenerate the Go stubs, and commit the generated files. Run tests with `go test ./...`. The simulator in `cmd/rendsim/` replays a recorded cluster trace and is the main tool for checking placement changes."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Placement code must stay deterministic: never iterate over a Go map when the order affects which node is picked; sort keys first. Do not import `internal/sched` from `cmd/` packages other than `cmd/rendwell`. Time comes from the `clock.Clock` interface, never from time.Now directly, so tests can control it. Any change to scoring weights in `internal/sched/score.go` must include simulator results in the pull request description. Log with the slog package, using structured key and value pairs."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "After editing a `.proto` file in Rendwell, you run `make proto`.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Rendwell's generated Go stubs should not be committed.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Rendwell code reads time through the `clock.Clock` interface.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Changes to Rendwell scoring weights must include simulator results in the pull request description.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Rendwell placement code may pick a node by iterating over an unsorted Go map.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Rendwell scheduler core is written in Go 1.23.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

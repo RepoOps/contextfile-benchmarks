@@ -1,0 +1,99 @@
+{
+  "id": "gw-0189",
+  "artifactType": "doc",
+  "title": "Hoover Dam",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Hoover Dam is a concrete arch-gravity dam on the Colorado River in Black Canyon, on the border between Nevada and Arizona. It was built between 1931 and 1936 by Six Companies, Inc., a group of construction firms that joined to win the contract. The dam stands about 221 meters (726 feet) high. President Franklin D. Roosevelt dedicated it on September 30, 1935. It was long called Boulder Dam before Congress confirmed the Hoover name in 1947."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The dam holds back Lake Mead, the largest reservoir in the United States by capacity when full. Its power plant has a capacity of about 2,080 megawatts and sells electricity to users in Nevada, Arizona and California. Water from the reservoir also supplies farms and cities in the lower Colorado basin. To build the dam, workers first drove four diversion tunnels through the canyon walls to carry the river around the site."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hoover Dam was dedicated by President Herbert Hoover.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Hoover Dam's power plant has a capacity of about 2,080 megawatts.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Workers drove four diversion tunnels to carry the Colorado River around the Hoover Dam site.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hoover Dam was built by Six Companies, Inc.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Hoover Dam holds back Lake Powell.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Hoover Dam stands about 221 meters high.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

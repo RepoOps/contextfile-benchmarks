@@ -45,10 +45,10 @@ import { chat, OpenRouterError, parseJson } from "./openrouter.ts";
 import { LocalDevSigner } from "./signing.ts";
 
 const SET_ID = "contextfile-golden";
-const SET_VERSION = "0.1.0";
+const SET_VERSION = "1.0.0";
 const TARGET_WORKS = 220;
-/** The 30 works are published as a pilot until the set reaches TARGET_WORKS (owner decision 2026-11-11). */
-const SET_STAGE = "pilot" as const;
+/** The set was published as a pilot until it reached TARGET_WORKS (owner decision 2026-11-11); it reached 220 works on 2026-11-18. */
+const SET_STAGE = "full" as const;
 
 /** A judge backend scores one claim against one passage. Null entailment = the call failed. */
 export interface JudgeBackend {

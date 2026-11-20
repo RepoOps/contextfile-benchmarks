@@ -1,0 +1,99 @@
+{
+  "id": "gw-0051",
+  "artifactType": "doc",
+  "title": "The ozone layer",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Ozone is a molecule made of three oxygen atoms, with the formula O3. Most of the ozone in the atmosphere sits in the stratosphere, roughly 15 to 35 kilometres above the surface, in a region called the ozone layer. The layer absorbs most of the Sun's ultraviolet B radiation, which can cause sunburn and skin cancer. Ozone amounts are measured in Dobson units, named after the British physicist G. M. B. Dobson."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "In 1985 scientists of the British Antarctic Survey, Joseph Farman, Brian Gardiner and Jonathan Shanklin, reported a deep seasonal loss of ozone over Antarctica, later called the ozone hole. The main cause was chlorofluorocarbons, or CFCs, once used in refrigerators and spray cans. The Montreal Protocol, agreed in 1987, phased out these chemicals. Every member of the United Nations has ratified it. The hole forms each southern spring, from about September to November."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "An ozone molecule is made of three oxygen atoms.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Montreal Protocol was agreed in 1997.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Antarctic ozone hole forms each southern autumn.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Dobson units are named after G. M. B. Dobson.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Chlorofluorocarbons were the main cause of the ozone hole.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Scientists of the British Antarctic Survey reported the Antarctic ozone loss in 1985.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

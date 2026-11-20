@@ -1,0 +1,99 @@
+{
+  "id": "gw-0104",
+  "artifactType": "doc",
+  "title": "The discovery of X-rays",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Wilhelm Conrad Roentgen, a German physicist at the University of Wurzburg, discovered X-rays in November 1895 while experimenting with cathode ray tubes. He noticed that a fluorescent screen across the room began to glow even though the tube was covered in black cardboard. Because the nature of the new rays was unknown, he called them X-rays, using the mathematical symbol for an unknown quantity. Within weeks he made an image of the bones in his wife Anna Bertha's hand, which showed her wedding ring. He reported the discovery in a paper submitted at the end of December 1895."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "News of the discovery spread quickly, and within months doctors were using X-rays to find bullets and broken bones. In 1901 Roentgen received the first Nobel Prize in Physics. He declined to patent his discovery, wanting it to be freely available for the benefit of everyone. The dangers of the rays were not understood at first, and early workers suffered skin burns and hair loss from repeated exposure. Later research showed that X-rays are a form of electromagnetic radiation with much shorter wavelengths than visible light."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Roentgen received the first Nobel Prize in Physics in 1901.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Roentgen saw a fluorescent screen glow while the tube was covered in black cardboard.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Roentgen discovered X-rays while working at the University of Berlin.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Early workers with X-rays suffered skin burns from repeated exposure.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Roentgen made an X-ray image of his wife's hand.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Roentgen chose not to patent his discovery of X-rays.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

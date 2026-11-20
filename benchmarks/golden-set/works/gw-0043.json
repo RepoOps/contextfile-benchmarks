@@ -1,0 +1,99 @@
+{
+  "id": "gw-0043",
+  "artifactType": "open_spec",
+  "title": "Corvanta incremental snapshots",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec CV-7: incremental snapshots in Corvanta. Today Corvanta takes a full copy of each volume every night, which takes about six hours for a 2 TB volume. This change adds incremental snapshots that copy only blocks changed since the previous snapshot. Corvanta tracks changed blocks with a bitmap stored in /var/lib/corvanta/bitmaps. A full snapshot still runs every Sunday to bound restore chains. Restores replay at most six incremental snapshots on top of the last full one."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits: incremental snapshots are not supported for volumes smaller than 10 GB, which keep nightly full copies. Encryption keys stay unchanged, so existing snapshots remain readable. Rollout: version 3.4 ships the feature off by default behind the setting incremental = true. Operators should run corvanta verify after the first week to compare checksums against a full snapshot. If verification fails, Corvanta falls back to full snapshots and raises an alert."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Corvanta tracks changed blocks with a bitmap.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Corvanta version 3.4 ships incremental snapshots turned on by default.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A full Corvanta snapshot still runs every Saturday.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Corvanta volumes smaller than 10 GB keep nightly full copies.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "If verification fails, Corvanta falls back to full snapshots.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A Corvanta restore replays at most six incremental snapshots.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0098",
+  "artifactType": "open_spec",
+  "title": "Ilvatrice passkey sign-in proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal IV-212: passkey sign-in for Ilvatrice. Motivation: in the last quarter, 31 percent of Ilvatrice support tickets were password resets, and phishing reports rose to 140 cases. This change adds WebAuthn passkeys as a sign-in method next to passwords. A signed-in user can register up to 5 passkeys from the Security page. Registering a passkey requires the user to have entered their password within the last 10 minutes. Passwords stay available; this proposal does not remove them. The owner is the Identity team, and the design review took place on 2026-09-14."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Passkeys are stored as public keys in the `credentials` table; the private key never leaves the user's device. Accounts that use single sign-on through an employer are out of scope and keep their current flow. Rollout runs in three stages: 5 percent of web users in week 1, 50 percent in week 3, and all web users in week 5. Mobile apps follow in a later proposal. The feature flag is `auth.passkeys.enabled`. Rollback means turning the flag off; existing passkeys then stop working until it is on again."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "An Ilvatrice user can register up to 5 passkeys from the Security page.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "To register a passkey, an Ilvatrice user must have entered their password within the previous 10 minutes.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Ilvatrice passkey rollout reaches all web users in week 3.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Ilvatrice passkey feature flag is named auth.passkeys.enabled.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Accounts that use single sign-on through an employer are out of scope for the Ilvatrice passkey proposal.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Password resets made up 31 percent of Ilvatrice support tickets in the last quarter.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

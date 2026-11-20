@@ -1,0 +1,99 @@
+{
+  "id": "gw-0217",
+  "artifactType": "context_file",
+  "title": "Ujvelt cursor rules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# .cursorrules for Ujvelt. Ujvelt is a grocery list app for Android written in Kotlin 2.0 with Jetpack Compose. Build a debug APK with `./gradlew assembleDebug`. Unit tests run with `./gradlew test`, and instrumented tests with `./gradlew connectedAndroidTest` on an emulator running API 34. The minimum SDK is 26. Feature code lives in `app/src/main/java/com/ujvelt/feature/`, one package per screen. Use Hilt for dependency injection; do not create singletons by hand. The application ID is `com.ujvelt.app`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Store data only through the Room database in the `data/db` package; schema exports go to `app/schemas/` and must be committed. Every Compose screen needs a preview function and a screenshot test. Strings belong in `res/values/strings.xml`. Network calls use Retrofit with a 15-second timeout. Do not raise `targetSdk` or change signing configs; those changes need the release owner. Run `./gradlew ktlintCheck` before pushing. Load images with Coil, and never send analytics events from debug builds."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Ujvelt minimum SDK is 26.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Ujvelt network calls use a 30-second timeout.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Ujvelt stores data through a Room database.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Ujvelt Room schema exports must be committed.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Ujvelt uses Koin for dependency injection.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Ujvelt instrumented tests run on an emulator with API 34.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

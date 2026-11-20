@@ -1,0 +1,99 @@
+{
+  "id": "gw-0076",
+  "artifactType": "doc",
+  "title": "Germany's 1923 hyperinflation",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Germany suffered one of history's best-known hyperinflations in 1923. The government had paid for much of the First World War by borrowing, and after 1919 it also owed reparations under the Treaty of Versailles. In January 1923 French and Belgian troops occupied the Ruhr, the country's industrial heartland, after Germany fell behind on deliveries. The government backed a campaign of passive resistance there and paid striking workers by printing money. By November 1923 one US dollar was worth about 4.2 trillion marks."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Prices rose so fast that ordinary life broke down. Workers were paid once or even twice a day and rushed to spend their wages before prices climbed again. People who held savings, bonds or fixed pensions saw them wiped out, while debtors could repay loans with worthless money. The crisis ended with a new currency, the Rentenmark, introduced in November 1923 at a rate of one Rentenmark to one trillion old marks. In 1924 the Reichsmark replaced it as the official currency."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "French and Belgian troops occupied the Ruhr in January 1923.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "In November 1923 one US dollar was worth about 4.2 trillion marks.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Rentenmark was exchanged at one Rentenmark to one billion old marks.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Reichsmark became Germany's official currency in 1924.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Rentenmark was introduced in November 1923.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The German government paid striking workers in the Ruhr by printing money.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0123",
+  "artifactType": "open_spec",
+  "title": "Haspelind image optimization RFC",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "RFC 42: built-in image optimization for Haspelind. Motivation: images make up 61 percent of page weight across the sample of Haspelind sites we measured. This RFC adds an `<Img>` component that resizes images at build time and serves WebP or AVIF to browsers that accept them. Widths are generated at 480, 960 and 1920 pixels by default. Images below the first screen load lazily unless the `priority` prop is set."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. Only local images under `public/` are processed; remote URLs pass through unchanged. Source files larger than 20 MB are skipped with a build warning. Processed files are cached in `.haspelind/cache/images/`, so a rebuild only handles changed images. The component ships in Haspelind 5.2 as opt-in, and the existing `<img>` tag keeps working. Build time is expected to grow by no more than 15 percent on the reference site."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Haspelind processes remote image URLs at build time.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Haspelind's Img component generates widths of 480, 960 and 1920 pixels by default.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Haspelind caches processed images in .haspelind/cache/images/.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Haspelind skips image source files larger than 20 MB.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "By default, Haspelind's Img component loads images below the first screen eagerly.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Haspelind's Img component serves WebP or AVIF to browsers that accept them.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

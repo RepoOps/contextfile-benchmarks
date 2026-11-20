@@ -1,0 +1,99 @@
+{
+  "id": "gw-0069",
+  "artifactType": "doc",
+  "title": "Fernwell log agent guide",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Fernwell is a lightweight agent that tails log files and ships them to a central collector. Install it with the package fernwell-agent, then edit /etc/fernwell/fernwell.yaml. By default the agent watches every file matching /var/log/*.log and sends batches of up to 500 lines. A batch is also sent when 5 seconds pass without reaching that size. Fernwell records how far it has read in each file in /var/lib/fernwell/offsets.db, so a restart does not resend old lines. The agent runs as the fernwell system user."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Fernwell sends logs to the collector over TCP port 6514 using TLS. Set collector.address in the config file to the collector's host name. If the collector is unreachable, the agent buffers up to 256 MB on disk and retries every 10 seconds. When the buffer is full, Fernwell drops the oldest batches first and increments the fernwell_dropped_batches_total counter. Run fernwell check to test the config file and the connection before you restart the service."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Fernwell stores its read offsets in /var/lib/fernwell/offsets.db.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "When its disk buffer is full, Fernwell drops the newest batches first.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Fernwell retries an unreachable collector every 10 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Fernwell connects to the collector on TCP port 6514.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Fernwell sends batches of up to 1,000 lines by default.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Fernwell agent runs as the fernwell system user.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

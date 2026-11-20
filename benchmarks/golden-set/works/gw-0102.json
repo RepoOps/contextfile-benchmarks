@@ -1,0 +1,99 @@
+{
+  "id": "gw-0102",
+  "artifactType": "open_spec",
+  "title": "Kestavin per-key rate limits proposal",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal KV-77: per-key rate limits for the Kestavin public API. Motivation: today all keys in an organization share one limit of 600 requests per minute, so one runaway script can block an entire team. This proposal moves the limit to each API key. Each key gets 300 requests per minute by default, and organization admins can raise a key to at most 2,000. Requests over the limit receive HTTP 429 with a `Retry-After` header in seconds. The API Platform team wrote the proposal."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scope and rollout. Webhook deliveries and the `/health` endpoint do not count toward any limit. Every response gains three headers: `X-RateLimit-Limit`, `X-RateLimit-Remaining` and `X-RateLimit-Reset`. Counters live in Redis with a sliding window of 60 seconds. Rollout starts in the sandbox environment on 2027-02-01 and reaches production two weeks later. Customers get 30 days notice by email before production enforcement. If Redis is unreachable, the API lets requests through rather than rejecting them."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Under proposal KV-77, each Kestavin API key gets 300 requests per minute by default.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Webhook deliveries do not count toward Kestavin rate limits.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "If Redis is unreachable, the Kestavin API rejects requests.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Requests over the Kestavin rate limit receive HTTP status 429.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Kestavin organization admins can raise a single key's limit to at most 2,000 requests per minute.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Kestavin customers get 30 days notice by email before production enforcement of the new limits.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

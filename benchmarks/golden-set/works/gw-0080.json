@@ -1,0 +1,99 @@
+{
+  "id": "gw-0080",
+  "artifactType": "oci_image",
+  "title": "fallowmere-collector image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The fallowmere-collector image receives distributed traces and writes them to storage. It is built on ubuntu:24.04 and runs as the non-root user fallow with user ID 1500. It accepts OTLP over gRPC on port 4317 and OTLP over HTTP on port 4318. A web UI for browsing traces is served on port 16700. Spans are stored under /data, which should be a mounted volume. The entrypoint is /usr/local/bin/fallowmere. Both OTLP receivers accept gzip-compressed payloads."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "FALLOWMERE_RETENTION sets how long traces are kept and defaults to 72h. FALLOWMERE_SAMPLE_RATE sets the fraction of traces kept, from 0 to 1, and defaults to 1, which keeps every trace. Set FALLOWMERE_UI_ENABLED to false to turn off the web UI. The health check calls /health on port 13133 every 30 seconds. The image writes its own logs to standard error in logfmt. Set FALLOWMERE_LOG_LEVEL to debug to see every rejected span; it defaults to info."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "fallowmere-collector accepts OTLP over HTTP on port 4318.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "FALLOWMERE_RETENTION defaults to 72h.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "FALLOWMERE_SAMPLE_RATE defaults to 1.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "fallowmere-collector stores spans under /data.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The fallowmere-collector image is built on ubuntu:22.04.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The fallowmere-collector health check calls /health on port 13133.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

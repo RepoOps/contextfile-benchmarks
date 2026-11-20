@@ -1,0 +1,99 @@
+{
+  "id": "gw-0070",
+  "artifactType": "open_spec",
+  "title": "Embrel edge debug log filtering",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal EMB-207: drop debug logs at the Embrel edge agent. Debug lines make up about 60 percent of the log volume Embrel receives, yet engineers query them in fewer than 2 percent of searches. Storing them costs the team roughly 18,000 dollars a month. This proposal moves debug filtering from the central indexer to the edge agent that runs on each host. The change affects only lines with level debug or trace."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Each service can keep its debug logs by setting keep_debug: true in its embrel.yaml. The edge agent will still keep a sample of 1 in 100 debug lines for every service, tagged sampled=true, so recent examples stay searchable. The agent records dropped lines in the counter embrel_edge_dropped_lines_total. Rollout begins with 10 percent of hosts in the eu-west region and expands after one week without incidents. During an incident, engineers can lift the filter on one host for an hour with embrel debug-window."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Debug lines make up about 60 percent of Embrel's log volume.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Embrel edge agent keeps a sample of 1 in 100 debug lines.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Rollout of the Embrel change begins in the us-east region.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "A service keeps its debug logs by setting keep_debug: true in embrel.yaml.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Storing Embrel debug logs costs roughly 18,000 dollars a month.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Embrel edge agent counts dropped lines in embrel_edge_dropped_lines_total.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

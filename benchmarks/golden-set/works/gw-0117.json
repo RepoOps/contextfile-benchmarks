@@ -1,0 +1,99 @@
+{
+  "id": "gw-0117",
+  "artifactType": "doc",
+  "title": "Isquarel guide to payment links",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Isquarel guide: creating a payment link. A payment link is a URL that opens a hosted checkout page for one product or a fixed basket. In the Isquarel dashboard, open Payments, choose Links, and click New link. Pick a product, set the price, and choose the currency; the default is the currency of your account. Links can accept cards and bank transfers. By default a link stays active until you turn it off, but you can set an expiry of up to 90 days. Each link gets a short address on the `pay.isquarel.example` domain."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Managing payments from links. Every completed payment appears under Payments with the link's name in the Source column. Refunds can be issued in full or in part within 180 days of the payment. Payouts reach your bank account two business days after the payment by default. To get an alert for each sale, add a webhook endpoint under Developers and subscribe to the `payment.completed` event. Isquarel retries a failed webhook delivery for up to 3 days."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "An Isquarel payment link can be set to expire after up to 90 days.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Isquarel payment links can accept bank transfers.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Isquarel allows refunds up to 365 days after a payment.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Isquarel payouts reach the bank account two business days after the payment by default.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "By default, an Isquarel payment link expires after 30 days.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "New Isquarel payment links are created from the Links section under Payments.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

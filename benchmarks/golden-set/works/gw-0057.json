@@ -1,0 +1,99 @@
+{
+  "id": "gw-0057",
+  "artifactType": "oci_image",
+  "title": "cobrenna image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The cobrenna image runs Cobrenna, an in-memory key-value store with optional disk snapshots. It is built on gcr.io/distroless/static and runs as user ID 65532, with no shell in the image. The server listens on port 7711 for clients and on port 7712 for cluster gossip. Snapshots are written to /data, so mount a volume there to keep data across restarts. The entrypoint is /cobrenna-server, and arguments after the image name are passed to it."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "COBRENNA_MAXMEMORY sets the memory limit and defaults to 1gb; when it is reached, the least recently used keys are evicted. COBRENNA_SNAPSHOT_INTERVAL controls how often a snapshot is written and defaults to 300 seconds. Set COBRENNA_PASSWORD to require authentication; when it is empty, any client may connect. COBRENNA_LOG_LEVEL defaults to info. Because the image has no shell, the health check runs the bundled binary /cobrenna-probe every 5 seconds. Clients that send a wrong password are disconnected."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Cobrenna listens for clients on port 7711.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "COBRENNA_SNAPSHOT_INTERVAL defaults to 600 seconds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The cobrenna image runs as user ID 0.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "COBRENNA_LOG_LEVEL defaults to info.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Cobrenna writes its snapshots to /data.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "When COBRENNA_MAXMEMORY is reached, Cobrenna evicts the least recently used keys.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

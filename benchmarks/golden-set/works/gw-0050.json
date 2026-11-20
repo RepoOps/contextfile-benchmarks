@@ -1,0 +1,99 @@
+{
+  "id": "gw-0050",
+  "artifactType": "brain_wiki",
+  "title": "Sahara Desert",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Sahara is the largest hot desert in the world, covering about 9 million square kilometres of northern Africa. It stretches from the Atlantic Ocean in the west to the Red Sea in the east, and from the Mediterranean and the Atlas Mountains in the north to the Sahel in the south. Only about a quarter of it is covered by sand seas and dunes; much of the rest is rocky plateau and gravel plain. Its highest point is Emi Koussi, a volcano in Chad, at about 3,415 metres."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The Sahara has not always been dry. Between about 11,000 and 5,000 years ago, during a period called the African Humid Period, much of it was grassland with lakes, and rock art from that time shows cattle, giraffes and hippos. Today most of the desert receives less than 100 millimetres of rain a year. Dust blown from the Sahara crosses the Atlantic Ocean, and some of it settles over the Amazon rainforest, where it adds nutrients to the soil."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Sahara covers about 9 million square kilometres.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Rock art from the African Humid Period shows cattle.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Emi Koussi is a volcano in Chad.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Sand seas and dunes cover about three quarters of the Sahara.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Dust from the Sahara crosses the Atlantic Ocean.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Sahara stretches east to the Red Sea.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

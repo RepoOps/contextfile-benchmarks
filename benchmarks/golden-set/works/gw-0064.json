@@ -1,0 +1,99 @@
+{
+  "id": "gw-0064",
+  "artifactType": "oci_image",
+  "title": "dravelin-auth image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The dravelin-auth image runs Dravelin, an authoritative DNS server. It is built on alpine:3.20 and runs as the non-root user dravelin with user ID 5300. The image grants the binary the NET_BIND_SERVICE capability so it can bind port 53 without root. The server answers queries on port 53 over UDP and TCP and serves an HTTP API for zone changes on port 8053. Zone files live in /etc/dravelin/zones, which you should mount from the host. The entrypoint is /usr/bin/dravelin, started with the serve subcommand."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Set DRAVELIN_LOG_LEVEL to debug, info, warn or error; it defaults to info. DRAVELIN_API_TOKEN protects the zone API, and when it is empty the API is turned off. DRAVELIN_ZONE_RELOAD sets how often zone files are checked for changes and defaults to 30s. The health check sends a query for health.dravelin. to the server every 10 seconds and marks the container unhealthy after 3 failures. Query logs go to standard output in JSON, one line per query."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The dravelin-auth image runs as user ID 5300.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The dravelin-auth zone API is turned off when DRAVELIN_API_TOKEN is empty.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "DRAVELIN_LOG_LEVEL defaults to warn.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "DRAVELIN_ZONE_RELOAD defaults to 30s.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The dravelin-auth image is built on alpine:3.20.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The dravelin-auth zone API listens on port 8053.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

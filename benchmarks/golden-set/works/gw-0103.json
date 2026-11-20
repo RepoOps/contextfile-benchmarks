@@ -1,0 +1,99 @@
+{
+  "id": "gw-0103",
+  "artifactType": "context_file",
+  "title": "Imbrevant CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Imbrevant. Imbrevant is an OpenID Connect sign-in server written in Go 1.22. The main binary builds from `cmd/imbrevant` with `make build`, which writes to `bin/imbrevant`. Run unit tests with `make test` and the database tests with `make test-db`, which needs Docker and starts Postgres 16 on port 55432. Config is read from `config/dev.yaml` by default; set `IMB_CONFIG` to point elsewhere. Never log access tokens, refresh tokens or ID tokens, even at debug level."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Security rules. Signing keys rotate every 90 days through `scripts/rotate-keys.sh`; do not edit `keys/` by hand. Access tokens expire after 15 minutes and refresh tokens after 30 days. Any change under `internal/crypto/` needs review from a member of the security group in CODEOWNERS before merge. Use `crypto/rand`, never `math/rand`, for anything secret. Password hashing uses Argon2id with the parameters in `internal/crypto/params.go`. New endpoints must add a test in `internal/http/routes_test.go`. Run `make lint` before every push."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Imbrevant signing keys rotate every 90 days.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Imbrevant's database tests start Postgres 16 on port 5432.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Setting IMB_CONFIG makes Imbrevant read a config file other than config/dev.yaml.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Imbrevant access tokens expire after 60 minutes.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Imbrevant hashes passwords with Argon2id.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Changes under internal/crypto/ in Imbrevant need review from the security group before merge.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

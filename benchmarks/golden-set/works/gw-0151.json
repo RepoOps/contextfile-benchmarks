@@ -1,0 +1,99 @@
+{
+  "id": "gw-0151",
+  "artifactType": "context_file",
+  "title": "Lunderpike .cursorrules",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Lunderpike .cursorrules. Lunderpike measures search relevance by replaying judged queries against a search engine and computing NDCG and recall. The code is Python 3.11, with a small FastAPI service in `service/` and the scoring library in `lunderpike/`. Use `make setup` to create the virtual environment and `make test` to run tests. Judgment lists live in `judgments/` as CSV files with the columns `query`, `doc_id` and `grade`. Grades run from 0 (irrelevant) to 3 (perfect). The default cutoff for metrics is 10 results."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules. Do not change a judgment file once a report has used it; add a new file with a date suffix such as `shoes-2026-11.csv`. Reports go to `reports/` as HTML and must not be committed. The service runs on port 8420 and has no authentication, so it must bind only to localhost. Keep scoring functions free of I/O. When you add a metric, add it to `METRICS` in `lunderpike/registry.py` and write a test with a hand-computed expected value."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lunderpike relevance grades run from 0 to 3.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Lunderpike service runs on port 8420.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lunderpike reports should be committed to the repository.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The default Lunderpike metric cutoff is 20 results.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Lunderpike judgment lists are CSV files.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "New Lunderpike metrics are added to METRICS in lunderpike/registry.py.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

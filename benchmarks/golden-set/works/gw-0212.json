@@ -1,0 +1,99 @@
+{
+  "id": "gw-0212",
+  "artifactType": "context_file",
+  "title": "Yolvane agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# Yolvane agent notes. Yolvane is a Rust library that parses and writes YAML-like config files while keeping comments and key order. The minimum Rust version is 1.75. Run `cargo test --all-features` before every push. Parser code lives in `src/parse/` and the writer in `src/emit/`. Round-trip fixtures are in `tests/roundtrip/`, one input file and one expected file per case. Do not use `unsafe` anywhere in the crate; the build sets `#![forbid(unsafe_code)]`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Conventions. Every parse error carries a line and column, and its message starts with a lowercase letter and has no trailing period. Public API changes need an entry in `CHANGELOG.md` under Unreleased. The crate has exactly two optional features, `serde` and `chrono`, and neither is on by default. Fuzz the parser with `cargo fuzz run parse` for at least 10 minutes after touching `src/parse/lexer.rs`. Benchmarks use criterion and run with `cargo bench`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Yolvane serde feature is off by default.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Yolvane forbids unsafe code in the crate.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Yolvane round-trip fixtures are in tests/roundtrip/.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The minimum Rust version for Yolvane is 1.70.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Yolvane parse errors carry a line and a column.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Yolvane benchmarks use criterion.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

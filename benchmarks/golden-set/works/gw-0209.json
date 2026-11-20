@@ -1,0 +1,99 @@
+{
+  "id": "gw-0209",
+  "artifactType": "brain_wiki",
+  "title": "El Nino and La Nina",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "El Nino is a periodic warming of surface waters in the central and eastern tropical Pacific Ocean. The name, Spanish for the boy or the Christ child, came from fishermen in Peru who noticed warm currents arriving near Christmas. During El Nino the trade winds that normally blow from east to west across the Pacific weaken. Warm water then spreads east toward South America, and the upwelling of cold, nutrient-rich water off Peru slows, which hurts the anchovy catch. Episodes return irregularly, about every 2 to 7 years."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "La Nina is the opposite phase, with cooler than normal water in the central and eastern tropical Pacific and stronger trade winds. Together with the swings in air pressure called the Southern Oscillation, the two phases form a cycle known as ENSO. El Nino years tend to bring drought to Indonesia and Australia and heavy rain to coastal Peru and Ecuador. El Nino also tends to raise global average temperatures, and 2016, which followed a strong El Nino, was among the warmest years on record."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "El Nino episodes return about every 2 to 7 years.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "During El Nino the Pacific trade winds weaken.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "La Nina brings weaker trade winds.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "El Nino years tend to bring drought to Indonesia and Australia.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The name El Nino came from fishermen in Chile.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "During El Nino, the upwelling of cold water off Peru slows.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

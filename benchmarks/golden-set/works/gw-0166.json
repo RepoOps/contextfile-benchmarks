@@ -1,0 +1,99 @@
+{
+  "id": "gw-0166",
+  "artifactType": "open_spec",
+  "title": "Quorvel named profiles spec",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec QV-19: named profiles for the Quorvel command line tool. Quorvel manages cloud storage buckets, and today each user keeps one set of settings in ~/.quorvel/config.toml. Users who work across several accounts must edit that file by hand to switch. This spec adds [profile.NAME] sections to the same file and a global --profile flag. The QUORVEL_PROFILE environment variable selects a profile when the flag is absent. A profile named default is used when neither is set."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. A profile may not inherit settings from another profile in this version. Profile names may contain only lowercase letters, digits and hyphens, up to 32 characters. The new command quorvel profile list prints every profile and marks the active one with an asterisk. Profiles ship in Quorvel 1.8. Old config files without profile sections keep working, and Quorvel reads their settings as the default profile. Removal of the old format is not planned."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The QUORVEL_PROFILE environment variable selects a profile when --profile is not given.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Quorvel profile names can be up to 32 characters long.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "In this version, a Quorvel profile can inherit settings from another profile.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The quorvel profile list command marks the active profile with an asterisk.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Quorvel keeps its settings in ~/.quorvel/config.toml.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Quorvel uses a profile named default when neither the flag nor the variable is set.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "gw-0198",
+  "artifactType": "doc",
+  "title": "Yarrowtide offline mode guide",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Yarrowtide offline mode: a guide for field teams. The Yarrowtide app for Android and iOS saves inspection forms on the phone when there is no signal. Turn on offline mode from the Sync tab before you leave coverage. The app then downloads every form assigned to you for the next 7 days. Each phone can hold up to 500 unsent forms. Photos are compressed to 1600 pixels on the long side to save space. A grey cloud icon on a form means it is waiting to upload."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Syncing when you return. Yarrowtide uploads waiting forms as soon as the phone reaches Wi-Fi. To also sync over mobile data, switch on Use cellular in Settings; it is off by default. If two people edit the same form offline, the server keeps the later edit and saves the earlier one as a draft copy for review. Forms that fail to upload three times move to the Needs attention list. Unsent forms are deleted if you sign out, so always sync before you hand the phone to someone else."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Each Yarrowtide phone can hold up to 500 unsent forms.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Yarrowtide Use cellular setting is off by default.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Yarrowtide offline mode downloads assigned forms for the next 7 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "When two people edit the same Yarrowtide form offline, the server keeps the earlier edit.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Yarrowtide deletes unsent forms when the user signs out.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Yarrowtide forms that fail to upload three times move to the Needs attention list.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

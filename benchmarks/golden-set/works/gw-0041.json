@@ -1,0 +1,99 @@
+{
+  "id": "gw-0041",
+  "artifactType": "oci_image",
+  "title": "arnovel-db image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The arnovel-db image runs ArnovelDB, a small relational database for edge devices. It is based on debian:12-slim and runs as user arnovel with user ID 999. Clients connect on port 6420, and the HTTP admin console listens on port 6480. Data files live in /var/lib/arnovel; mount a volume there or data is lost when the container is removed. The entrypoint script is /usr/local/bin/docker-entrypoint.sh, and it starts the server with arnoveld and the config file /etc/arnovel/arnovel.conf."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "On first start, the entrypoint creates a database named after ARNOVEL_DB, which defaults to app. ARNOVEL_PASSWORD sets the password for the admin user and is required; the container refuses to start without it. ARNOVEL_MAX_MEMORY caps the memory used for caching and defaults to 256MB. Scripts placed in /docker-entrypoint-initdb.d run once, in alphabetical order, when the data directory is empty. The health check runs arnovel-cli ping every 10 seconds. Logs go to standard output."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The arnovel-db admin console listens on port 6480.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "ARNOVEL_MAX_MEMORY defaults to 512MB.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The arnovel-db image is based on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The arnovel-db health check runs every 10 seconds.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The arnovel-db container refuses to start without ARNOVEL_PASSWORD.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "ArnovelDB data files live in /var/lib/arnovel.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

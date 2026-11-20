@@ -1,0 +1,99 @@
+{
+  "id": "gw-0171",
+  "artifactType": "context_file",
+  "title": "Spindrel AGENTS.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Spindrel. Spindrel is a command line linter for Dockerfiles. It is written in TypeScript and published to npm as `spindrel`. The minimum Node.js version is 20. Install with `npm ci`, build with `npm run build` (output goes to `dist/`), and test with `npm test`, which runs Jest. Lint rules live in `src/rules/`, one file per rule, and each rule ID uses the prefix SPD followed by three digits, such as SPD014."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "When adding a rule. Register it in `src/rules/index.ts` and add a fixture pair under `test/fixtures/<rule-id>/`: `bad.Dockerfile` must trigger the rule and `good.Dockerfile` must not. Every rule needs a docs page at `docs/rules/<rule-id>.md`. New rules start at severity warning; raising one to error takes a minor release. Never renumber an existing rule ID, even after the rule is removed. Each fixture file must be a valid Dockerfile that builds. Rule messages are one sentence long and do not end with a period."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "New Spindrel rules start at severity error.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Spindrel needs Node.js 20 or later.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Each Spindrel rule needs a docs page under `docs/rules/`.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "New Spindrel rules must be registered in `src/rules/index.ts`.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Spindrel rule IDs use the prefix SPD.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Spindrel's `npm test` runs Mocha.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

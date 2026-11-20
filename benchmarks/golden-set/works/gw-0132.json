@@ -1,0 +1,99 @@
+{
+  "id": "gw-0132",
+  "artifactType": "doc",
+  "title": "Beethoven's Ninth Symphony",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Ludwig van Beethoven completed his Symphony No. 9 in D minor, Opus 125, in 1824. It was his last complete symphony. The first performance took place in Vienna on 7 May 1824 at the Theater am Karntnertor. By then Beethoven was almost completely deaf. He shared the stage with the conductor Michael Umlauf, and a well known account says that one of the soloists turned him around at the end so he could see the audience applauding. The symphony has four movements and usually runs longer than an hour."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The final movement brings in vocal soloists and a chorus, which was unusual for a symphony at the time. Most of the words come from the poem An die Freude, or Ode to Joy, written by Friedrich Schiller in 1785. Beethoven wrote a short opening line of his own for a solo singer. In 1972 the Council of Europe adopted the melody of the Ode to Joy as its anthem, and the European Union took it up as its own anthem in 1985. Beethoven's handwritten score is part of UNESCO's Memory of the World register."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Ninth Symphony was first performed in Vienna.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Friedrich Schiller wrote An die Freude in 1785.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Council of Europe adopted the Ode to Joy melody as its anthem in 1972.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Beethoven's Ninth Symphony premiered on 7 May 1824.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Beethoven's Ninth Symphony is in the key of C minor.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Ninth Symphony was Beethoven's last complete symphony.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

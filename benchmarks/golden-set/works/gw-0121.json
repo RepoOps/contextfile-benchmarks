@@ -1,0 +1,99 @@
+{
+  "id": "gw-0121",
+  "artifactType": "open_spec",
+  "title": "Hadrovane dated API versions spec",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Spec HV-12: date-based API versions for Hadrovane. Motivation: the Hadrovane API is on URL version `/v3`, and every breaking change forces customers through a large migration. This spec adds a `Hadrovane-Version` request header that takes a date such as `2027-04-01`. Each account is pinned to the version that was current when it made its first API call. Requests may override the pin with the header. The `/v3` path stays and is not replaced by `/v4`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Limits and rollout. A version is supported for at least 24 months after a newer one is released. Breaking changes ship only in new dated versions, at most four times a year. Unknown dates return HTTP 400 with the error code `invalid_version`. The changelog page lists every version with its changes and a migration note. The first dated version, `2027-04-01`, ships on that day, and a backfill job sets account pins the week before."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hadrovane ships breaking changes at most four times a year.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Under spec HV-12, Hadrovane replaces the /v3 path with /v4.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A Hadrovane account is pinned to the API version that was current at its first API call.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "An unknown Hadrovane-Version date returns HTTP 400.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "A single request can override the Hadrovane version pin with a header.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "A Hadrovane API version is retired 12 months after a newer one is released.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

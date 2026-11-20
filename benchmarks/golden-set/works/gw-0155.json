@@ -1,0 +1,99 @@
+{
+  "id": "gw-0155",
+  "artifactType": "brain_wiki",
+  "title": "Wimbledon Championships",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Wimbledon Championships is the oldest tennis tournament in the world. It was first held in 1877 by the All England Croquet and Lawn Tennis Club in Wimbledon, London, and that year only a men's singles event was played. Spencer Gore won the first title. A women's singles event was added in 1884. Wimbledon is the only one of the four Grand Slam tournaments still played on grass, and it takes place each year in late June and early July."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Wimbledon keeps a strict dress code that requires players to wear almost entirely white. The tournament opened to professionals in 1968, the start of the Open Era. A retractable roof over Centre Court came into use in 2009. Until 2022 the middle Sunday was normally a rest day, but from that year play has been scheduled on all fourteen days. Martina Navratilova won the women's singles title nine times, a record for the event."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Spencer Gore won the first Wimbledon title.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Wimbledon added a women's singles event in 1884.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Centre Court retractable roof at Wimbledon came into use in 2012.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The first Wimbledon Championships were held in 1887.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Wimbledon opened to professional players in 1968.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Martina Navratilova won the Wimbledon women's singles title nine times.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

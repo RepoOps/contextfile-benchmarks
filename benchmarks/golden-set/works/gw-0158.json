@@ -1,0 +1,99 @@
+{
+  "id": "gw-0158",
+  "artifactType": "context_file",
+  "title": "Lorrowind CLAUDE.md",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# CLAUDE.md for Lorrowind. Lorrowind is a pipeline that prepares labeled image data for training vision models: it pulls raw images, removes duplicates, sends batches to human labelers and exports finished datasets. Python 3.12 with uv. Run `uv run pytest` for tests and `uv run lorrowind export --dataset <name>` to build a dataset. Exports are written to `exports/<name>/<date>/` as WebDataset tar shards of up to 1 GB each. Duplicate detection uses perceptual hashes with a Hamming distance threshold of 6."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for agents in Lorrowind. Never send images that contain faces to external labelers; the `face_filter` step must run before `dispatch`. Labeler batches hold 200 images. Do not change label IDs in `labels/taxonomy.yaml`; retire old ones and add new ones at the end. Every export writes a `manifest.json` with the dataset name, the git commit and the image count. Use the logging module, not print. Unit tests may not download real images; use the fixtures in `tests/data`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Lorrowind exports are written as WebDataset tar shards.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lorrowind's face_filter step must run before dispatch.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Lorrowind labeler batches hold 500 images.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Lorrowind duplicate detection uses a Hamming distance threshold of 6.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Every Lorrowind export writes a manifest.json file.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Lorrowind export shards are up to 1 GB each.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

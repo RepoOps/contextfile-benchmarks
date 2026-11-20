@@ -1,0 +1,99 @@
+{
+  "id": "gw-0095",
+  "artifactType": "context_file",
+  "title": "Hexmorrow agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# AGENTS.md for Hexmorrow. Hexmorrow is a server-rendered web framework written in TypeScript. The repository is a pnpm workspace with the core runtime in `packages/hm-core` and the router in `packages/hm-router`. Use Node 20; the `.nvmrc` file pins 20.11.1. Install with `pnpm install` and build every package with `pnpm -r build`. Unit tests run with `pnpm test`, which calls Vitest. The end-to-end suite in `e2e/` uses Playwright and must run against a dev server started on port 4100 with `pnpm dev:e2e`. Do not commit the `dist/` folders; the build produces them."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Rules for agents. Route files live under `app/routes/` and export a default function named `render`. Every new public API needs a changeset created with `pnpm changeset` in the same pull request. Keep the bundle size of `hm-core` under 40 KB gzipped; CI fails above that limit through the `size-check` job. Do not add runtime dependencies to `hm-core` without an issue that a maintainer has labeled `deps-approved`. Use named exports only, except in route files. Branch names follow `type/short-name`, for example `fix/router-params`."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Hexmorrow's .nvmrc file pins Node 18.19.0.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The size-check job fails CI when hm-core exceeds 40 KB gzipped.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Every new public API in Hexmorrow needs a changeset in the same pull request.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Hexmorrow's end-to-end tests use Playwright.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Hexmorrow route files export a default function named handler.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Hexmorrow router lives in packages/hm-router.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

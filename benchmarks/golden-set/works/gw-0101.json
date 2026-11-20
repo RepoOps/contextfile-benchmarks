@@ -1,0 +1,99 @@
+{
+  "id": "gw-0101",
+  "artifactType": "brain_wiki",
+  "title": "Euclid's Elements",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Euclid's Elements is a mathematics text written in Greek around 300 BC, probably in Alexandria. It is made up of 13 books. The work begins with definitions, five postulates and a set of common notions, and then proves each proposition from what came before. The first book ends with a proof of the Pythagorean theorem, Proposition 47. Books 7 to 9 deal with whole numbers, and Book 9 contains a proof that there are infinitely many prime numbers. Very little is known about Euclid's own life."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The fifth postulate, often called the parallel postulate, says in effect that through a point not on a given line exactly one parallel to that line can be drawn. Mathematicians tried for centuries to prove it from the other four postulates. In the nineteenth century, Nikolai Lobachevsky and Janos Bolyai independently showed that a consistent geometry exists in which it fails, which gave rise to non-Euclidean geometry. The first printed edition of the Elements appeared in Venice in 1482."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Pythagorean theorem appears as Proposition 47 of the third book of the Elements.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Lobachevsky and Bolyai independently showed that a consistent geometry can exist in which the parallel postulate fails.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Book 9 of the Elements contains a proof that there are infinitely many prime numbers.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The first printed edition of the Elements appeared in Venice in 1482.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The first printed edition of the Elements appeared in Paris.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Elements opens with definitions, five postulates and common notions.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

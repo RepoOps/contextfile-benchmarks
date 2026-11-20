@@ -1,0 +1,99 @@
+{
+  "id": "gw-0182",
+  "artifactType": "oci_image",
+  "title": "quorsel-dns image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The quorsel-dns image runs Quorsel, a caching DNS resolver for container clusters. It is built on alpine:3.20. Quorsel starts as root to bind port 53 on UDP and TCP, then drops to the user quorsel with user ID 953. Its config file is /etc/quorsel/quorsel.conf. The entrypoint is /usr/sbin/quorsel -f, which keeps the process in the foreground. Prometheus metrics are served on port 9153. The image is about 9 MB compressed."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. QUORSEL_FORWARDERS lists upstream servers and defaults to 1.1.1.1,9.9.9.9. QUORSEL_CACHE_SIZE sets the number of cached records and defaults to 10000. QUORSEL_MIN_TTL forces a lower bound on cached TTLs in seconds and defaults to 0, which keeps the upstream TTL. Set QUORSEL_DNSSEC=on to validate DNSSEC signatures; it is off by default. The health check resolves localhost.quorsel every 30 seconds. Set QUORSEL_LOG_QUERIES=true to log every query; query logging is off by default."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Quorsel drops to user ID 953 after binding port 53.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "QUORSEL_CACHE_SIZE defaults to 10000.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "DNSSEC validation in Quorsel is on by default.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "QUORSEL_MIN_TTL defaults to 0.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Quorsel serves Prometheus metrics on port 9153.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The quorsel-dns image is built on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

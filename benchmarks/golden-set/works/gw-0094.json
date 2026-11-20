@@ -1,0 +1,99 @@
+{
+  "id": "gw-0094",
+  "artifactType": "oci_image",
+  "title": "elsmoor-prober image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The elsmoor-prober image runs Elsmoor, which checks that HTTP endpoints, TCP ports and DNS names respond and reports the results as metrics. It is built on debian:12-slim and runs as user ID 2000. Probe definitions are read from /etc/elsmoor/probes.yaml. Results are exposed for Prometheus on port 9471 at the /metrics path. The entrypoint is /usr/bin/elsmoor, and the default command is run. Each probe result carries the probe name as a label."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "ELSMOOR_INTERVAL sets how often each probe runs and defaults to 60s. ELSMOOR_TIMEOUT defaults to 10s and must be shorter than the interval. ELSMOOR_REGION adds a region label to every result and defaults to unknown. The image needs the NET_RAW capability only if you define ICMP probes. The health check calls /healthz every 30 seconds. Elsmoor keeps no state, so the image declares no volumes. Set ELSMOOR_LOG_FORMAT to json for structured logs; it defaults to logfmt."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Elsmoor reads probe definitions from /etc/elsmoor/probes.yaml.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "elsmoor-prober exposes results for Prometheus on port 9471.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "ELSMOOR_REGION defaults to global.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "ELSMOOR_TIMEOUT must be shorter than ELSMOOR_INTERVAL.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The elsmoor-prober image runs as user ID 2000.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The elsmoor-prober image declares no volumes.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

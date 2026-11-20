@@ -1,0 +1,99 @@
+{
+  "id": "gw-0063",
+  "artifactType": "doc",
+  "title": "The Silk Road",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Silk Road was not a single road but a web of overland trade routes linking China with Central Asia, Persia and the Mediterranean world. The German geographer Ferdinand von Richthofen coined the name Seidenstrasse in 1877. The routes grew busy after the Han dynasty sent the envoy Zhang Qian west in the second century BCE. Chinese silk travelled west, while horses, glass, silver and wool moved east. Few merchants made the whole journey. Goods usually passed through many hands, and cities such as Samarkand and Kashgar grew rich as trading posts."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Ideas and diseases moved along the same routes as goods. Buddhism spread from India into China through Central Asian oasis towns during the first centuries CE. The Mogao Caves near Dunhuang, in western China, hold hundreds of Buddhist cave temples carved between the 4th and 14th centuries. Papermaking spread west from China and reached the Islamic world in the 8th century, and from there it later passed into Europe. In the 14th century the Black Death travelled along these trade networks before reaching Europe in 1347."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Ferdinand von Richthofen coined the name Seidenstrasse in 1907.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Mogao Caves are near Dunhuang in western China.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Buddhism spread from India into China through Central Asian oasis towns.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Han dynasty sent the envoy Zhang Qian west in the second century BCE.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Papermaking spread east from the Islamic world to China.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Kashgar grew rich as a trading post on the Silk Road.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

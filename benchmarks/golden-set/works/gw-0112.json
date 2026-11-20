@@ -1,0 +1,99 @@
+{
+  "id": "gw-0112",
+  "artifactType": "oci_image",
+  "title": "Jemberlow Authgate image",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "# jemberlow/authgate. Jemberlow Authgate is a sign-in proxy that sits in front of internal web apps and checks each request for a valid session. The image is built on `debian:12-slim` and runs as the non-root user `gate` with UID 10001. It listens on port 4180 for HTTP and serves Prometheus metrics on port 9180 at `/metrics`. The entrypoint is `/usr/local/bin/authgate serve`. Session data is kept in memory unless `AUTHGATE_REDIS_URL` is set."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Configuration. `AUTHGATE_UPSTREAM` (required, no default) is the URL of the app being protected. `AUTHGATE_COOKIE_NAME` defaults to `_authgate`, and `AUTHGATE_SESSION_TTL` defaults to `8h`. `AUTHGATE_ALLOWED_DOMAINS` limits sign-in to the listed email domains and defaults to empty, which allows none. Mount a volume at `/etc/authgate` to supply `providers.yaml`. The health check calls `GET /ping` every 30 seconds and marks the container unhealthy after 3 failures. `AUTHGATE_LOG_LEVEL` defaults to `info`. Set `AUTHGATE_COOKIE_SECURE` to `false` only for local testing over plain HTTP."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Jemberlow Authgate runs as the non-root user gate with UID 10001.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "AUTHGATE_UPSTREAM has no default value.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The default Jemberlow Authgate session lifetime is 24 hours.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Jemberlow Authgate reads providers.yaml from a volume mounted at /etc/authgate.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Jemberlow Authgate serves Prometheus metrics on port 9180.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Jemberlow Authgate keeps session data in memory unless AUTHGATE_REDIS_URL is set.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

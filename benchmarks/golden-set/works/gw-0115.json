@@ -1,0 +1,99 @@
+{
+  "id": "gw-0115",
+  "artifactType": "doc",
+  "title": "Voyager 1",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "NASA launched Voyager 1 on 5 September 1977, about two weeks after its twin, Voyager 2. Voyager 1 flew past Jupiter in March 1979 and past Saturn in November 1980. Its close pass by Saturn's large moon Titan bent its path up and out of the plane in which the planets orbit, so it visited no other planets. In 1990 it turned its camera back and took the Pale Blue Dot image, which shows Earth as a tiny point of light."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Each Voyager carries a gold-plated copper record holding sounds and images from Earth, chosen by a committee led by Carl Sagan. The probes draw power from radioisotope thermoelectric generators, which turn heat from decaying plutonium-238 into electricity. In August 2012 Voyager 1 crossed the heliopause and became the first human-made object to enter interstellar space. Its radio signals now take more than 22 hours to reach Earth. Voyager 2 remains the only spacecraft to have visited Uranus and Neptune."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Voyager 1 was launched before Voyager 2.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Voyager 1 crossed the heliopause in August 2012.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Voyager 1 flew past Saturn in November 1980.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Voyager records were chosen by a committee led by Carl Sagan.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Voyager probes draw their power from solar panels.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Voyager 1 took the Pale Blue Dot image in 1990.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

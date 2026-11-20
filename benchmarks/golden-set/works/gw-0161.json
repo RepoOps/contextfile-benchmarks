@@ -1,0 +1,99 @@
+{
+  "id": "gw-0161",
+  "artifactType": "oci_image",
+  "title": "sorrelgate-proxy image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The sorrelgate-proxy image runs Sorrelgate, a small TCP and HTTP reverse proxy. It is built on alpine:3.20 and runs as the non-root user sorrel with user ID 1500. HTTP traffic enters on port 8080 and the admin API listens on port 9901. The entrypoint is /usr/bin/sorrelgate with the argument --config /etc/sorrelgate/proxy.yaml. Mount a volume at /var/cache/sorrelgate to keep TLS session tickets across restarts. The image is about 24 MB compressed."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. SORREL_LOG_LEVEL sets log detail and defaults to info. SORREL_WORKERS sets the number of worker threads and defaults to 4. SORREL_UPSTREAM gives the default backend address and has no default; the container exits with code 2 when it is missing. The health check runs sorrelgate check every 20 seconds with a 3 second timeout and marks the container unhealthy after 5 failed checks. Logs go to standard output in JSON format."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The sorrelgate-proxy admin API listens on port 9901.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "SORREL_WORKERS defaults to 8.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The sorrelgate-proxy container exits with code 2 when SORREL_UPSTREAM is missing.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "SORREL_LOG_LEVEL defaults to info.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The sorrelgate-proxy image is built on debian:12-slim.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The sorrelgate-proxy image runs as user ID 1500.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

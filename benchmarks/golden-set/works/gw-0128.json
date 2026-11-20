@@ -1,0 +1,99 @@
+{
+  "id": "gw-0128",
+  "artifactType": "brain_wiki",
+  "title": "Sagrada Familia",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Sagrada Familia is a large Roman Catholic church in Barcelona, Spain. Construction began in 1882 under the architect Francisco de Paula del Villar, and Antoni Gaudi took over the project in 1883. Gaudi gave the rest of his working life to the church and is buried in its crypt. He died in 1926 after being struck by a tram, when only a small part of the building was complete. Pope Benedict XVI consecrated the church and named it a minor basilica in 2010."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Gaudi's design calls for eighteen spires. Twelve stand for the apostles, four for the evangelists, one for the Virgin Mary, and the tallest, for Jesus Christ, is planned to reach about 172.5 metres, which would make it the tallest church building in the world. The church has three large facades: the Nativity facade, the Passion facade, and the Glory facade, which is still unfinished. The Nativity facade and the crypt were added by UNESCO in 2005 to the World Heritage Site that covers Gaudi's works."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Antoni Gaudi took charge of the Sagrada Familia in 1883.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Sagrada Familia design includes twelve spires representing the apostles.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Construction of the Sagrada Familia began in 1882.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Antoni Gaudi died in 1936.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Nativity facade of the Sagrada Familia was added to UNESCO's World Heritage listing in 2005.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Pope Benedict XVI consecrated the Sagrada Familia in 2010.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

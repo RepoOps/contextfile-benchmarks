@@ -1,0 +1,100 @@
+{
+  "seedId": "own-contextfile-docs",
+  "title": "ContextFile docs: knowledge-gap probe set",
+  "subject": "ContextFile",
+  "version": "published 2026-11",
+  "license": "CC0-1.0",
+  "reviewedBy": null,
+  "tasks": [
+    {
+      "id": "pt-0001",
+      "title": "The MCP server URL",
+      "kind": "exact_command",
+      "prompt": "What is the exact URL of the ContextFile MCP server that an agent host should connect to? Give the URL only.",
+      "checks": { "mustMatch": ["mcp\\.contextfile\\.ai/mcp(?![\\w/-])"], "mustNotMatch": [] },
+      "namedCommands": ["https://mcp.contextfile.ai/mcp"],
+      "sourceUrl": "https://contextfile.ai/llms.txt"
+    },
+    {
+      "id": "pt-0002",
+      "title": "The read-only MCP endpoint",
+      "kind": "new_api",
+      "prompt": "A directory only accepts MCP servers that cannot move money. Which ContextFile MCP endpoint URL exposes only the read-only tools?",
+      "checks": { "mustMatch": ["mcp\\.contextfile\\.ai/mcp/readonly"], "mustNotMatch": [] },
+      "namedCommands": ["https://mcp.contextfile.ai/mcp/readonly"],
+      "sourceUrl": "https://contextfile.ai/docs/mcp"
+    },
+    {
+      "id": "pt-0003",
+      "title": "The renamed search tool",
+      "kind": "deprecation",
+      "prompt": "An agent written last year calls the ContextFile MCP tool `search_artifacts`. What is the tool's current name, which `tools/list` shows?",
+      "checks": { "mustMatch": ["\\bartifacts_search\\b"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://contextfile.ai/docs/deprecation"
+    },
+    {
+      "id": "pt-0004",
+      "title": "Fetch a purchased artifact",
+      "kind": "changed_api",
+      "prompt": "After an agent buys a ContextFile listing, which MCP tool does it call to fetch the purchased file? Name the current tool.",
+      "checks": { "mustMatch": ["\\bartifacts_download\\b"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://contextfile.ai/docs/mcp"
+    },
+    {
+      "id": "pt-0005",
+      "title": "Re-check one claim of a report",
+      "kind": "new_api",
+      "prompt": "Write the JSON-RPC `tools/call` request body that re-checks claim CLM-0001 of the ContextFile verification report with digest sha256:abc over MCP.",
+      "checks": { "mustMatch": ["\"claims_verify\"", "\"claim_id\"\\s*:\\s*\"CLM-0001\"", "\"digest\"\\s*:\\s*\"sha256:abc\""], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://contextfile.ai/docs/mcp"
+    },
+    {
+      "id": "pt-0006",
+      "title": "Install into Claude Code",
+      "kind": "exact_command",
+      "prompt": "Which `cf` command adds the ContextFile MCP server and its instructions block to Claude Code? Give the command.",
+      "checks": { "mustMatch": ["cf install (--host )?claude-code"], "mustNotMatch": [] },
+      "namedCommands": ["cf install claude-code"],
+      "sourceUrl": "https://contextfile.ai/docs/cli"
+    },
+    {
+      "id": "pt-0007",
+      "title": "Preview a folder sync",
+      "kind": "exact_command",
+      "prompt": "With the ContextFile `cf` CLI, what command scans the folder ./docs and reports what it would sync, without pushing anything?",
+      "checks": { "mustMatch": ["cf sync \\S+ --dry-run|cf sync --dry-run \\S+"], "mustNotMatch": [] },
+      "namedCommands": ["--dry-run"],
+      "sourceUrl": "https://contextfile.ai/docs/cli"
+    },
+    {
+      "id": "pt-0008",
+      "title": "Load team context at session start",
+      "kind": "new_api",
+      "prompt": "Which ContextFile MCP tool does an agent call when a session starts to get its team's shared context at the newest or a pinned version?",
+      "checks": { "mustMatch": ["\\bcontext_load\\b"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://contextfile.ai/docs/shared-context"
+    },
+    {
+      "id": "pt-0009",
+      "title": "Save a context file with a check",
+      "kind": "exact_command",
+      "prompt": "From a terminal, what `cf` command saves conventions.md as the next version of the team's context file and asks for the claim-by-claim check?",
+      "checks": { "mustMatch": ["cf context push \\S*conventions\\.md\\b.*--verify|cf context push --verify \\S*conventions\\.md"], "mustNotMatch": [] },
+      "namedCommands": ["cf context push", "--verify"],
+      "sourceUrl": "https://contextfile.ai/docs/shared-context"
+    },
+    {
+      "id": "pt-0010",
+      "title": "Get a sandbox token",
+      "kind": "new_api",
+      "prompt": "An agent wants a ContextFile sandbox token with no account and no human step. Which HTTP method and URL does it call?",
+      "checks": { "mustMatch": ["POST", "mcp\\.contextfile\\.ai/sandbox/agents"], "mustNotMatch": [] },
+      "namedCommands": [],
+      "sourceUrl": "https://contextfile.ai/docs/sandbox"
+    }
+  ]
+}

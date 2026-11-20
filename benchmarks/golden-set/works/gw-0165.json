@@ -1,0 +1,99 @@
+{
+  "id": "gw-0165",
+  "artifactType": "oci_image",
+  "title": "rookspan-cache image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The rookspan-cache image packages Rookspan, an in-memory key value cache. It is built on gcr.io/distroless/cc-debian12 and runs as the non-root user with user ID 65532. Clients connect on port 7711, and Prometheus metrics are served on port 9122 at /metrics. The image has no shell. The entrypoint is /rookspan with the argument --listen 0.0.0.0:7711. Snapshots are written to /data, so mount a volume there to keep data across restarts. The image is published for amd64 and arm64."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Configuration. ROOKSPAN_MAX_MEMORY sets the memory limit and defaults to 512mb. ROOKSPAN_EVICTION picks the eviction policy; it defaults to lru, and the other accepted value is lfu. ROOKSPAN_SNAPSHOT_INTERVAL sets seconds between snapshots and defaults to 300; a value of 0 turns snapshots off. ROOKSPAN_PASSWORD has no default, and when it is unset any client may connect without a password. The health check opens a TCP connection to port 7711 every 10 seconds."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Setting ROOKSPAN_SNAPSHOT_INTERVAL to 0 turns Rookspan snapshots off.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The rookspan-cache image includes a shell.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Rookspan serves Prometheus metrics on port 9122.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "ROOKSPAN_EVICTION defaults to lfu.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "ROOKSPAN_MAX_MEMORY defaults to 512mb.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Rookspan writes snapshots to /data.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

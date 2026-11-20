@@ -1,0 +1,99 @@
+{
+  "id": "gw-0144",
+  "artifactType": "brain_wiki",
+  "title": "Eiffel Tower",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Eiffel Tower stands on the Champ de Mars in Paris. It was built as the entrance arch for the 1889 World's Fair, the Exposition Universelle, which marked the hundredth anniversary of the French Revolution. The company of the engineer Gustave Eiffel designed and built it, although the first sketches came from two of his engineers, Maurice Koechlin and Emile Nouguier. Construction took a little over two years, and the tower opened in March 1889. Its original permit allowed it to stand for 20 years."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "The tower is made of wrought iron and was the tallest structure in the world from 1889 until 1930, when the Chrysler Building in New York passed it. It weighs about 10,000 tonnes in total, and its iron frame is held together by about 2.5 million rivets. The tower is repainted roughly every seven years, using around 60 tonnes of paint. Its use as a radio transmission post helped save it from being taken down when its first permit ran out."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Eiffel Tower was built for the 1889 World's Fair.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Eiffel Tower is held together by about 2.5 million rivets.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Eiffel Tower is made of wrought iron.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The Eiffel Tower's original permit allowed it to stand for 50 years.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Eiffel Tower is repainted roughly every seven years.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The Chrysler Building passed the Eiffel Tower as the world's tallest structure in 1930.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

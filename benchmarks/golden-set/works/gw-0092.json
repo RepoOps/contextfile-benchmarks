@@ -1,0 +1,99 @@
+{
+  "id": "gw-0092",
+  "artifactType": "context_file",
+  "title": "Gavrin agent notes",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "AGENTS.md for gavrin. Gavrin is a forward proxy for outbound traffic from build machines, written in TypeScript on Node.js 20. Install with `pnpm install` and run the tests with `pnpm test`. The allowlist of reachable hosts is in `config/allowlist.txt`, one host per line, sorted alphabetically. Every change to the allowlist needs approval from the security team in the pull request. The proxy listens on port 3128. Run `pnpm build` to compile the code into `dist/`."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Source code is in `src/`, and request filters live in `src/filters/`, one class per file. Use the logger from `src/log.ts` instead of `console.log`, and never log the Proxy-Authorization header. Tests use vitest and live next to the code as `*.test.ts` files. Run `pnpm lint` before pushing; the lint step fails on any unused export. Releases are tagged vX.Y.Z on the main branch, and CI publishes each one as a container image."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The Gavrin allowlist is sorted alphabetically.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Gavrin request filters live in src/filters/.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Gavrin proxy listens on port 3128.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Gavrin tests use vitest.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Gavrin runs on Node.js 18.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Gavrin code must never log the Proxy-Authorization header.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

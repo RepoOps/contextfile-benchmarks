@@ -1,0 +1,99 @@
+{
+  "id": "gw-0219",
+  "artifactType": "oci_image",
+  "title": "wendlecast-push image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The wendlecast-push image runs the Wendlecast push notification gateway, which forwards messages to the Apple and Google push services. It is built on debian:12-slim and runs as a non-root user named wendle with user ID 10220. The gateway accepts HTTP requests on port 7070 and exposes Prometheus metrics on port 9107. Mount the directory holding your Apple and Google credentials read-only at /etc/wendlecast/keys. The entrypoint is /usr/local/bin/wendlecast. Images are published for amd64 and arm64 on every tagged release."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. WENDLE_WORKERS sets the number of sender threads and defaults to 8. WENDLE_APNS_ENV chooses the Apple environment and defaults to production; set it to sandbox for development builds. WENDLE_RATE_LIMIT caps outgoing messages per second and defaults to 500. Set WENDLE_LOG_FORMAT to json for structured logs; the default is text. WENDLE_DRY_RUN, when set to true, logs messages instead of sending them. The health check calls /health every 20 seconds and marks the container unhealthy after 3 failures."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "WENDLE_WORKERS defaults to 4.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The wendlecast-push gateway accepts HTTP requests on port 7070.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "WENDLE_APNS_ENV defaults to production.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The wendlecast-push health check calls /health every 20 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The wendlecast-push image is built on debian:12-slim.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The wendlecast-push image runs as the root user.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

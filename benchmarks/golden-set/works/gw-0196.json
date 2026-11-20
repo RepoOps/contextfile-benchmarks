@@ -1,0 +1,99 @@
+{
+  "id": "gw-0196",
+  "artifactType": "open_spec",
+  "title": "Quiet hours for Wrenquil push notifications",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Proposal: add quiet hours to Wrenquil mobile push notifications. Users report that reminder pushes wake them at night, and 14 percent of uninstall surveys in the last quarter named notifications as the reason. The change lets each user set one quiet window per day in Settings, under Notifications. The default window runs from 22:00 to 07:00 in the device's local time zone. During the window, the server holds pushes and delivers them as a single summary when the window ends. Messages marked urgent, such as security alerts, skip quiet hours."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Scope and rollout. Quiet hours apply only to push notifications; email and in-app banners are out of scope. The setting is stored on the account, so it follows the user across devices. A held summary contains at most 20 items, and items beyond that are dropped from the summary but stay in the in-app inbox. Rollout starts with 5 percent of Android users in week one, then reaches all Android and iOS users after two weeks if the crash rate stays below 0.2 percent. The flag name is quiet_hours_v1."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The default Wrenquil quiet window runs from 22:00 to 07:00.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Wrenquil quiet hours flag is named quiet_hours_v1.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A held Wrenquil summary contains at most 50 items.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Wrenquil quiet hours do not apply to email.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Security alerts skip Wrenquil quiet hours.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Each Wrenquil user can set one quiet window per day.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

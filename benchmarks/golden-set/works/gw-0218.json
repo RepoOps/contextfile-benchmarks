@@ -1,0 +1,99 @@
+{
+  "id": "gw-0218",
+  "artifactType": "brain_wiki",
+  "title": "Pasteurization",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Pasteurization is the heating of a food or drink to a set temperature for a set time to kill harmful microbes and slow spoilage. It is named after the French scientist Louis Pasteur, who showed in the 1860s that gentle heating could stop wine from spoiling. The method was later applied to milk, where it helped cut deaths from diseases such as tuberculosis spread by raw milk. Unlike sterilization, pasteurization does not kill every microbe, so pasteurized milk still needs refrigeration."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Most milk today is treated by the high-temperature short-time method, heating it to at least 72 degrees Celsius for 15 seconds and then cooling it quickly. An older batch method holds milk at about 63 degrees Celsius for 30 minutes. Ultra-high-temperature processing heats milk to around 135 degrees Celsius or more for a few seconds; packed in sterile cartons, UHT milk can be stored unopened at room temperature for months. Pasteurization changes the flavor of milk only slightly."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The high-temperature short-time method heats milk to at least 72 degrees Celsius for 15 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Louis Pasteur showed in the 1860s that gentle heating could stop wine from spoiling.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The batch method holds milk at about 63 degrees Celsius for 30 minutes.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Pasteurization kills every microbe in milk.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Pasteurization is named after Louis Pasteur.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Unopened UHT milk in sterile cartons can be stored at room temperature for months.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

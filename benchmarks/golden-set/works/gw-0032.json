@@ -1,0 +1,99 @@
+{
+  "id": "gw-0032",
+  "artifactType": "brain_wiki",
+  "title": "Mount Everest",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mount Everest stands on the border between Nepal and the Tibet region of China, in the Mahalangur range of the Himalayas. Its summit is the highest point above sea level on Earth. In 2020, China and Nepal jointly announced a height of 8,848.86 metres. In Nepali the mountain is called Sagarmatha, and in Tibetan it is called Chomolungma. The English name honours George Everest, a former Surveyor General of India. Before that, British surveyors referred to the peak as Peak XV."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Edmund Hillary of New Zealand and the Sherpa climber Tenzing Norgay made the first confirmed ascent of Everest on 29 May 1953. They climbed the southeast ridge from Nepal as part of a British expedition led by John Hunt. In 1975 Junko Tabei of Japan became the first woman to reach the summit. Reinhold Messner and Peter Habeler made the first ascent without bottled oxygen in 1978. The area above about 8,000 metres is known as the death zone because the air holds too little oxygen to sustain life for long."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Junko Tabei was the first woman to reach the summit of Everest.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Tibetan name for Everest is Chomolungma.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Hillary and Tenzing made the first confirmed ascent of Everest in 1953.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "In 2020, China and Nepal announced a height of 8,848.86 metres for Everest.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Messner and Habeler made the first ascent of Everest without bottled oxygen in 1982.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "British surveyors once called Everest Peak XV.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

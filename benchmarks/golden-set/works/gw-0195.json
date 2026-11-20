@@ -1,0 +1,99 @@
+{
+  "id": "gw-0195",
+  "artifactType": "brain_wiki",
+  "title": "Beaufort wind scale",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The Beaufort wind force scale ranks wind strength by its observed effects rather than by instrument readings. It is named after Francis Beaufort, an officer in the British Royal Navy, who devised his version in 1805. Beaufort first described each level by how the sails of a fully rigged warship would respond. The Royal Navy made the scale mandatory in its logbooks in 1838. The scale runs from force 0, calm, to force 12, hurricane force. Force 8 is called a gale."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Later versions tied each Beaufort number to wind speeds and to effects on land and sea. On land, force 0 means smoke rises straight up, and at force 3 leaves and small twigs move constantly. Force 1 is called light air. At sea, force 12 brings air filled with foam and spray and a sea completely white. Force 12 begins at 64 knots, about 118 kilometres per hour, the same threshold the Saffir-Simpson scale uses for a category 1 hurricane."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Francis Beaufort devised his scale in 1850.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "On the Beaufort scale, force 12 begins at 64 knots.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Royal Navy made the Beaufort scale mandatory in its logbooks in 1838.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "At Beaufort force 3, leaves and small twigs move constantly.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Beaufort force 1 is called a gentle breeze.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Beaufort force 8 is called a gale.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

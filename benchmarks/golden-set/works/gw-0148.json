@@ -1,0 +1,99 @@
+{
+  "id": "gw-0148",
+  "artifactType": "doc",
+  "title": "Mirelund search log retention policy",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "Mirelund search log retention policy, version 2. This policy covers the query logs produced by Mirelund, the company's internal document search engine. Raw query logs, which include the employee ID and the full query text, are kept for 30 days and then deleted. Aggregated logs, which drop employee IDs and keep only query text and click counts, are kept for 18 months. Access to raw logs requires approval from the search team lead and is reviewed every quarter. The policy took effect on 1 March 2026."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Exceptions and handling. A legal hold from the legal department pauses deletion of the logs it names until the hold is lifted. Queries that match the patterns in the `pii_patterns` list, such as national ID numbers, are masked before they reach the aggregated store. Engineers may copy raw logs to a laptop only for incident work, and must delete the copy within 7 days. Breaches of this policy are reported to the security team within 24 hours. The data protection officer reviews the policy once a year."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Mirelund keeps raw query logs for 30 days.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Aggregated Mirelund logs keep employee IDs.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A legal hold pauses deletion of the Mirelund logs it names.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Engineers must delete laptop copies of raw Mirelund logs within 7 days.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The Mirelund log retention policy took effect on 1 March 2026.",
+      "sourceId": "s2",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Breaches of the Mirelund log policy are reported to the security team within 24 hours.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

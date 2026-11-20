@@ -1,0 +1,99 @@
+{
+  "id": "gw-0215",
+  "artifactType": "oci_image",
+  "title": "zephlock-flags image README",
+  "license": "CC0-1.0",
+  "provenance": "authored",
+  "sources": [
+    {
+      "id": "s1",
+      "locator": "para-1",
+      "content": "The zephlock-flags image runs the Zephlock feature flag server. It is built on alpine:3.20 and runs as a non-root user named zeph with user ID 10101. The server answers flag evaluation requests on port 8040 and serves its admin dashboard on port 8041. Mount a volume at /var/lib/zephlock to keep flag definitions and audit logs across restarts. The entrypoint is /usr/bin/zephlock, started with the serve subcommand. Images are published for amd64 and arm64."
+    },
+    {
+      "id": "s2",
+      "locator": "para-2",
+      "content": "Environment variables. ZEPH_STORE selects the storage backend and defaults to sqlite; set it to postgres and provide ZEPH_DATABASE_URL to use Postgres. ZEPH_CACHE_TTL sets how long evaluated flags stay cached and defaults to 30 seconds. ZEPH_LOG_LEVEL controls log detail and defaults to info. ZEPH_ADMIN_TOKEN is required, and the container exits at startup if it is missing. The health check requests /readyz every 10 seconds and marks the container unhealthy after 3 failures."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The zephlock-flags image runs as user ID 10101.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "ZEPH_STORE defaults to postgres.",
+      "sourceId": "s2",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The zephlock-flags container exits at startup if ZEPH_ADMIN_TOKEN is missing.",
+      "sourceId": "s2",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The zephlock-flags health check requests /readyz every 10 seconds.",
+      "sourceId": "s1",
+      "expected": "misgrounded",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "misgrounded",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "The zephlock-flags admin dashboard is served on port 8040.",
+      "sourceId": "s1",
+      "expected": "wrong",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "wrong",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "The zephlock-flags image is built on alpine:3.20.",
+      "sourceId": "s1",
+      "expected": "supported",
+      "labels": [
+        {
+          "labeler": "claude-draft",
+          "verdict": "supported",
+          "date": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}
